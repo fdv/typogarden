@@ -1,0 +1,297 @@
+@media screen {
+
+body {
+	background-color: #F6EACB;
+	background-image: url(/images/theme/back.gif);
+	background-repeat: repeat-x;
+	background-position: left top;
+	text-align:center;
+	font-family:tahoma, Helvetica, Arial, Sans-serif;
+	color:#111;
+}
+
+a {
+text-decoration:none;
+color:#A11919;
+}
+
+a:hover {
+text-decoration:underline;
+}
+
+#wrapper {
+	background-image:url(/images/theme/bg.png);
+	border:1px solid #fff;
+	text-align:left;
+	width:80%;
+	margin:2em auto 0 auto;
+	padding:0;
+	z-index:5;
+	position:relative;
+		max-width:1100px;
+
+}
+
+#inner {
+background-image:url(/images/theme/top_bg.png);
+background-position:right top;
+background-repeat:no-repeat;
+padding:.4em;
+}
+
+* html #inner {
+background-image:url(images/top_bg.gif);
+}
+
+/* BACKGROUND TITLE */
+#bgtitle {
+font-size:3.5em;
+color:#433C1F;
+position:absolute;
+letter-spacing:.2em;
+top:.1em;
+left:60%;
+z-index:0;
+text-transform:uppercase;
+line-height:1;
+text-align:right;
+font-family:Georgia, "Times New Roman", Times, serif;
+overflow:hidden;
+font-weight:bold;
+}
+
+* html #bgtitle {
+display:none;
+}
+
+/*MASTHEAD */
+#header h1 {
+padding:0 0 .1em 0;
+margin:0;
+font-family:Georgia, "Times New Roman", Times, serif;
+text-transform:uppercase;
+width:100%;
+border-bottom:1px solid #A11919;
+font-weight:normal;
+display:block;
+font-size:xx-large;
+}
+#header h1 a {
+color:#111;
+}
+
+#header h2 {
+padding:.1em 0 0 .1em;
+margin:0;
+font-weight:normal;
+font-size:medium;
+margin-bottom:.5em;
+}
+/* SIDEBAR */
+#sidebar {
+float:left;
+width:13em;
+}
+#sidebar   a {
+color:#111;
+}
+#sidebar img {
+border:none;
+}
+.sidebar-node {
+background-color:#EDD492;
+border:1px solid #fff;
+margin-bottom:1em;
+font-size:small;
+padding-bottom:.2em;
+}
+
+.sidebar-node h3 {
+background-color:#DEB239;
+color:#fff;
+border-bottom:1px solid #fff;
+margin:0;
+padding:.2em;
+font-size:small;
+}
+
+.sidebar-node ul {
+list-style:none;
+padding:0;
+margin:0;
+}
+
+.sidebar-node li {
+list-style:none;
+padding:.2em .3em ;;
+margin:0;
+}
+
+/* SEARCH */
+#search {
+background-color:#CBC7B9;
+border:1px solid #fff;
+margin-bottom:1em;
+font-size:small;
+padding-bottom:.2em;
+}
+
+#search form {
+background-color:#433C1F;
+color:#fff;
+border-bottom:1px solid #fff;
+margin:0;
+padding:.2em;
+font-size:small;
+display:block;
+font-weight:bold;
+}
+
+#search label {
+margin:0 .5em 0 0;
+}
+#search input {
+font-size:small;
+background-color:#CBC7B9;
+border:1px solid #fff;
+height:15px;
+padding-left:.1em;
+}
+#search-results {
+display:block;
+padding:.2em;
+}
+#search-results p {
+padding:0;
+margin:0;
+}
+
+#search-results li {
+list-style:disc;
+}
+
+/*MAIN*/
+
+#main {
+margin-left:14em;
+}
+
+/*POSTING*/
+
+.post {
+line-height:1.7em;
+font-size:small;
+background-image:url(/images/theme/postbg.png);
+background-repeat:no-repeat;
+background-position:top left;
+padding:.75em;
+}
+* html .post {
+background-image:url(/images/theme/postbg.gif);
+}
+.auth {
+margin-top:.5em;
+color:#433C1F;
+text-transform:uppercase;
+font-size:x-small;
+line-height:1;
+}
+
+.meta {
+text-align:right;
+padding-right:1em;
+font-size:x-small;
+}
+
+.post h2 {
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:x-large;
+font-weight:normal;
+margin:0 0 -.2em 0;
+padding:0;
+text-transform:uppercase;
+line-height:1;
+}
+ 
+ /*FOOTER */
+ 
+#footer {
+clear:both;
+text-align:center;
+font-size:small;
+border-top:1px solid #433C1F;
+padding-top:.5em;
+}
+
+ #footer ul {
+ list-style:none;
+ padding:0;
+ margin:0;
+ display:inline;
+ }
+ 
+#footer li  {
+list-style:none;
+padding:0;
+display:inline;
+ }
+ 
+#footer li  a{
+padding:0 2em;
+}
+ 
+/*COMMENTS*/
+
+#comments, #trackbacks {
+background-image:url(/images/theme/combg.png);
+background-repeat:no-repeat;
+background-position:top left;
+padding:.75em;
+line-height:1.7em;
+font-size:small;
+}
+
+* html #comments, * html #trackbacks  {
+background-image:url(/images/theme/combg.gif);
+}
+
+#comments h4, #trackbacks h4 {
+padding:0;
+margin:0;
+font-family:Georgia, "Times New Roman", Times, serif;
+font-size:large;
+font-weight:normal;
+margin:0 0 -.2em 0;
+padding:0;
+text-transform:uppercase;
+line-height:1;
+}
+
+.comment-list li, .trackback-list li {
+margin:0 0 1em 0;
+position:relative;
+
+}
+
+.comment-list li div, .trackback-list li div {
+position:absolute;
+top:0;
+right:0;
+}
+
+.frm-tbl td {
+vertical-align:top;
+font-size:small;
+}
+
+/* ADMIN TOOLS */
+
+.admintools {
+float:right;
+margin:0.25em .5em;
+color:#FFFFFF;
+padding:.5em;
+font-size:x-small;
+background-color:#A11919;
+border:1px solid #fff;}
+}

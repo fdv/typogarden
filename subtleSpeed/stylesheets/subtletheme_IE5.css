@@ -1,0 +1,95 @@
+
+
+/*<group=IE>*/
+
+div.content pre {
+	width: 30em;
+}
+
+#sidebar {
+	height: 1%;
+}
+
+/*</group>*/
+
+/*<group=IE5>*/
+
+p.meta {
+	margin: 0;
+	padding: 0;
+}
+
+p.meta a {
+	height: 1px;
+}
+
+#commentBlock {
+	background: none;
+}
+
+.comment {
+	list-style: none;
+}
+
+.comment div.content {
+	margin: 0 0 -1em;
+	padding: 0 .5em .5em;
+}
+
+.comment div.content blockquote, .comment div.content table {
+	width: auto;
+}
+
+.comment div.content p {
+	margin-top: 0;
+}
+
+.cite {
+	padding: 0;
+	margin: -1em 0 0;
+	background: none !important;
+}
+
+#comment_box .content {
+	padding-top: .5em;
+	height: 1px;
+	margin-bottom: .5em;
+}
+
+#sidebar * {
+	float: none;
+	clear: none;
+	padding: 0;
+	margin: 0;
+	width: auto;
+	line-height: inherit;
+}
+
+#sidebar a {
+	padding-left: 2px !important;
+	background: none !important;
+	display: inline;
+	border-style: none;
+	text-decoration: underline;
+}
+
+#sidebar li {
+	list-style: none;
+	display: inline;
+	height: 1px;
+	margin: 0 1em 0 0;
+}
+
+.sidebar-node {
+	display: block;
+	float: none;
+}
+
+.flickrrectangle {
+}
+
+/*</group>*/
+
+pre {
+	width: 36em;
+}

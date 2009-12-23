@@ -1,0 +1,19 @@
+div#header { 
+  margin-top: 0px;
+}
+
+h1, h1 a, h2, h2 a, h3, h4, h5, h6 { 
+  font-family: "Copperplate Gothic Bold";
+}
+
+div#footer { 
+  font-family: "Copperplate Gothic Light";
+}
+
+div.post p.meta, div.post p.auth { 
+  font-family: "Copperplate Gothic Light";
+}
+
+blockquote { 
+  background-image: url(../../images/theme/quote.gif);
+}

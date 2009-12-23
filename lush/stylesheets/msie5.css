@@ -1,0 +1,71 @@
+/* quick fixes for IE5 box model quirks */
+/* I'm sure this could be done more elegant
+   but hey, We've got rockin' IE5+ support! */
+
+#sidebar li  {	
+  display:inline;
+}
+
+#sidebar li, #sidebar h3, #tagcloud  {
+  width:229px;	
+  margin:0;
+}
+
+#commentList, ul.preview  {
+  margin:0 0 0 15px;
+  padding:0;	
+}
+
+#commentList li, ul.preview li  {
+  width:502px;	
+}
+
+.commenthead, .commenttext, .commentmeta, ul.preview li .commenthead, ul.preview li .commenttext, ul.preview li .commentmeta  {
+  width:502px;
+}
+
+.commenthead  {
+  height:42px;	
+}
+
+.commentmeta  {
+  height:47px;	
+  padding-bottom:8px;
+}
+
+#comment_author, #comment_email, #comment_url  {
+  height:20px;	
+}
+
+p#rss_track  {
+  width:502px;	
+}
+
+.post a:visited, #viewpage a:visited  {
+  background:none;	
+}
+
+blockquote  {
+  width:450px;
+}
+
+#ladybug  {
+  top:20px;
+}
+
+#wtyl  {
+  visibility:hidden;	
+}
+
+/* Tell those ancient IE users to get Firefox. Pronto! */
+
+#ffplug  {
+  width:254px;
+  height:54px;
+  display:block;
+  background:url(../../images/theme/ieteaser.gif) no-repeat left;
+  position:relative;
+  right:15px;
+  top:0;
+}
+

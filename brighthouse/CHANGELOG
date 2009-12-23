@@ -1,0 +1,29 @@
+
+1.2.2
+
+- Overrode the live/search.rhtml in the theme directory instead of 
+  requiring people to overwrite the one in the typo codebase
+- Made the right sidebar absolutely positioned so that text overflows 
+  in the content area (like from long text in <pre> tags) wouldn't
+  wrap the sidebar to the bottom in IE
+- Made the footer only span the content pane since the layout is no l
+  onger floated
+- Styled the older pages links at the bottom
+- Styled static pages to have the same headers as blog posts
+
+1.2.1
+
+- Ummmm I don't remember :)
+
+1.2.0
+
+- Edit/Nuke links on comments and articles are no longer placed inline 
+  (was pushing down the comments when you moused over, very annoying).
+- Moved about-box out of the template so that its an optional static 
+  sidebar element.
+- Made the gigantor textarea for comments smaller.
+- Restyled live search.
+- Removed rico_corner.js as all rounding is being done now through CSS 
+  background images.
+
+* Compatible with FF 1.0+, Safari 10.4 and IE 6

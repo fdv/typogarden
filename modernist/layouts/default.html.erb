@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><%=h page_title %></title>
+	
+    <%= page_header %>
+    <%= stylesheet_link_tag "/stylesheets/theme/modernist" %>
+    <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+</head>
+<body>
+<div id="wrap">
+    <div id="header">
+            <div>
+                <h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+                <h2><%= this_blog.blog_subtitle %></h2>
+            </div>
+    </div>
+    
+    <div id="content">        
+         <%= @content_for_layout %>
+        
+        <div id="menu">
+            <div class="flip"><a href="#header" onclick="new Effect.ScrollTo('header'); return false" class="flip-top" title="Scroll to the top"> </a></div>
+            <div id="menu-inner">
+               <div class="sidebar-node">
+                   <%= render :partial => "shared/search" %>
+                   <div id="search-results"></div>
+               </div>
+
+                <%= render_sidebars %>
+
+  
+                <div class="clear"> </div></div>
+            </div>
+    </div>
+
+</div>
+
+</body>
+
+</html>

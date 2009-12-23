@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<!--
+      'Forester' - A Typo theme.
+      Copyright 2005 by M Brandon Jones
+
+      http://www.mbjones.org/
+      
+      This template is licensed under the Creative Commons
+      Attribution Non Commercial License
+      http://creativecommons.org/licenses/by-nc/2.5/
+-->
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/forester" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+</head>
+<body>
+<div id="container">
+
+   <div id="nav">
+		<%= image_tag("/images/theme/tree.png") %>
+      <div id="right">
+			<%= render_sidebars %>
+			<br />
+			<%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+		</div>
+		<div id="left">
+			<span class="sidebar-node"><h3>about:</h3></span>
+			<div class="sidebar-node">
+				Change this in the "default.rhtml" file located in the "layouts" folder in your theme folder to include a brief paragraph about yourself or your blog.
+			</div>
+		</div>
+	</div>
+	<div id="content">
+	   <div class="pagetitle">
+<%= link_to this_blog.blog_name, { :controller => '/' } %>
+	   </div>
+	   <div class="pagesubtitle">
+<%= this_blog.blog_subtitle %>
+	   </div>
+	    <br />
+	    <%= @content_for_layout %>
+	    <%= javascript_tag "show_dates_as_local_time()" %>
+	</div>
+	<div id="footer">
+	    Where the footer goes...Feel free to remove this line if you do not want to include any copyright and/or other information here.
+	</div>
+</div>	
+</body>
+</html>

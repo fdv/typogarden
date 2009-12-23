@@ -1,0 +1,15 @@
+<% form_tag({ :controller => 'articles', :action => 'search' },
+            { :method => 'get', :id => 'sform' }) do -%>
+	<div id="live-search-fieldset"><fieldset>
+		<label for="q">Live Search:</label>
+		<input type="text" id="q" name="q" value="" class="text" />
+		<%= image_tag "../../images/theme/search-throbber.gif", :id => 'search_spinner', :style => 'display:none;' %>
+	</fieldset></div>
+<% end %>
+<%= observe_field "q", :frequency => 1, 
+    :url => { :controller => "live", :action => "search" }, 
+    :loading => "Element.show('search_spinner')",
+    :complete => "showResults()",
+    :update => "search-results",
+    :with => "'q=' + escape($F('q'))" -%>
+

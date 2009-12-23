@@ -1,0 +1,8 @@
+<li class="graybox" id="comment-<%= comment.id %>" <%= 'style="display:none"' if controller.request.xhr? %><%= onhover_show_admin_tools(:comment, comment.id) %>>
+  
+  <a name="comment-<%= comment.id %>"></a>
+  <h4 class="commentauthor"><%= (comment.url.blank?) ? h(comment.author) : link_to(h(comment.author), comment.url) %> said <%= distance_of_time_in_words @article.created_at, comment.created_at %> later:</h4>
+  <div class="commentbody">
+  <%= comment.body_html %>
+  </div>
+</li>

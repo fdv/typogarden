@@ -1,0 +1,37 @@
+@import url(concomitant.css);
+
+body {
+  background-color: #CDDD81;
+}
+
+:link { 
+  color: #390;
+}
+:visited { 
+  color: #060;
+}
+
+em {
+  color: #040;
+}
+
+#header {
+  background-color: #999;
+  border-bottom: #666 1px solid;
+  background-image: url(../../images/theme/grass.gif);
+  background-position: 0px -125px;
+}
+
+#header h2 {
+  color: #ff0;
+}
+
+#header :link,
+#header :visited { 
+  color: white;
+}
+
+#sidebar h3 {
+  color: white;
+  text-shadow: 0px 0px 5px #333;
+}

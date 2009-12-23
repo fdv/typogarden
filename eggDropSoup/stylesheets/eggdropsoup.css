@@ -1,0 +1,332 @@
+/* 	Egg Drop Soup Stylesheet
+	Adapted from Justin Palmer's Azure Stylesheet
+*/
+
+body {
+	margin: 0;
+	padding:0;
+	text-align: center;
+	background: #fff url(../../images/theme/body_bkg.gif) repeat;
+	font: 1em/1.1em Georgia, Garamond, Times, "Times New Roman", serif;
+	color: #5c620d;
+}
+
+#container {
+	margin: 0 auto;
+	width: 748px;
+	text-align: left;
+	background: #fff;
+	border: 4px solid #abb157;
+	border-top:none;
+	font-size: 80%;
+}
+
+#header { 
+	background: #abb157 url(../../images/theme/header_img.gif) no-repeat;
+	width: 748px;
+	height: 194px;
+	margin: 0;
+	border-bottom:18px solid #e59009;
+	vertical-align:top;
+}
+
+#content {
+	padding-left:25px;
+	padding-top: 25px;
+	background:  #fff url(../../images/theme/sidebar_back.gif) right repeat-y;
+}
+
+#main { 
+	float: left;
+	width: 510px;
+	padding: 1px;
+}
+
+#sidebar {
+	margin-left: 535px;
+	padding-left: 15px;
+	padding-right: 0px;
+	background-color:#e9ebbb;
+}
+
+
+#footer {
+	margin-top: 7px;
+	height: 35px;
+	text-align: center;
+}
+	
+#footer a { border: none; }
+#footer img { border: none; margin-top: 10px; }
+
+/*+-------------------------------------------+
+  |   			LINKS 						  |
+  +-------------------------------------------+*/
+a {
+	color: #e59009;
+	text-decoration: none;
+	border-bottom: 1px dotted #e59009;
+}
+
+ a:hover {
+	color: #64691e;
+	border-bottom-color: #64691e;
+}
+
+/*+-------------------------------------------+
+  |   			UTILITY 					  |
+  +-------------------------------------------+*/
+  
+  h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+	}
+
+  form, div { padding: 0; margin: 0; }
+  p { margin: 0 0 1em 0; padding: 0; }
+  img { border: 0; }
+
+  
+/*+-------------------------------------------+
+  |   			HEADER 						  |
+  +-------------------------------------------+*/
+  
+#logo {
+	padding-top: 86px; padding-left: 133px; text-align:left;
+}
+	
+#logo h1 a {
+	color: #8a902e;
+	text-decoration: none;
+	border: none;
+	font-family:Georgia,Garamond,Times, Times New Roman, serif;
+	font-size:1em;
+	text-transform: uppercase;
+	font-weight:normal;
+	letter-spacing:.3em;
+}
+#logo h2 {
+	color: #8a902e;
+	padding-top:.2em;
+	_padding-top:1em;
+	text-decoration: none;
+	font-size:1.4em;
+	text-transform:lowercase;
+	font-weight:normal;
+}
+
+/*+-------------------------------------------+
+  |   			        SEARCH     						    |
+  +-------------------------------------------+*/	
+
+#sform {padding-top: 10px;}
+#sidebar #searchform #s {margin-top: 20px;}
+#sidebar #searchsubmit {padding: 1px;}
+#search-results {padding: 2px; }
+#search input{margin-left:10px;}
+#search_spinner {margin-bottom:-10px;}
+
+/*+-------------------------------------------+
+  |   			POST 						                  |
+  +-------------------------------------------+*/
+.post {
+	padding: 0 0 20px 0;
+}
+
+.post h2 {
+	font: normal 140%/1.3em Georgia, Garamond, Times, "Times New Roman", serif;
+	font-weight:bold;
+	background: url(../../images/theme/title_decoration.gif) no-repeat;
+	padding: 35px 0 6px 50px;
+	display:block;
+	margin-left:-26px;
+	_margin-left:0;
+	text-transform:uppercase;
+}
+
+.post h2 a {
+	color: #e59009;
+	text-decoration: none;
+	border: none;
+}
+
+.post h2 a:hover {
+	color: #64691;
+}
+
+p.meta {
+	font-size: 75%;
+	text-align: right;
+	margin-right: 5px;
+	color:#64691e;
+	font-weight:bold;
+}
+
+p.auth {
+	padding:0;
+	font-size: 85%;
+	margin-left: 28px;
+	_margin-left:50px;
+	font-weight: bold;
+	color: #64691e;
+}
+
+h4.comments {
+	background: #e9ebbb;
+	padding: 5px;
+	margin: 10px 0;
+	border: 2px solid #abb157;
+}
+
+ /*+-------------------------------------------+
+  |   			      COMMENTS						         |
+  +-------------------------------------------+*/
+.comment-list li {
+	background: #e9ebbb;
+	padding: 5px;
+	margin-bottom: 8px;
+	color: #333;
+}
+  	
+ /*+-------------------------------------------+
+  |   			SIDEBAR 						               |
+  +-------------------------------------------+*/
+#sidebar a {
+	font-family:Georgia, Garamond, Times, "Times New Roman", sans-serif;
+	text-decoration:none;
+	border:none;
+}
+.sidebar-node h3 {
+	font-weight:bold;
+	font-size:1em;
+	font-family:Georgia, Garamond, Times, "Times New Roman", sans-serif;
+	color: #64691e;
+	margin: 10px 0 14px 0;
+	text-transform:uppercase;
+	letter-spacing:.2em;
+}
+
+#sidebar h3 a {color: #563308; border-bottom: 1px dotted #d75a20; }
+
+#sidebar h3 a:hover { color: #85ab02; border-bottom-color: #85ab02; }
+
+#sidebar ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+ 		
+#sidebar ul li {
+	background: url(../../images/theme/bullet.gif) 0 45% no-repeat;
+	padding: 0 4px 0 35px;
+	margin-bottom:5px;
+}
+
+#flickr div img {
+	border: 4px solid #fff;
+}
+
+#flickr div {
+	width: 108px;
+	border: 2px solid #dbd1c1;
+	margin-bottom: 5px;
+}
+
+#flickr div.flickrsquare {
+	width: 82px;
+	border-right: 3px solid #dbd1c1;
+	float:left;
+	margin-right: 5px;
+	margin-right: 5px;
+}
+
+#flickr div a { border: none; }
+  
+ /*+-------------------------------------------+
+   |   			FOOTER 						                 |
+   +-------------------------------------------+*/
+  
+#footer ul {
+	margin: 0;
+	padding: 10px 0 0 0;
+	list-style: none;
+}
+
+#footer ul li {
+	display: inline;
+	margin: 0;
+	padding: 0 5px 0 0;
+	font-size: 75%;
+}
+
+ /*+-------------------------------------------+
+   |   			       FORMS 						           |
+   +-------------------------------------------+*/
+   
+input, textarea, select {
+	border: 1px solid #64691e;
+	background: #fff;
+	padding:3px;
+}
+
+ 	.frm-tbl td { vertical-align: top; padding: 5px; }
+ 	td#frm-btns { text-align: right; }
+ 	
+ 	#comment_body { height: 220px; }
+ 	#form-submit-button { background: #e59009; }
+  
+ /*+-------------------------------------------+
+   |   		          	MISC 						         |
+   +-------------------------------------------+*/
+   
+.powered { border: none; }
+.powered img { margin: 20px 0 0 0; }
+.pullquote {
+	width: 40%;
+	float:right;
+	font: 140%/1.5em Georgia, Times, "Times New Roman", serif;
+	color: #e59009;
+	margin:10px 5px 10px 15px;
+	padding: 10px 10px 10px 15px;
+	background-color:#e9ebbb;
+}
+
+.light-bg { background: #e9ebbb; padding: 2px; }
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+ 
+#errors {
+	color: red;
+}
+
+.admintools {
+	float: right;
+	background-color: #fff;
+	font-size: smaller;
+	padding: 0 2px;
+	margin: 0 1px;
+	color: #ccc;
+	border: 1px solid #ccc;
+}
+
+.admintools:hover {
+	color: #c00;
+	border: 1px solid #c00;
+}
+
+a[name] { border: none; }
+
+ /* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+ /* End hide from IE-mac */
+
+#categories li em, #archives li em
+{
+	color: #e59009;
+	font-size: smaller;
+}

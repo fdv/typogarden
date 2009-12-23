@@ -1,0 +1,141 @@
+body { 
+    background-color: #f7f7fd;
+    background-image: url(../../images/theme/peak-left.png);
+    background-repeat: no-repeat;
+    background-position: top-left;
+
+}
+
+body * { 
+    font-family: Monaco, "Lucida Console", "LucidaTypewriter", monospace;
+    color: #111111;
+}
+
+/* rff */
+div { 
+    padding: 0;
+}
+
+li { 
+    list-style-image: url(../../images/theme/peak-bullet3.png);
+}
+
+a { 
+    color: #48485e;
+}
+
+input, textarea, select { 
+    border: 1px solid #666666;
+}
+
+pre, blockquote { 
+    border: 1px solid #adc0de;
+    padding: 1em;
+    margin: 2em;
+}
+
+pre {  
+    background-color: #333333;
+    color: #f7f7fd;
+}
+
+table { 
+    border-collapse: collapse;
+}
+
+td, th { 
+    border: 1px solid #adc0de;
+    margin: 0;
+}
+
+th { 
+    background-color: #333333;
+    color: #f7f7fd;
+}
+
+div.post { 
+    border-bottom: 1px dotted #666666;
+    margin-bottom: 4em;
+}
+
+div.post h2 a { 
+    color: #a63b4e;
+    color: #355c41;
+    color: #3c6099;
+    text-decoration: none;
+
+}
+
+div.post p.meta, div.post p.auth { 
+    text-align: left;
+    font-size: smaller;
+}
+
+div.post p.meta { 
+
+}
+
+p.meta a { 
+    color: #a63b4e;
+}
+
+div#footer { 
+    text-align: center;
+    font-size: 75%;
+    clear: both;
+    padding-top: 2em;
+}
+
+div#footer li{ 
+    list-style: none;
+}
+
+div#header { 
+    /* rff */
+    padding: 0;
+    border: 0;
+}
+
+div#header div { 
+    height: 100px;
+    padding-left: 225px;
+    /* rff */
+    background-color: transparent;
+    border: 0;
+}
+
+div#header h1 a { 
+    text-decoration: none;
+    color: #111111; 
+}
+
+div#header h2 { 
+    margin-top: -1em;
+}
+
+div#leftside {
+    width: 200px;
+    float: left;
+    font-size: smaller;
+}
+
+div#middle {
+    padding-left: 25px;
+    padding-right: 25px;
+    width: 65%;
+    float: left;
+}
+
+div#search-results li { 
+    padding-bottom: 1em;
+}
+
+ul#archives em, ul#categories em { 
+    font-size: smaller;
+    font-style: normal;
+}
+
+div.comment-box th, div.comment-box td {  
+    border: none;
+}
+

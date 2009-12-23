@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>the { buckblogs :here }</title>
+<link href="../stylesheets/paint.css" rel="stylesheet" type="text/css" />
+<script language="javascript" src="../javascript/sifr.js"></script>
+
+
+</head>
+
+<body>
+<div id="container">
+
+  <div id="header">
+    <h1>the { buckblogs :here }</h1>
+		 <h2 id="subtitle">assorted_ramblings.by JamisBuck</h2>
+  </div>
+  <div id="content">
+ <div id="side">
+				<div id="search"> 
+			<%= render :partial => "shared/search" %>
+		  <div id="search-results"></div><br/>
+
+				  <%= observe_field "q", 
+					  :frequency => 1, 
+					  :url => { :controller => "live", :action => "search" }, 
+					  :loading => "Element.show('search_spinner')",
+					  :complete => "Element.hide('search_spinner')",
+					  :update => "search-results" -%>
+		  </div>
+			</div>
+  <div id="sidebar" style="width:200px; float:right; "><img src="274726.jpg" /></div>
+    <div class="post">
+		<h2 class="post_title"><a href="test.html">Enter the Bumblelog</a></h2>
+	  <div class="post_details">
+	    <div class="post_date">
+			<span class="datenum">17</span><br/>
+			<span class="month">nov</span>
+	    </div>
+		  <div class="post_author">Posted by<br />Jamis</div>
+		</div>
+		<div class="post_body">
+		  <p>There have been many times recently that I’ve wanted to put up a one or two sentence post, or a link, or quote, but posting such here seemed both too trivial for this blog, 
+		  as well as beyond its scope (I’d like to keep this blog primarily programming-centric, if not entirely Ruby-centric).
+		  </p>
+		  <p>
+		  Thus, I introduce <a href="http://bumble.jamisbuck.org/">the bumblelog</a>, a new kid on the tumblelog block. It is inspired largely by the <a href="http://project.ioni.st/">projectionist</a> tumblelog, so expect to see frequent quotes, thoughts, and so forth. (I’m not the 
+		  shutterbug other tumbleloggers appear to be, though, so don’t expect too many photos…)
+		  </p>
+		</div>
+	    <div class="post-meta">
+	      Posted in General | 2 comments | no trackbacks
+	    </div>
+     </div>
+	 
+	 <div class="post">
+		<h2 class="post_title"> <a href="#">Easy ActiveRecord Scripts </a></h2>
+	  <div class="post_details">
+	    <div class="post_date">
+			<span class="datenum">7</span><br/>
+			<span class="month">oct</span>
+	    </div>
+		  <div class="post_author">Posted by<br />Jamis</div>
+		</div>
+		<div class="post_body">
+		  <p>ActiveRecord (the ORM component of Rails) is really a pretty slick little piece of equipment. Not only does it integrate seamlessly with the other parts of the Rails stack, 
+		  it can be easily used on its own. I do so frequently when trying to duplicate reported bugs. Consider the following little script:
+		  </p>
+		  <div class="code">
+<pre>require 'active_record'
+
+ActiveRecord::Base.logger = Logger.new(STDERR)
+ActiveRecord::Base.colorize_logging = false
+
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite",
+  :dbfile  => ":memory:" 
+)
+
+ActiveRecord::Schema.define do
+  create_table :foxes do |t|
+    t.column :name, :string
+  end
+
+  create_table :trucks do |t|
+    t.column :fox_id, :integer
+    t.column :color, :string
+  end
+end
+
+class Fox < ActiveRecord::Base
+  has_many :trucks
+end
+
+class Truck < ActiveRecord::Base
+  belongs_to :fox
+end
+
+fox = Fox.create :name => "Small" 
+fox.trucks.create :color => "Blue" 
+fox.trucks.create :color => "Orange" 
+
+puts Fox.find(1).trucks.length
+		  </pre>
+		  </div>
+		  
+		  <p>
+		  The above script uses an in-memory SQLite database, so it doesn’t leave any messes around on disk. It also logs to STDERR, so I can see all the SQL that is produced, and it turns off colorized 
+		  logging (because I prefer a white-background terminal and AR’s colors aren’t very friendly to that). It then defines the tables using ActiveRecord::Schema, defines the classes, adds some data, 
+		  and then manipulates the data.<br /><br />
+		  Nice and simple! (Note that ActiveRecord::Schema is only available in the beta gems, currently, but everything else should work with the released version of AR.)
+		  </p>
+		</div>
+	    <div class="post-meta">
+	      Posted in General | 2 comments | no trackbacks
+	    </div>
+     </div>
+	 
+   </div>
+</div>
+</body>
+</html>

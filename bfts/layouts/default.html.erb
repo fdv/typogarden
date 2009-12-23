@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+	<meta http-equiv="CACHE-CONTROL" content="NO-CACHE" />
+	<meta http-equiv="PRAGMA" content="NO-CACHE" />
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/bfts", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/user-styles", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+  <script type="text/javascript" src="http://www.makepovertyhistory.org/oneband/oneband_small_right.js"> </script>
+</head>
+<body>
+  <div id="container" class="clearfix">
+
+<div id="making-of">
+	for the inebriation of <a href="/">The Soul</a>
+</div>
+
+
+      <div id="header">
+        <div id="logo">
+          <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+          <h2 id="subtitle"><%= this_blog.blog_subtitle %></h2>
+        </div>
+      </div>
+    
+      <div id="content" class="clearfix">
+        <div id="main">
+          <%= @content_for_layout %>
+          <%= javascript_tag "show_dates_as_local_time()" %>
+        </div>
+        <div id="sidebar">
+
+            <div id="search"> <%= render :partial => "shared/search" %></div>
+          
+            <div id="search-results"></div>
+
+	<div id="sidebar-containers">
+
+            <%= render_sidebars %>
+
+				<br /><br />
+            <a href="http://blog.thebarproject.com/xml/rss20/feed.xml">
+					<img src="/images/theme/RSS.gif" alt="RSS 2.0 feed" />
+				</a><br />
+				<%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %><br />
+				<a href="http://spreadfirefox.com/community/"><img border="0" alt="Get Firefox!" title="Get Firefox!" src="http://sfx-images.mozilla.org/affiliates/Buttons/88x31/get.gif"/></a><br />
+								
+	</div>
+
+            </div>
+
+            <br clear="all" />
+      </div>
+      <div id="footer">
+        <a href="http://validator.w3.org/check?uri=referer"><img src="/files/w3cxhtml.gif" alt="XHTML" /></a>
+        <a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>"><img alt="CSS" src="/files/w3ccss.gif" /></a>
+        
+      </div>
+  </div>
+</body>
+</html>

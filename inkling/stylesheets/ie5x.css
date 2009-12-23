@@ -1,0 +1,46 @@
+/* Inkling IE5x specific styles */
+
+body{
+	text-align: right;
+	font-size: x-small;
+}
+
+#wrap,
+#header,
+#footer{
+	text-align: left;
+}
+
+#search form{
+	width: 50%;
+}
+
+#content{
+	width: 52%;
+	height: 600px;
+	padding: 1% 0 2% 2%;
+}
+
+#rightbar{
+	position: relative;
+}
+
+#sidebar,
+#searchbar{
+	width: 30%;
+}
+
+dl.entries dt span.date,
+h2 span.date{
+	left: -60px;
+	width: 40px;
+	height: 110px;
+}
+
+a.valid{
+	float: left;
+}
+
+textarea{
+	width: 70%;
+}

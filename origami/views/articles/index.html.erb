@@ -1,0 +1,14 @@
+<!--<h2 id="latest-posts" class="section-title">Latest Posts</h2>
+--><% 
+postCounter = 0
+for article in @articles 
+	postCounter = 1 - postCounter
+-%>
+ <div class="post <%= (postCounter == 1 ? "normal-post" : "alternate-post") %>">
+  <%= render :partial => "articles/article", :object => article %>
+  <%= article_link "Read more...", article if article.extended? %>  
+  <p class="meta"><%= article_links article %></p> 
+  </div>
+<% end -%>
+
+  <p id="pagination"><%= will_paginate @articles %></p>

@@ -1,0 +1,240 @@
+body {
+	background: #f6f6f6 url(../../images/theme/background.gif) top center repeat-x;
+	margin: 0;
+	padding: 40px 20px;
+	font-family: Helvetica, "x-small Georgia", Serif;
+	text-align:center;
+	color: #666;
+	font: 12px/1.6em Helvetica;
+}
+
+a:link {
+	color: #CD6500;
+	text-decoration:none;
+}
+a:visited {
+	color: #CD6500;
+	text-decoration:none;
+}
+a:hover {
+	color: #E5A260;
+	text-decoration:none;
+}
+a img { border-width: 0; }
+
+
+#job_call {
+	margin: 0;
+	padding: 0;
+}
+
+#job_call p {
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+#job_call a {
+	color: #fff;
+	font-style: italic;
+}
+
+
+#header {
+	width: 660px;
+	margin: 0 auto 10px;
+}
+
+#header h1 a {
+	margin: 5px 5px 0;
+	padding: 20px 20px .25em;
+	color: #ffffff;
+	letter-spacing: .2em;
+	font: bolder 115%/1.2em Helvetica;
+	text-transform:uppercase;
+}
+
+#header p {
+	margin: 0 5px 5px;
+	padding: 0 20px 20px;
+	font: bolder 90%/1.4em Helvetica, "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+	letter-spacing:.2em;
+	color: #ffffff;
+}
+
+
+
+#content {
+	width: 660px;
+	margin: 0 auto;
+	margin-top: 200px;
+	padding: 0;
+	text-align: left;
+}
+
+#main {
+	float: left;
+	width: 410px;
+}
+
+#sidebar {
+	float: right;
+	margin-top: -10px;
+	width: 220px;
+}
+
+
+
+h3 {
+	margin: 1.5em 0 .75em;
+	font: bolder 105%/1.4em Helvetica, "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #6493c3;
+}
+
+h4 {
+	margin: 0;
+	padding: 0;
+	color: #006CBB;
+	font: 200%/1em Helvetica;
+}
+
+h5 {
+	margin: 1.5em 0 .75em;
+	font: bolder 100%/1.4em Helvetica, "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .2em;
+	color: #02A7DF;
+}
+
+
+
+.post {
+	margin: .5em 0 3.5em;
+	border-bottom: 1px dotted #666;
+	padding-bottom: 1.5em;
+}
+
+.post h2 {
+	margin: .25em 0 0;
+	padding: 0 0 0px;
+	color: #006CBB;
+	font: 200%/1em Helvetica;
+	text-transform: none;
+}
+
+.post h2 a {
+	display: block;
+	text-decoration :none;
+	color: #006CBB;
+	font-weight: normal;
+}
+
+.post div {
+	margin: 0 0 .75em;
+	line-height: 1.6em;
+	color: #909090;
+	text-align: justify;
+}
+
+p.auth, p.meta {
+	clear: both;
+	margin: 10px 0 5px 0;;
+	color:#ccc;
+	font: bolder 78%/1.4em Helvetica, "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .25em;
+}
+
+.post img {
+	float: right;
+	padding:4px;
+	margin: 0 0 15px 15px;
+	border: 1px solid #ccc;
+	background: #fff;
+}
+
+
+
+ol {
+	margin: 0 0 2em 0;
+	padding: 0;
+	list-style: none;
+}
+
+ol li {
+	margin: .5em 0;
+	padding: 0;
+	color: #909090;
+	font: 12px/1.6em Helvetica;
+}
+
+ol li cite {
+	display: block;
+	font: bold 14px/0em Helvetica;
+	margin: 2.5em 0 0 0;
+	padding: 0;
+	text-transform: uppercase;
+}
+
+
+
+#sidebar ul {
+	margin: 0 0 1.5em;
+	padding: 0 0 1.5em;
+	border-bottom: 1px dotted #666;
+	list-style: none;
+}
+
+#sidebar li {
+	font: bolder 88%/2em Helvetica, "Trebuchet MS", Trebuchet, Arial, Verdana, Sans-serif;
+	margin: 0;
+	padding: 0 0 .25em 15px;
+	text-indent: -15px;
+	line-height: 1.5em;
+}
+
+#sidebar p {
+	color: #666;
+	line-height: 1.5em;
+}
+
+#sidebar a:link {
+	color: #CD6500;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#sidebar a:visited {
+	color: #CD6500;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+#sidebar a:hover {
+	color: #FF8A34;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+
+
+
+#footer {
+	width: 660px;
+	clear: both;
+	margin: 0 auto;
+}
+
+#footer hr {
+	display: none;
+}
+
+#footer p {
+	margin: 0;
+	padding-top: 15px;
+	font: 78%/1.6em "Trebuchet MS",Trebuchet,Verdana,Sans-serif;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+}

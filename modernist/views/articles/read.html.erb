@@ -1,0 +1,96 @@
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about=""
+    trackback:ping="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+    dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
+    dc:identifier="<%= url_for :controller=>"articles", :action=>"read", :id=>@article %>"
+    dc:description="<%=h (@article.html.strip_html[0..255]).gsub(/-+/, '-') %>"
+    dc:creator="<%= h @article.author %>"
+    dc:date="<%= @article.updated_at.xmlschema %>" />
+</rdf:RDF>
+-->
+
+<div class="flip">
+<a href="#header" onclick="new Effect.ScrollTo('header'); return false" class="flip-top" title="Scroll to the top"> </a>
+<% if @article.comments.size > 0 -%>
+<a href="#comments" onclick="new Effect.ScrollTo('comments'); return false" class="flip-comments" title="Scroll to the comments"> </a>
+<% end -%>
+<% if @article.allow_comments? and @article.comments.size == 0 -%>
+<a href="#commentform" onclick="new Effect.ScrollTo('commentform'); return false" class="flip-post" title="Scroll to the comment form"> </a>
+<% end -%>
+<a href="#menu" onclick="new Effect.ScrollTo('menu'); return false" class="flip-menu" title="Scroll to the menu"> </a>
+</div>
+
+    
+<h3 <%= onhover_show_admin_tools(:article) %>>
+    <%= link_to_permalink @article, @article.title %>
+    <%= author_link(@article) %>
+    <span class="h-date"><%=  @article.created_at.strftime("%b. %d") %></span>
+    <%= link_to("edit", { :controller => "admin/content", :action => "edit", :id => @article },
+            :class => "admintools", :style => "display: none", :id => "admin_article") %>
+</h3>
+
+<%= @article.html %>
+
+
+<div class="post-meta">
+    <div>
+        <ul>
+
+            <li><a href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'atom', :id => @article %>">Atom feed</a></li>
+            <li><a href="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>">Trackback URI</a></li>
+
+            <%=
+
+            '<li class="post-meta-cat">'+@article.categories.collect { |c| link_to c.name,
+          { :controller=>"articles", :action=>"category", :id=>c.permalink },
+          :rel => "category tag"
+        }.join('</li><li class="post-meta-cat">')+'</li>'
+
+            %>
+
+
+        </ul>
+        <span class="clear"> </span>
+    </div>
+</div>
+
+<div class="leaf">&nbsp;</div>
+
+
+
+    <div id="comments" <%= 'style="display:none;"' unless @article.comments.size > 0 -%>>
+    <div class="flip">
+    <a href="#header" onclick="new Effect.ScrollTo('header'); return false" class="flip-top" title="Scroll to the top"> </a>
+    <% if @article.allow_comments? -%>
+    <a href="#commentform" onclick="new Effect.ScrollTo('commentform'); return false" class="flip-post" title="Scroll to the comment form"> </a>
+    <% end -%>
+    <a href="#menu" onclick="new Effect.ScrollTo('menu'); return false" class="flip-menu" title="Scroll to the menu"> </a>
+    </div>
+    
+    <h3><span class="green">Commentary</span> (<%= (@article.comments.size > 0) ? @article.comments.size : 1 %>)</h3>
+    
+    <%= content_tag(:ol, render(:partial => "comment", :collection => @article.comments.to_a.select {|c| c.published? }), :id => 'commentList', :class => 'comment-list') %>
+    </div>
+
+
+<% if @article.allow_pings? and @article.trackbacks.size > 0 -%>
+    <div id="trackbacks">
+    <div class="flip">
+    <a href="#header" onclick="new Effect.ScrollTo('header'); return false" class="flip-top" title="Scroll to the top"> </a>
+    <a href="#menu" onclick="new Effect.ScrollTo('menu'); return false" class="flip-menu" title="Scroll to the menu"> </a>
+    </div>
+    <h3><span class="green">Trackbacks</span> (<%= @article.trackbacks.size %>)</h3>
+    <%= content_tag(:ol, render(:partial => "trackback", :collection => @article.trackbacks), :id => 'trackbackList', :class => 'trackback-list') %>  
+    </div>
+<% end -%>
+
+
+<% if @article.allow_comments? -%>
+    <%= render :partial => 'comment_box' %>
+<% else -%>
+    <p>Comments are disabled</p>
+<% end -%>

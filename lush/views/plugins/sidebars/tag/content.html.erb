@@ -1,0 +1,14 @@
+<% unless @tags.blank? -%>
+<h3>Tags</h3>
+<p style="overflow:hidden" id="tagcloud">
+<% @tags.each do |tag| -%>
+<% thesize = ((tag.article_counter * @font_multiplier)/10).round %>
+<% thesize = 9 if (thesize < 9) %>
+<% thesize = 26 if (thesize > 26) %>
+<span style="font-size:<%= thesize %>px"><%= link_to tag.name, :controller => "articles", :action => "tag", :id => tag.name %></span>
+<% end -%>
+</p>
+<ul>
+<li><%= link_to 'View all tags', :controller => "articles", :action => "tag" %></li>
+</ul>
+<% end %>

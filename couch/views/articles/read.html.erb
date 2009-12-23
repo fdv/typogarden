@@ -1,0 +1,60 @@
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about=""
+    trackback:ping="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+    dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
+    dc:identifier="<%= url_for :controller=>"articles", :action=>"read", :id=>@article %>"
+    dc:description="<%=h (@article.html.strip_html[0..255]).gsub(/-+/, '-') %>"
+    dc:creator="<%= h @article.author %>"
+    dc:date="<%= @article.updated_at.xmlschema %>" />
+</rdf:RDF>
+-->
+
+<div class="post">
+  <h2><%= @article.title %></h2>
+  
+  <%= @article.html(:body) %>
+  <hr class="artdivider">
+  <p class="auth">-Posted <%= js_distance_of_time_in_words_to_now @article.created_at.utc %> by <%= author_link(@article) %><br />
+      <span class="truedate"><%= @article.created_at %></span>
+    </p>
+</div>
+<div id="comments">
+<% if @article.allow_comments? or @article.comments.size > 0 -%>
+  <a name="comments"></a><h2>Comments</h2> 
+
+  <p class="postmetadata">
+    <% if @article.allow_comments? -%>
+    <a href="#respond">Leave a response</a> |
+    <% end -%>
+    <a href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'atom', :id => @article %>">Atom feed for this post</a> |
+    <a href="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>">trackback uri</a>  
+</p>
+
+  <%= content_tag(:ol, render(:partial => "comment", :collection => @article.comments), :id => 'commentList', :class => 'comment-list') %>
+<% end -%>
+
+<% if @article.allow_pings? -%>
+  <a name="trackbacks"></a><h2>Trackbacks</h2>
+  <p>
+    Use the following link to trackback from your own site:<br/>
+    <%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>
+    </p>    
+  <%= content_tag(:ol, render(:partial => "trackback", :collection => @article.trackbacks), :id => 'trackbackList', :class => 'trackback-list') %>  
+<% end -%>
+
+
+
+  
+  
+
+
+<% if @article.allow_comments? -%>
+  <%= render :partial => 'comment_box' %>
+<% else -%>
+  <p>Comments are disabled</p>
+<% end -%>
+</div>

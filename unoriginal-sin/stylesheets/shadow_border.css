@@ -1,0 +1,11 @@
+/* =Shadow border
+------------------------------------------------------------------------------*/
+
+#shadow-top-left { background: url(/images/theme/top-left-corner.jpg) no-repeat top left; }
+#shadow-top-right { background: url(/images/theme/top-right-corner.jpg) no-repeat top right; }
+#shadow-top { background: url(/images/theme/top.jpg) repeat-x; }
+#shadow-left { background: url(/images/theme/left.jpg) repeat-y; }
+#shadow-right { background: url(/images/theme/right.jpg) repeat-y right; }
+#shadow-bottom { background: url(/images/theme/bottom.jpg) repeat-x bottom; }
+#shadow-bottom-right { background: url(/images/theme/bottom-right-corner.jpg) no-repeat bottom right; }
+#shadow-bottom-left { background: url(/images/theme/bottom-left-corner.jpg) no-repeat bottom left; }

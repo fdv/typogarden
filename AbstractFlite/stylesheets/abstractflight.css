@@ -1,0 +1,486 @@
+/*+-------------------------------------------+
+  |      AbstractFlight Screen Styles    	  |
+  +-------------------------------------------+*/
+
+body {
+	margin: 0;
+	text-align: center;
+	background: #8ab3d1 url(../../images/theme/Background.jpg) repeat-x;
+	font: 1em/1.2em "Trebuchet MS", "Times New Roman", sans-serif;
+	color: #333;
+}
+	
+#container {
+	margin: 0 auto;
+	width: 666px;
+	text-align: left;
+	background: #fff url(../../images/theme/bodybg.gif) repeat-y;
+	border: 0px;
+	font-size: 80%;
+}
+	
+#header { 
+	width: 666px;
+	margin: 0;
+	padding: 0;
+}
+
+#header #title {
+	background: #fff url(../../images/theme/Banner.jpg);
+	width: 666px;
+	height: 137px;
+	padding: 0;
+	margin: 0;
+	border-bottom: 1px solid #fff;
+}
+
+#header #title h1 {
+	padding: 15px 0 0 15px;
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#header #subtitle {
+	width: 666px;
+	height: 24px;
+	padding: 0;
+	margin: 0;
+	background: #377aca;
+	border-bottom: 1px solid #fff
+}
+
+#header #subtitle h2 {
+	color: #fff;
+	font-size: 1em;
+	text-align: right;
+	font-style: italic;
+}
+	
+#search {
+	height: 24px;
+	margin: 0 0 10px 0;
+	color: #fff;
+}	
+	
+#content {
+	margin-top: 7px;
+}
+
+#main { 
+	float: left;
+	width: 455px;
+	padding-left: 10px;
+}
+	
+#sidebar {
+	margin-left: 470px;
+	padding-left: 10px;
+	padding-right: 5px;
+}
+	
+#footer {
+	background: #7F7F7F;
+	margin-top: 7px;
+	height: 35px;
+	text-align: left;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+#footer img { 
+	border: none; 
+	margin-top: 30px; 
+}
+	
+/*+-------------------------------------------+
+  |   			LINKS 						  |
+  +-------------------------------------------+*/
+a {
+	color: #5189b5;
+	text-decoration: none;
+	border-bottom: 1px dotted #5189b5;
+}
+	
+a:hover { 
+	color: #FCA93F; 
+	border-bottom-color: #FCA93F; 
+}
+
+#header a {
+	color: #fff;
+	text-decoration: none;
+	border: none;
+}
+	
+#header a:hover { 
+	color: #fff; 
+}
+
+#footer a { 
+	border: none;
+	color: #fff;
+}
+
+/*+-------------------------------------------+
+  |   			UTILITY 					  |
+  +-------------------------------------------+*/
+  
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+	
+form, div { 
+	padding: 0; 
+	margin: 0; 
+}
+  
+p {
+	margin: 0 0 1em 0; 
+	padding: 0; 
+}
+
+img {
+	border: 0;
+}
+
+  
+/*+-------------------------------------------+
+  |   			HEADER 						  |
+  +-------------------------------------------+*/
+  
+#logo {
+	padding-top: 50px;
+}
+	
+#logo h1 a { 
+	color: #fff; 
+	text-decoration: none; 
+	border: none;
+}
+
+#logo h2 { 
+	color: #fff; 
+	padding-top: .2em; 
+	font-size: 1.2em; 
+	text-decoration: underline;
+}
+
+
+/*+-------------------------------------------+
+  |   			        SEARCH
+  +-------------------------------------------+*/	
+
+#searchbox {
+	width: 156px;
+	height: 25px;
+	float: left;
+	margin-right; 3px;
+	overflow: hidden;
+	margin-left: -3px;
+	background: url(../../images/theme/searchBox.gif) top left no-repeat;
+}
+
+#searchbox input {
+	height: 18px;
+	width: 120px;
+	float: left;
+	background: transparent;
+	border: 0;
+	margin: 3px 9px 0 13px;
+	padding: 3px 7px 0 0;
+	font-size: 9px;
+	color: #000;
+	overflow: hidden;
+}
+
+div.searching#searchbox {
+	background: url(../../images/theme/searchBox.gif) 0 -24px no-repeat transparent;
+}
+
+#sform { 
+ 	padding-top: 0px; 
+}
+
+#sidebar #searchform #s {
+	width: 130px;
+	margin-top: 20px;
+}
+
+#sidebar #searchsubmit {
+	padding: 1px;
+}
+	
+
+#search-results {
+	padding: 0px;
+	margin: 0 10px 10px 0;
+}
+
+#search_spinner {
+	color: #fff;
+	font-size: 0.8em;
+	padding-left: 2px;
+}
+  
+
+/*+-------------------------------------------+
+  |   			POST
+  +-------------------------------------------+*/
+.post {
+	display: block;
+	margin: 0 0 20px 5px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #fff;
+}
+	
+.post h2 {
+	padding: 5px 0 5px 5px;
+	color: #000;
+	font: normal 130%/1.2em Arial, Verdana, Helvetica, sans-serif;
+	border:none;
+}
+	
+.post h2 a {
+	color: #000;
+	text-decoration: none;
+	border: none;
+}
+	
+.post h2 a:hover {
+ 	color: #00;
+ 	border-bottom: 1px dotted #fff;
+}
+	
+p.meta {
+  	font-size: 80%;
+	text-align: right;
+	margin-right: 5px;
+}
+	
+p.auth {
+ 	padding: 0 0 0 12px;
+	font-size: 85%;
+	margin-left: 10px;
+	font-weight: bold;
+	color: #5189b5;
+	background: url(../../images/theme/bracket.gif) no-repeat;
+}
+	
+h4.blueblk {
+ 	padding: 5px;
+ 	margin: 10px 0;
+ 	border-top: 1px dotted #acacac;
+ 	color: #000;
+	text-decoration: italic;
+ }
+ 	
+ 	
+/*+-------------------------------------------+
+  |   			      COMMENTS			      |
+  +-------------------------------------------+*/
+
+.comment-list li {
+	background: #fff;
+	margin-bottom: 5px;
+	padding: 5px 0 1px 5px;
+	border-left: 1px dotted #acacac;
+  	color: #555;
+}
+
+.postmetadata {
+	margin: 0;
+	padding: 0;
+}
+  	
+ 
+/*+-------------------------------------------+
+  |   			SIDEBAR 				      |
+  +-------------------------------------------+*/
+  
+#sidebar h3 {
+	display: inline;
+	background: url(../../images/theme/bullet.png) no-repeat center right;
+ 	font-size: 1em;
+ 	color: #000;
+ 	margin-top: 25px;
+	padding-right: 14px;
+	font-style: italic
+ }
+ 		
+#sidebar h3 a {
+	color: #000;
+	border-bottom: 1px dotted #fff;
+	font-style: italic;
+}
+
+#sidebar h3 a:hover { 
+	color: #fff; 
+	border-bottom-color: #fff; 
+	font-style: italic;
+}
+
+#sidebar ul {
+	display: block;
+ 	margin: 0 0 10px 0;
+ 	padding: 0;
+ 	list-style-type: none;
+}
+ 		
+#sidebar ul li { 
+ 	padding-left: 5px;
+	font-size: 0.9em;
+}
+
+#sidebar ul li a {
+	color: #ccc;
+	border: none;
+}
+
+#sidebar ul li a:hover {
+	color: #fff;
+	border: none;
+}
+ 	 
+#flickr div img {
+ 	border: 2px solid #fff;
+}
+ 	
+#flickr div {
+	width: 104px;
+	margin-bottom: 5px;
+	margin-left: 1px;
+}
+
+#flickr div.flickrsquare { 
+	width: 82px;
+	float: left;
+	margin-right: 4px;
+}
+
+#flickr div a {
+	border: none; 
+}
+  
+  
+/*+-------------------------------------------+
+  |   			FOOTER 		                  |
+  +-------------------------------------------+*/
+  
+#footer ul {
+	margin: 0;
+	padding: 8px 0 0 10px;
+	list-style: none;
+}
+  	
+#footer ul li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	font-size: 75%;
+}
+ 
+  	
+/*+-------------------------------------------+
+  |   			       FORMS 	              |
+  +-------------------------------------------+*/
+   
+input, textarea, select {
+ 	border: 1px solid #8ab3d1;
+ 	background: #f9f9f9;
+}
+ 	
+.frm-tbl td { 
+	vertical-align: top; 
+	padding: 5px; 
+}
+ 
+td#frm-btns {
+	text-align: right;
+}
+ 	
+#comment_body { 
+	height: 220px;
+}
+
+#form-submit-button { 
+	background: #d3e0ea;
+}
+
+  
+/*+-------------------------------------------+
+  |   		          	MISC 			      |
+  +-------------------------------------------+*/
+   
+.powered { 
+	border: none; 
+}
+
+.powered img { 
+	margin-top: 20px;
+}
+
+.pullquote {
+	width: 30%;
+	float:right;
+	font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+	color: #666;
+	margin:10px;
+	background: url(/images/theme/q-close.gif) no-repeat 70% 100% !important;
+	background /**/:url(); /* removing quote graphic in IE5+ */
+	padding: 0 25px 5px 0;
+}
+
+.pullquote:first-letter {
+	background: url(/images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+.light-bg { 
+	background: #f7f7f7; 
+	padding: 2px;
+}
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+ 
+#errors {
+   color: red;
+}
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] {
+	border: none;
+}
+
+/* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+#categories li em, #archives li em {
+	color: #fff;
+	font-size: smaller;
+}

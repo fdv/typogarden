@@ -1,0 +1,8 @@
+<%= render :partial => 'articles/article', :collection => @articles %>
+
+<div class="navigation">
+  <div class="alignleft">
+    <%= will_paginate @articles%>
+  </div>
+  <div class="alignright"></div>
+</div>

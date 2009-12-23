@@ -1,0 +1,55 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/fundamental" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+</head>
+<body>
+  <div id="page">
+    <div id="header">
+      <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+      <h4 id="subtitle"><%= this_blog.blog_subtitle %></h4>
+    </div>
+
+    <div id="main">
+      <%= @content_for_layout %>
+      <%= javascript_tag "show_dates_as_local_time()" %>
+    </div>
+
+    <div id="footer"></div>
+  </div>
+
+  <div id="sidebar">
+    <div id="search">
+      <h4 class="search">Search</h4>
+
+			<% form_tag({ :controller => 'articles', :action => 'search' },
+			            { :method => 'get', :id => 'sform' }) do -%>
+      <input type="text" id="q" name="q" value="" size="15" />
+      <%= image_tag "/images/theme/spinner.gif", :id => 'search_spinner', :style => 'display: none;' %>
+      <% end %>
+    </div>
+    <div id="search-results"></div>
+      <%= observe_field "q", :frequency => 1, 
+          :url => { :controller => "live", :action => "search" }, 
+          :loading => "Element.show('search_spinner')",
+          :complete => "Element.hide('search_spinner')",
+          :update => "search-results" -%>
+
+    <%= render_sidebars %>
+
+    <div id="pagemeta">
+      <h4>Meta</h4>
+
+      <ul>
+      <li><a href="http://validator.w3.org/check?uri=referer">Valid XHTML 1.0</a></li>
+      <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">Valid CSS</a></li>
+      </ul>
+    </div>
+
+    <%= link_to image_tag('../../images/theme/powered.gif'), "http://typosphere.org" %>
+  </div>
+</body>
+</html>

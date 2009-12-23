@@ -1,0 +1,451 @@
+/* Typomate Screen Styles */
+
+html {
+	font-size: 62.5%;
+}
+body {
+	margin: 0;
+	padding: 2em 4em;
+	background: #be3431;
+	color: #000;
+	font-size: 1em;
+	font-family:"lucida grande", verdana, sans-serif;
+	line-height:1.5;
+}
+
+#wrapper {
+	position:relative;
+	padding:0 34px 0 28px;
+	min-width: 750px;
+	max-width: 2000px;
+}
+
+#tl {
+	position:absolute;
+	top:0;
+	left:0;
+	width:28px;
+	height:70px;
+	background:url(../../images/theme/corner-tl.png) no-repeat;
+}
+#tr {
+	position:absolute;
+	top:0;
+	right:0;
+	width:34px;
+	height:70px;
+	background:url(../../images/theme/corner-tr.png) no-repeat;
+}
+
+#bl {
+	position:absolute;
+	bottom:0;
+	left:0;
+	width:28px;
+	height:49px;
+	background:url(../../images/theme/corner-bl.png) no-repeat;
+}
+
+#br {
+	position:absolute;
+	bottom:0;
+	right:0;
+	width:34px;
+	height:49px;
+	background:url(../../images/theme/corner-br.png) no-repeat;
+}			
+
+
+#content { 
+	background: url(../../images/theme/tile.png) repeat-y 30% 0;
+	margin: 0;
+}
+
+#content-bl { 
+	background: url(../../images/theme/border-l.png) repeat-y 0 0;
+	margin-left:-28px;
+	padding-left:28px;
+}
+#content-br { 
+	background: url(../../images/theme/border-r.png) repeat-y 100% 0;
+	margin-right:-34px;
+	padding-right:34px;
+}
+
+#content-head {
+	padding:8px 0 0 30%;
+	height:62px;
+	background:  url(../../images/theme/top.png) no-repeat 30% 0;
+	text-align:center;
+}
+
+#content-foot {
+	height:41px;
+	background:  url(../../images/theme/bottom.png) no-repeat 30% 0;
+	padding: 8px 0 0 30%;	
+}
+
+#main {
+	float:left;
+	width:70%;
+	color:#ddd;
+}
+
+#main-content {
+	padding: 0 15px 1em 15px;
+	font-family:"Bitstream Vera Sans Mono", "lucida grande", verdana, sans-serif;
+	
+}
+
+#sidebar {
+	float:left;
+	width:30%;
+	line-height: 1.6;	
+}
+
+#sidebar-content {
+	padding: 0 25px 0 0;
+}
+
+#search {
+	position:absolute;
+	top: 31px;
+	left: 38px;
+	padding: 1em 0;
+}
+
+	
+	/*+-------------------------------------------+
+	  |   			LINKS 						  |
+	  +-------------------------------------------+*/
+	small { font-size : 1em;} 
+
+
+	a {
+		color:#ff0;
+		text-decoration: none;
+		border-bottom:1px dotted #ff0;
+	}
+
+	a:hover { border-bottom:1px solid #ff0; }
+
+	/*+-------------------------------------------+
+	  |   			WHITESPACE RESET 					  |
+	  +-------------------------------------------+*/
+
+	  h1, h2, h3, h4, h5, h6 {
+	  margin: 0;
+		padding: 0;
+		}
+
+	  form, div { padding: 0; margin: 0; }
+	  p { margin: 0 0 1em 0; padding: 0; }
+	  img { border: 0; }
+
+
+	/*+-------------------------------------------+
+	  |   			HEADER 						  |
+	  +-------------------------------------------+*/
+
+h1 a { 
+	color: #fff;
+	font-weight:700;
+	font-family: Georgia, serif;
+	letter-spacing:.07em;
+	padding:1em;
+	text-decoration: none;
+	text-shadow:#444 0px 1px 3px;
+	border:0;
+ }
+h1 a:hover {
+	color:#fff;
+	border:0;
+}
+
+#content-head img { vertical-align : middle; }
+
+#content-head h2 {
+		font-size:1.2em;
+		line-height:1;
+		font-weight:normal;
+		color:#000;
+		display:inline;
+		margin-left:4px;
+		vertical-align : middle;
+}
+	
+#typomate-red,
+#typomate-orange,
+#typomate-green {
+	float:left;
+	margin: 3px 7px 0 0;
+	cursor: pointer;
+	width:14px;
+	height:14px;
+}
+
+#typomate-red {
+	margin-left:-15px;
+}
+
+
+
+
+	/*+-------------------------------------------+
+	  |   			        SEARCH     						    |
+	  +-------------------------------------------+*/	
+
+	 #sidebar #q { 
+		background:#fff; 
+		border: 1px solid #666; 
+		color:#000;
+		margin-left:5px; 
+	}
+	#search_spinner { vertical-align: middle;} 
+
+	#sidebar #searchform #s { }
+
+	 #sidebar #searchsubmit {
+		}
+
+	 #search-results {
+		margin-bottom:1.5em;
+		padding:0 10px;
+		line-height:1.5;
+		background: url(../../images/theme/search-bgd.png);
+		color:#666;
+	}
+	 #sidebar #search-results ul {
+		margin:0;
+		padding:0 0 1.2em 0;
+	}	
+	 #sidebar #search-results li {
+		 background: url(../../images/theme/arrow.gif) no-repeat 0 0;
+		padding-left: 14px;
+		margin-left:0;
+	}
+	/*+-------------------------------------------+
+	  |   			POST 						                  |
+	  +-------------------------------------------+*/
+	.post {
+	 margin: 1em 0 0 0 ;
+	 border-bottom: 1px dashed #999;
+	 padding-bottom: 1em;
+	 }
+
+	.post h2 {
+		font: bold 1.6em/1.2 Helvetica, Arial, Verdana, Helvetica, sans-serif;
+		color: #6c3;
+
+	 }
+
+	.post h2 a {
+	 	color: #6c3;
+	 	border-bottom:1px dotted #6c3;
+	  	text-decoration:none;
+	 }
+
+	.post h2 a:hover {
+	  	border:0;
+	  	border-bottom:1px solid #6c3;
+	  }
+
+	 p.meta {
+	  text-align: right;
+	  margin:.5em 0;
+	  color: #999;
+	  }
+	  p.meta strong {
+	  font-weight:normal;
+	  }
+
+
+	 p.auth {
+	 	padding: .5em 0 .5em 12px;
+		margin-left: 10px;
+		color: #999;
+		background: url(../../images/theme/bracket.gif) no-repeat;
+		}
+
+	 h4.blueblk {
+		font: bold 1.6em/1.2 Helvetica, Arial, Verdana, Helvetica, sans-serif;
+		color: #6c3;
+	 	margin: 1em 0 0 0;
+	 	}
+
+	 /*+-------------------------------------------+
+	  |   			      COMMENTS						         |
+	  +-------------------------------------------+*/
+		.comment-list {
+			margin: 1em 0 ;
+			border-bottom: 1px dashed #999;
+			padding-bottom: 0;		
+		}
+
+	  .comment-list li, blockquote, q {
+		font-style: italic;
+		background: #353535;
+	  	padding: 10px 10px;
+	  	margin-bottom: 1em;
+	  	color: #ccc /* #cc7833 */ ;
+	  	}
+
+
+
+
+	 /*+-------------------------------------------+
+	  |   			TRACKBACKS 						               |
+	  +-------------------------------------------+*/
+
+
+		.trackback-list {
+			margin: 1em 0 ;
+			border-bottom: 1px dashed #999;
+			padding-bottom: 0;		
+		}
+
+	 /*+-------------------------------------------+
+	  |   			SIDEBAR 						               |
+	  +-------------------------------------------+*/
+
+	 #sidebar h3 {
+		margin:1.2em 5px 0 10px;
+		padding-left:33px;
+		background: url(../../images/theme/folder_icon.gif) no-repeat 0 50%;
+		font-weight:normal;
+		font-size:1em;
+	}
+
+
+	#sidebar h3 a {
+	/*  	color: #c83730;
+	  	border-bottom: 1px dotted #c83730;
+	*/
+		color:#000;
+		border:0;
+
+	}
+	#sidebar h3 a:hover {
+	  	border-bottom: 1px solid #000;
+	}
+
+	#sidebar a {
+		font-weight:normal;
+		color:#000;
+		text-decoration: none;
+		border:0;
+	}
+	#sidebar a:hover { border-bottom:1px solid #000; }
+
+	#sidebar ul {
+	 		margin: 0 5px 1.2em 10px;
+	 		padding: 0;
+	 		list-style-type: none;
+	}
+
+	#sidebar ul li { 
+	 	padding-left: 17px;
+		margin-left: 33px;
+		background: url(../../images/theme/document_icon.gif) no-repeat 0 0 ;
+	}
+	#sidebar ul li a {
+	} 	 
+	 #flickr div img {
+	 	}
+
+	 #flickr div {
+	   width: 108px;
+		margin:.8em 5px 1.2em 43px;
+	}
+
+	 #flickr div.flickrsquare { 
+	        width: 82px;
+	        border-right: 3px solid #fff;
+	        float:left;
+	        margin-right: 5px;
+	        margin-right: 5px;
+	  }
+
+	  #flickr div a { border: none; }
+
+	 /*+-------------------------------------------+
+	   |   			FOOTER 						                 |
+	   +-------------------------------------------+*/
+	  #content-foot ul {
+	  	margin: 0 0 0 15px;
+	  	padding: 0;
+	  	list-style: none;
+	  	}
+
+	  #content-foot ul li {
+	  	display: inline;
+	  	margin: 0;
+	  	padding: 0 10px 0 0;
+	  	}
+		#content-foot a { border: 0; color:#000;}
+		#content-foot a:hover { border-bottom: 1px solid #000; color:#000;}
+	 /*+-------------------------------------------+
+	   |   			       FORMS 						           |
+	   +-------------------------------------------+*/
+
+	 input, textarea, select {
+		border: 0;
+	 	background: #666;
+		color:#fff;
+		font-family: "Bitstream Vera Sans Mono", "lucida grande", verdana, sans-serif;
+		font-size:1em;
+		padding: 2px 5px;
+	}
+
+	select {
+		padding: 0;
+	}
+
+	 	.frm-tbl td { vertical-align: top; padding: 5px; }
+	 	td#frm-btns { text-align: right; }
+
+	 	#comment_body { height: 220px; }
+	 	#form-submit-button { background: red;  }
+
+	 /*+-------------------------------------------+
+	   |   		          	MISC 						         |
+	   +-------------------------------------------+*/
+	.powered { 
+		margin: 1em 0 1.5em 0; 
+		padding:0 0 0 30%; 
+		text-align: center; 
+		display: block; 
+		border:0;
+	}
+	.powered:hover { border:0; }
+	.powered img { border:0; }
+
+	.light-bg {  }
+
+
+	 #errors {
+	   color: red;
+	 }
+
+	.admintools {
+	  float: right;
+	  background-color: red ;
+	  padding: 0 3px;
+	  margin: 0 0 0 4px;
+	  color: #fff;
+	  border:0
+	}
+
+	.admintools:hover {
+		border:0
+	}
+
+	a[name] { border: none; }
+
+
+
+	#categories li em, #archives li em
+	{
+	  font-style: normal;
+		color: red;
+	}

@@ -1,0 +1,36 @@
+<% if @articles.to_a.empty? -%>
+	<div class="post">
+	<h1 class="page-title">Sorry</h1>
+	<p>Sorry there where no articles found in this archive.</p>
+	</div>
+<% else
+     haslooped = false
+     currentmonth = 0
+     currentyear = 0  %>
+     <div class="post normal-post">
+     <h1 class="page-title">Post Archives</h1>
+     <p class="important">Listed below are the archives for <strong><%= this_blog.blog_name %></strong></p>
+     <% for article in @articles 
+		if (article.created_at.month != currentmonth || article.created_at.year != currentyear) 
+			if (haslooped == true) -%>
+				</ul>
+			<% end
+			currentmonth = article.created_at.month
+			currentyear = article.created_at.year
+			haslooped = true
+			-%>
+			<h2><%= Date::MONTHNAMES[article.created_at.month] %> <%= article.created_at.year %></h2>
+			<ul class="arcvives-list">
+		<% end -%>
+		<li>
+		<em><%= article.created_at.mday %></em>
+		<strong><%= link_to_permalink article, article.title %></strong>
+		<% if !article.categories.empty? %>
+			<br /> <small>Posted in 
+			<%= article.categories.collect {|c| link_to c.name, :controller=>"articles", :action=>"category", :id=>c.name }.join(", ") -%></small>
+		<% end -%>
+		</li>
+	<% end -%>
+	</ul>
+	</div>
+<%  end -%>

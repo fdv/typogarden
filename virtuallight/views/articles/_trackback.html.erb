@@ -1,0 +1,10 @@
+<li class="commentEntry trackback" id="trackback-<%= trackback.id %>"<%= onhover_show_admin_tools(:trackback, trackback.id) %>>
+  
+  <a name="trackback-<%= trackback.id %>"></a>
+  <div class="commentFrom">From <strong><%= trackback.blog_name %></strong><br />
+  <a href="<%= trackback.url %>" rel="nofollow"><%= trackback.title %></a><br/></div>
+  <div class="commentBody">  
+	  <%= trackback.excerpt %>
+  </div>	  
+</li>
+

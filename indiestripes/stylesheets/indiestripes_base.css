@@ -1,0 +1,393 @@
+/* Indie Stripes Screen Styles - All Colors*/
+
+/*+-------------------------------------------+
+  |   			   STRUCTURE  	      			 |
+  +-------------------------------------------+*/	
+
+body {
+	margin: 0px;
+	text-align: center;
+	background: #fff;
+	font: 1.1em/1.4em Georgia, Times New Roman, Times, serif;
+	color: #333;
+	}
+	
+#container {
+   width: 690px; 
+   position: absolute; 
+   top: 0; 
+   left: 0; 
+}
+
+#left {
+   float: left; 
+   width:425px; 
+   margin-left: 60px; 
+   margin-top: 30px;
+   text-align: left;
+	font-size: 80%;
+	}
+
+#header { 
+	width: 415px;
+	height: 100px;
+	padding: 0;
+	margin: 0;
+	text-align: left;
+	float: left;
+	}
+
+#content {
+	margin-top: 7px;
+	}
+
+#main { 
+	width: 420px;
+	padding: 1px;
+	}
+
+#search {
+   margin-bottom: 5px;
+	}
+
+#sidebar {
+   text-align: left;
+   font-size: 80%;
+   width: 160px; 
+   margin: -20px 0 0 530px;
+	}
+
+/*+-------------------------------------------+
+  |   			   BASE ELEMENTS      			 |
+  +-------------------------------------------+*/	
+
+h1, h2, h3, h4, h5, h6 {
+ font-family: Georgia, Times New Roman, Times, serif;
+	margin: 0;
+	padding: 0;
+	}
+
+h2 {
+   font-size: 1.4em/1.4em;
+   font-weight: 800;
+}
+
+h1  {
+}
+	
+form, div { padding: 0; margin: 0; }
+p { margin: 0 0 1em 0; padding: 0; }
+img { border: 0; }
+
+em {
+   font-style: normal;
+   font-weight: bold;
+}
+
+dd {
+   margin-left: 0px;
+}
+
+a {
+   text-decoration: none;
+	font-weight: bold;
+	font-size: .9em;
+}
+
+a: visited {
+   font-weight: normal;
+}
+
+blockquote {
+   width: 340px;
+   margin-left: 0px;
+   padding: 10px 20px 0px 20px;
+   font-style: italic;
+   font-size: .9em/.9em;
+}
+
+/*+-------------------------------------------+
+  |   			   HEADER    	      			 |
+  +-------------------------------------------+*/	
+
+#logo {
+	padding: 10px 0 0 0;
+	margin: 0;
+	}
+
+h1#sitename {
+   font-size: 2.8em;
+}	
+
+#logo h1 a { 
+   font-weight: normal; 
+   text-decoration: none; 
+   border: none;
+   margin: 0px;
+   padding: 0px; 
+   line-height: 50%;
+}
+
+#top_image {
+   width: 180px;
+   height: 11px;
+   position: absolute;
+   top: 0;
+   left: 0;
+}
+
+.brace {
+   font: normal 2em/2em Times New Roman, Times, Georgia, serif;
+   font-size: 1.8em;
+}
+
+h2#subtitle {
+   width: 400px;
+   font: normal small-caps 1.7em/1.7em Georgia, Times New Roman, sans-serif;
+   margin-top: 0px;
+   line-height: 100%;
+}
+
+#top_nav {
+   margin: -5px 0 0 0;
+}
+
+#top_nav a, #top_nav a:link,#top_nav  a:active, #top_nav a:hover, #top_nav a:visited {
+   font-size: 1.2em;
+   font-weight: normal;
+   margin-bottom: 5px;
+}
+
+#top_nav a:hover {
+   font-weight: bold;
+}
+
+
+/*+-------------------------------------------+
+  |   			POST 			                   |
+  +-------------------------------------------+*/
+  .post {
+  	margin: 0 0 20px 0px;
+	padding-bottom: 10px;
+	width: 400px;
+	}
+	
+  .post h2 {
+	}
+
+   .post h1 {
+      font-size: 1.8em/1.8em;
+      font-weight: 800;
+   }
+	
+  .post h1 a {
+	text-decoration: none;
+	font-weight: bold;
+	border: none;
+	letter-spacing: .5pt;
+	}
+	
+	h1.title {
+	   margin-top: -5px;
+	}
+
+ .post h1 a:hover {
+   text-decoration: underline;
+  }
+ .post h2 a:hover {
+	}
+
+ div.auth {
+ 	padding: 0 0 0 0;
+	font-size: 90%;
+	margin: 5px 0 0 0;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.user-comment .auth {
+    margin: 0px;
+}
+
+.incidentals {
+   margin-top: -5px;
+   margin-bottom: 5px;
+}
+ .category_links, .article_numbers {
+    font-size: .85em;
+ }
+
+ .category_links {
+    margin-bottom: 0px;
+    height: auto;
+ }
+
+ .article_numbers {
+    margin-top: 0px;
+    height: 18px;
+ }
+
+/*+-------------------------------------------+
+  |   			        SEARCH     				 |
+  +-------------------------------------------+*/	
+
+ #sform { padding-top: 50px; }
+ 
+ #sidebar #searchform #s {
+	width: 130px;
+	margin-top: 0px;
+	}
+
+ #sidebar #searchsubmit {
+	padding: 1px;
+	}
+	
+ #search-results {
+  margin-left: 0px;
+  padding: 2px;
+  width: 150px;
+  }
+  
+/*+-------------------------------------------+
+|   			      COMMENTS				         |
++-------------------------------------------+*/
+#interactions {
+   width: 400px;
+}
+.comment-list li {
+	padding: 5px;
+	margin-bottom: 8px;
+}
+
+.comment-box {
+    margin: 10px 0px 10px 0px;
+}
+
+ .comment-box dl {
+    margin-top: 0px;
+}
+
+.comment-box h3, h3.section_head {
+    width: 400px;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin: 0 0 10px 0;
+}
+
+   
+ /*+-------------------------------------------+
+  |   			SIDEBAR 						       |
+  +-------------------------------------------+*/
+  
+#sidebar h3, #search label {
+		font: 110%/1.5em Georgia, Times New Roman, Times, serif;
+		text-transform: uppercase;
+}
+ 		
+#sidebar h3 {
+ 	margin-top: 10px;
+}
+ 
+#sidebar ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+}
+ 		
+#sidebar ul li { 
+   background-color: #fff;
+ 	padding-left: 17px;
+}
+
+#sidebar ul#syndicate li { 
+ 	padding-left: 22px;
+}
+
+#flickr div img {
+ 	border: 4px solid #fff;
+}
+ 	
+#flickr div {
+   width: 108px;
+ 	border: 2px solid #dbd1c1;
+ 	margin-bottom: 5px;
+}
+
+#flickr div.flickrsquare { 
+        width: 82px;
+        float:left;
+        margin-right: 5px;
+        margin-right: 5px;
+}
+
+#flickr div a { border: none; }
+
+ /*+-------------------------------------------+
+   |   			       FORMS 			           |
+   +-------------------------------------------+*/
+   
+ input, textarea, select {
+ 	border: 1px solid #8ab3d1;
+ 	background: #f9f9f9;
+ 	}
+ 	
+ 	.frm-tbl td { vertical-align: top; padding: 5px; }
+ 	td#frm-btns { text-align: right; }
+ 	
+ 	#comment_body { height: 220px; }
+ 	#form-submit-button { background: #d3e0ea; }
+  
+ /*+-------------------------------------------+
+   |   		          	MISC 						  |
+   +-------------------------------------------+*/
+   
+ .powered { border: none; }
+ .powered img { margin-top: 20px; }
+ .pullquote {
+		width: 30%;
+		float:right;
+		font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+		color: #666;
+		margin:10px;
+		background: url(../../images/theme/q-close.gif) no-repeat 70% 100% !important;
+		background /**/:url(); /* removing quote graphic in IE5+ */
+		padding: 0 25px 5px 0;
+}
+.pullquote:first-letter {
+	background: url(../../images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+ .light-bg { background: #f7f7f7; padding: 2px; }
+ 
+ #errors {
+   color: red;
+ }
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] { border: none; }
+
+ /* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+ /* End hide from IE-mac */
+
+#categories li em, #archives li em
+{
+  font-size: smaller;
+}

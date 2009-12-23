@@ -1,0 +1,60 @@
+<% form_remote_tag :url      => @article.comment_url,
+                    :position => :bottom,
+                    :update   => {:success => 'commentList'},
+                    :loading  => "loading()",
+                    :complete => "complete(request)",
+                    :failure  => "failure(request)",
+                    :html     => {:id => 'commentform', :class => 'comments' } \
+    do %>
+
+
+<div class="comment-box">
+   <h3>Leave a Comment</h3>
+  <div id="errors"></div>
+
+  <a name="respond"></a>
+  <dl>
+     <dt>
+       <label for="comment_author">Your name</label></dt>
+     <dd>
+        <%= text_field "comment", "author", :size => 20 %> 
+        <small><%= link_to_function("(leave url/email &#187;)", 
+                  "Element.toggle('guest_url'); Element.toggle('guest_email')") %></small>
+     </dd>
+  </dl>
+  
+     <div id="guest_url" style="display: none;">
+       <dl>
+       <dt>
+         <label for="comment_url">Your blog</label>
+       </dt>
+       <dd>
+        <%= text_field "comment", "url" %>
+       </dd>
+       </dl>
+     </div>
+     <div id="guest_email" style="display: none;">
+        <dl>
+       <dt>
+         <label for="comment_email">Your email</label>
+       </dt>
+       <dd>
+        <%= text_field "comment", "email" %>
+       </dd>
+       </dl>
+     </div>
+   <dl>
+    <dt>
+      <label for="comment_body">Your message</label>
+    </dt>
+    <dd>
+       <%= text_area "comment", "body", :cols => "32"%>
+    </dd>
+  </dl>
+  <div id="frm-btns">
+  <span id="comment_loading" style="display:none;"><%= image_tag "spinner.gif" %></span>&nbsp;&nbsp;
+    <input type="submit" name="submit" id="form-submit-button" value="submit" class="button" />
+  </div>
+
+</div>
+<% end %>

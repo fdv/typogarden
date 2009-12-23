@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%= page_title %></title>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+  <%= meta_tag 'ICBM', this_blog. geourl_location  %>
+  <link rel="EditURI" type="application/rsd+xml" title="RSD" href="<%= url_for :controller => 'xml', :action => 'rsd' %>" />
+  <%= auto_discovery_link_tag :rss, :controller => 'xml', :action => 'rss20', :id => 'feed.xml' %>
+  <%= auto_discovery_link_tag :atom, :controller => 'xml', :action => 'atom10', :id => 'feed.xml' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/brighthouse" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+  <%= javascript_include_tag "cookies" %>
+  <%= javascript_include_tag "prototype" %>
+  <%= javascript_include_tag "effects" %>
+  <%= javascript_include_tag "typo" %>
+  <script type="text/javascript"><%= @content_for_script %></script>
+</head>
+<body>
+  <div id="wrapper">
+      <div id="blog-header">
+        <h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+        <h2><%= this_blog.blog_subtitle %></h2>
+        <div id="search-wrapper">
+            <div id="search"> <%= render :partial => "shared/search" %></div>
+            <div id="search-results"></div>
+          </div>
+      </div>
+      
+      <div id="main-wrapper">
+        <div id="main-content">
+          <%= @content_for_layout %>
+          <%= javascript_tag "show_dates_as_local_time()" %>
+        </div>
+      
+        <div id="sidebar">      
+          <%= render_sidebars %>
+        </div>
+            
+      </div>
+      <div style="clear: both;" id="footer">
+        <p><a href="http://www.height1percent.com/pages/brighthouse/">Brighthouse</a> theme by <a href="http://www.height1percent.com/">Richard White</a></p>
+        
+        <ul>
+          <li>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.0</a></li>
+          <li>Valid <a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">CSS</a></li>
+        </ul>
+      </div>
+  </div>
+  
+</body>
+</html>

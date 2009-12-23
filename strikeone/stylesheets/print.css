@@ -1,0 +1,134 @@
+/* StrikeOne Print Styles */
+
+body {
+	margin: 0;
+	background: #FFFFFF url(none);
+	font: 101% Arial, Verdana, Helvetica, sans-serif;
+	color: #333;
+}
+
+#bottom, #top, #left_margin, #right_margin, #search, #sidebar, #footer, form {
+	display: none;
+}
+
+#main, #container, #content {
+  position: static;
+  width: auto;
+  height: auto;
+  float: none;
+	background-image: url(none);
+
+}
+
+a, a:hover {
+	color: #00628F;
+	text-decoration: none;
+	padding: 0.2em;
+}
+
+#logo h1 a, #logo h1 a:hover {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 24px;
+	font-weight: bold;
+	color: #C27B00;
+	text-decoration: none;
+	padding-bottom: 3px;
+	border-bottom-width: 1px;
+	border-bottom-style: dotted;
+	border-bottom-color: #C27B00;
+}
+#logo h2 {
+	font-size: 16px;
+	font-weight: bold;
+	padding-top: 6px;
+	color: #000;
+}
+
+.post {
+	margin: 0 0 20px 5px;
+	padding-bottom: 10px;
+	background-image: url(../../images/theme/line.gif);	
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+
+.post h2 {
+	color: #FF6600;
+	font: normal 140%/1.3em Arial, Verdana, Helvetica, sans-serif;
+}
+
+.post h2 a, .post h2 a:hover {
+	color: #FF6600;
+	text-decoration: none;
+	border: none;
+}
+
+p.meta {
+	font-size: 75%;
+	text-align: right;
+	margin-right: 5px;
+}
+
+p.auth {
+	font-size: 85%;
+	font-weight: bold;
+	color: #00628F;
+}
+
+.post ul li {
+	list-style-image: url(../../images/theme/bullet.gif);
+}
+.post table {
+	background: #C0D8E3;
+	border-collapse: collapse;
+	padding: 0px;
+	border-spacing: 0px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.post table td {
+	padding: 5px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #00628F;
+}
+.post table th {
+	padding: 5px;
+	color: #FFFFFF;
+	background: #00628F;
+	border-width: 1px;
+	border-style: solid;
+	border-color: #00628F;
+}
+
+.comment-list li {
+	background: #FAEEB4;
+	padding: 5px;
+	margin-bottom: 8px;
+	color: #555;
+}
+
+blockquote {
+	color: #00628F;
+	background: url(../../images/theme/quote.gif) no-repeat;
+	padding: 0px 25px 10px 30px;
+	font-family: "Times New Roman", Times, serif;
+	margin-top: 10px;
+	margin-right: 10px;
+	margin-left: 10px;
+}
+code, pre	 {
+  position: static;
+  width: auto;
+  height: auto;
+  float: none;
+	font-weight: bold;
+	color: #FFFFFF;
+	display: block;
+	padding: 1em;
+	background: #00628F;
+	white-space: pre;
+}
+ignored[by="IE"], code, pre { font-size: 1.3em;}

@@ -1,0 +1,15 @@
+div#sidebar {
+  width: 130px;
+}
+
+div#sidebar ul {
+  padding: 0;
+  margin: 0;
+  padding-left: 15px;
+}
+
+div#content {
+  width: 75%;
+  padding-left: 0;
+  margin-left: 0;
+}

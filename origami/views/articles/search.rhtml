@@ -1,0 +1,16 @@
+<% $commentCounter = 0 unless defined? $commentCounter%>
+<% if @articles.to_a.empty? -%>
+	<h2 class="section-title">Sorry</h2>
+	<p>There where no articles found based on your search keyword(s). Please try again.</p>
+<% else -%>
+	<h2 class="section-title">Search Results</h2>
+	<p class="important">Your search returned the following results:</p>
+	<% for article in @articles -%>
+	  <div class= "post <%= ($commentCounter == 1 ? 'normal-post' : 'alternate-post') %> ">
+	  <%= render_partial "article", article %>
+	  <%= article_link "Read more...", article if article.extended?%>    
+	  <p class="meta"><%= article_links article %></p> 
+	  </div>
+	  <% $commentCounter = 1 - $commentCounter %>
+	<% end -%>
+<% end -%>

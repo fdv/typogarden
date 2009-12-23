@@ -1,0 +1,22 @@
+div#header h1, div#header h2{
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/theme/header_h_back.png',sizingMethod='scale');
+}
+
+div#main_content{
+	width:433px;
+}
+
+div#sidebar div#flickr div.flickrsquare { 
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/theme/flickr_back_square.png',sizingMethod='scale');
+}
+
+div#sidebar div#flickr div.flickrrectangle {
+	background-image: none;
+	filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/theme/flickr_back_rect.png',sizingMethod='scale');
+}
+
+div#sidebar div#flickr div.flickrrectangle img{
+	margin-top:20px;
+}

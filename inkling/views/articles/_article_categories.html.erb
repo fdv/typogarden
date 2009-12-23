@@ -1,0 +1,5 @@
+<% categories =  article.categories.collect{ |c| link_to c.name,
+{ :controller=>"articles", :action => "category", :id => c.permalink },
+  :rel => "tag"
+} %>
+<%= " in " + categories[0..-2].join(", ") if categories.size > 0  %><%= " and " if categories.size > 1 %><%= categories.last %>

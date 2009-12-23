@@ -1,0 +1,22 @@
+@import url(concomitant.css);
+
+body {
+  background-image: url(../../images/theme/path2812.gif);
+  background-position: -48px -250px;
+}
+
+:link { 
+  color: #f60;
+}
+:visited { 
+  color: #a40;
+}
+
+em {
+  color: #820;
+}
+
+#header :link,
+#header :visited { 
+  color: #f90;
+}

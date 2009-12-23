@@ -1,0 +1,427 @@
+/* IowaStorm Screen Styles */
+
+body {
+	text-align: center;
+	font: 1em/1.2em Verdana, Arial, Helvetica, sans-serif;
+	color: #333;
+	background-color: #131a0a;
+	margin: 0;
+	padding: 0;
+}
+
+#container {
+	margin: 0 auto;
+	padding: 0;
+	width: 762px;
+	text-align: left;
+}
+
+#content {
+	background: #ccc url(../../images/theme/top-fade.gif) repeat-x;
+	width: 762px;
+	padding-top: 40px;
+}
+
+#main { 
+	width: 490px;
+	font-size: 80%;
+	float: left;
+	padding: 10px;
+}
+
+#main li {
+    background-color: #ddd;
+    padding: 5px;
+}
+
+
+/*+-------------------------------------------+
+  |   			LINKS 						  |
+  +-------------------------------------------+*/
+a {
+  	color: #669966;
+	text-decoration: none;
+	border-bottom: 1px dotted #669966;
+}
+	
+a:hover { 
+	color: #131a0a; 
+	border-bottom-color: #131a0a; 
+}
+
+/*+-------------------------------------------+
+  |   			UTILITY 					  |
+  +-------------------------------------------+*/
+    
+h1, h2, h3, h4, h5, h6 {
+	padding-bottom: 5px;
+	margin-bottom: 5px;
+	font-family: "Georgia", Times, serif;
+	color: #131a0a;
+}
+
+h1, h2 {
+	border-bottom: 2px solid;
+}
+	
+h3, h4, h5, h6 {
+	border-bottom: 1px solid;
+}
+
+form, div { 
+	padding: 0; 
+	margin: 0; 
+}
+  
+p { 
+ 	margin: 0 0 1em 0; 
+ 	padding: 0; 
+}
+  
+img { border: 0; }
+
+blockquote, code {
+    background: #ddd;
+    padding: 10px;
+    display: block;
+}
+
+/*+-------------------------------------------+
+  |   			HEADER 						  |
+  +-------------------------------------------+*/
+
+#header { 
+	width: 762px;
+	height: 300px;
+	text-align: left;
+	background: #131a0a url(../../images/theme/bg.jpg) repeat-x;
+}
+
+#logo {
+    margin: 0;
+    padding: 0;
+}
+
+#logo h1 { 
+	padding-top: 80px;
+	margin: 0;
+	padding-left: 150px;
+	color: #131a0a; 
+	border: none; 
+
+	font: italic 250% Georgia, Times, serif;
+}
+
+#logo h1 a {
+	color: #131a0a;
+	border: none;
+}
+
+#logo h2 { 
+    margin: 0;
+    padding-top: 50px; 
+    padding-left: 200px;
+	color: #131a0a; 
+	text-decoration: none;
+	border: none;
+	font: italic 100% Georgia, Times, serif;
+}
+
+ /*+-------------------------------------------+
+   |   			FOOTER 						   |
+   +-------------------------------------------+*/
+  
+#footer ul {
+  	margin: 0;
+  	margin-top: 20px;
+  	padding: 35px 0 0 0;
+  	list-style: none;
+}
+  	
+#footer ul li {
+  	display: inline;
+  	margin: 0;
+  	padding: 0 5px 0 0;
+  	font-size: 75%;
+  	vertical-align: middle;
+  	color: #333;
+}
+
+#footer {
+	height: 100px;
+	background: #131a0a url(../../images/theme/bottom-fade.gif) repeat-x;
+	text-align: center;
+}
+	
+#footer a { border: none; }
+
+#footer img { 
+	border: none; 
+	margin-top: 5px; 
+	margin-bottom: 5px;
+}
+
+/*+-------------------------------------------+
+  |   			        SEARCH     						    |
+  +-------------------------------------------+*/	
+
+#search {
+	height: 60px;
+	color: #888;
+	padding-top: 60px;
+	padding-left: 520px;
+}
+
+#search label {
+    padding-right: 5px;
+    font-family: "Georgia", Times, serif;
+    font-style: italic;
+    font-size: 12pt;
+    vertical-align: bottom;
+}
+ 
+#sidebar #searchform #s {
+	width: 130px;
+	margin-top: 20px; 
+}
+
+#sidebar #searchsubmit { padding: 1px; }
+	
+#search-results { padding: 2px; }
+	
+/*+-------------------------------------------+
+  |   			SIDEBAR 	      |
+  +-------------------------------------------+*/
+  
+#sidebar {
+	margin-left: 510px; 
+	padding: 10px;
+	color: #888;
+	background: #ccc;
+}
+	
+#sidebar h3 {
+	font: bold 80%/0.8em  Verdana, Arial, Helvetica, sans-serif;
+	background:  #669966;  
+	margin: 0;
+	color: #131a0a;
+	border: 2px solid;
+	padding: 10px;
+}
+ 		
+#sidebar h3 a {
+	font-style: italic;
+	color: #131a0a;
+	border: none;
+	background: none;
+	padding: 0;
+}
+
+#sidebar h3 a:hover {
+	color: #131a0a;
+}
+
+#sidebar ul {
+ 	margin-top: 10px;
+ 	padding-left: 3px;
+ 	margin-bottom: 10px;
+ 	list-style-type: none;
+ 	border-left: 1px solid #669966;
+ 	border-right: 1px solid #669966;
+
+}
+
+#sidebar ul li {
+	padding-bottom: 3px;
+	font-size: 90%;
+}
+ 	 
+#sidebar a { 
+ 	background: url(../../images/theme/xlink.gif) 0 45% no-repeat;
+ 	padding-left: 17px;
+	color: #333;
+ 	border: none;
+ 	display: block;
+}
+ 
+#sidebar a:hover { 
+	background: url(../../images/theme/xlink-hover.gif) 0 45% no-repeat; 
+	color: #669966;	
+} 	 
+
+#sidebar span a {
+    display: inline;
+}
+
+/*+-------------------------------------------+
+  |   			POST 						  |
+  +-------------------------------------------+*/
+  
+.post {
+  	margin: 0 0 20px 5px;
+	border-bottom: 2px solid #131a0a;
+	padding-bottom: 10px; 
+}
+
+.post h2 a {
+	border: none;
+	color: #131a0a;
+}
+
+.post h2 a:hover {
+	border: none;
+	color: #669966;
+}
+	
+p.meta {
+  	font-size: 75%;
+	text-align: right;
+	margin-right: 5px;
+}
+	
+p.auth {
+ 	padding: 0 0 0 12px;
+	font-size: 85%;
+	margin-left: 10px;
+	font-weight: bold;
+	color: #999;
+	background: url(../../images/theme/bracket.gif) no-repeat;
+}
+	
+h4.blueblk {
+ 	background: #669966;
+ 	color: #333;
+ 	padding: 5px;
+ 	margin: 10px 0;
+ 	border: 1px solid #006600;
+ 	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+ 	
+/*+-------------------------------------------+
+  |   			      COMMENTS	      |
+  +-------------------------------------------+*/
+  
+.comment-list li {
+  	background: #ccc;
+  	padding: 5px;
+  	margin-bottom: 8px;
+  	color: #555;
+  	border-top: 1px dotted;
+  	border-right: 1px dotted;
+}
+
+/*+-------------------------------------------+
+  |   			FLIKR 						  |
+  +-------------------------------------------+*/
+
+#flickr div img {
+ 	border: 4px solid #669966;
+}
+ 	
+#flickr div {
+    width: 108px;
+ 	border: 2px solid #131a0a;
+ 	margin-bottom: 5px;
+}
+
+#flickr div.flickrsquare { 
+	width: 82px;
+	border-right: 3px solid #131a0a;
+	float:left;
+	margin-right: 5px;
+	margin-right: 5px;
+}
+
+#flickr div a { border: none; }
+  	
+/*+-------------------------------------------+
+  |   			       FORMS 				  |
+  +-------------------------------------------+*/
+   
+input, textarea, select {
+ 	border: 1px solid #006600;
+ 	background: #f9f9f9;
+}
+ 	
+.frm-tbl td { 
+	vertical-align: top; 
+	padding: 5px; 
+}
+
+td#frm-btns { text-align: right; }
+ 	
+#comment_body { height: 220px; }
+
+#form-submit-button { background: #669966; }
+  
+ /*+-------------------------------------------+
+   |   		          	MISC 				   |
+   +-------------------------------------------+*/
+   
+.powered { border: none; }
+
+.powered img { margin-top: 20px; }
+
+.pullquote {
+		width: 30%;
+		float:right;
+		font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+		color: #666;
+		margin:10px;
+		background: url(../../images/theme/q-close.gif) no-repeat 70% 100% !important;
+		background /**/:url(); /* removing quote graphic in IE5+ */
+		padding: 0 25px 5px 0;
+}
+
+.pullquote:first-letter {
+	background: url(../../images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+.light-bg { 
+	background: #eee; 
+	padding: 2px; 
+}
+
+.clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+}
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] { border: none; }
+
+/* Hides from IE-mac \*/
+* html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+#categories li em, #archives li em
+{
+  color: #555;
+  font-size: smaller;
+  right: 80px;
+  display: inline;
+}
+
+#errors {
+   color: red;
+}

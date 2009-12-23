@@ -1,0 +1,14 @@
+<h1 class="title"><%= link_to_permalink article, article.title %></h1>
+<div class="round_block">
+   <div class="incidentals_top"></div>
+   <div class="incidentals">
+      <div class="date"><%= article.created_at.strftime("%b %d") %></div>
+      <div class="auth">
+         posted <%= js_distance_of_time_in_words_to_now article.created_at %></div>
+         <div class="category_links"><%= category_links article%></div>
+      <div class="num_comments"><%= comments_link article %></div>
+      <div class="num_trackbacks"><%= trackbacks_link article %></div>
+   </div>
+   <div class="incidentals_bottom"></div>   
+</div>
+<%= article.body_html %>

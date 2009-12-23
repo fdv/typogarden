@@ -1,0 +1,22 @@
+<% 
+$commentCounter = 0 unless defined? $commentCounter
+$commentCounter = 1 - $commentCounter
+%>
+<li id="comment-<%= comment.id %>" class= "comment <%= ($commentCounter == 1 ? 'normal-comment' : 'alternate-comment') %> " <%= 'style="display:none"' if controller.request.xhr? %> <%= onhover_show_admin_tools(:comment, comment.id) %>>
+	<div class="admin-tools-for-comment"></div>
+	<div class="comment-body">
+		<cite>
+			<strong>
+				<%= (comment.url.blank?) ? h(comment.author) : link_to(h(comment.author), comment.url) %>
+			</strong>
+			<%= ($commentCounter == 1 ? ' replied:' : ' commented:') %>
+		</cite>
+		<% if this_blog.use_gravatar and comment.email %>
+			<a href="<%= (comment.email.blank?) ? 'http://www.gravatar.com' : comment.url %>" title="<%= (comment.url.blank?) ? 'Get your own gravatar' : ('Vist the website of: ' + h(comment.author)) %>">
+				<%= gravatar_tag(comment.email, :default => 'http://stage.izilla.com.au/getAGravatar.png', :size => 50, :class => 'gravatar') %>
+			</a>
+		<% end %>
+ 		<%= comment.body_html %>
+	</div>
+	<div class="comment-date">Posted: <%= distance_of_time_in_words @article.created_at, comment.created_at %> later.</div>
+</li>

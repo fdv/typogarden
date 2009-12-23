@@ -1,0 +1,36 @@
+<a name="respond"></a>
+
+<% form_remote_tag :url      => @article.comment_url,
+                    :position => :bottom,
+                    :update   => {:success => 'commentList'},
+                    :loading  => "loading()",
+                    :complete => "complete(request)",
+                    :failure  => "failure(request)",
+                    :html     => {:id => 'commentform', :class => 'comments' } \
+    do %>
+                    
+<div id="comment-box">
+  <div id="errors"></div>
+
+  <div id="comment-textarea">
+    <label for="comment_body">Comment</label>
+    <%= text_area "comment", "body" %>
+  </div>
+  <div id="comment-name">
+    <label for="comment_author">Name</label>
+    <%= text_field "comment", "author", :size => 20 %>
+  </div>
+  <div id="comment-url">
+    <label for="comment_url">URL <small>(Optional)</small></label>
+    <%= text_field "comment", "url" %>
+  </div>
+  <div id="comment-email">
+    <label for="comment_email">Email <small>(Optional)</small></label>
+    <%= text_field "comment", "email" %>
+  </div>
+  
+  <span id="comment_loading" style="display:none;"><%= image_tag "spinner.gif" %></span>&nbsp;&nbsp;
+  <div id="comment-submit"><input type="submit" name="submit" id="form-submit-button" value="Leave Comment" class="button" /></div>
+  <br class="clearer" />
+</div>
+<% end %>

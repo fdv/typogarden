@@ -1,0 +1,10 @@
+<% for article in @articles -%>
+ <div class="post">
+  <%= render :partial => "article", :object => article %>
+  <%= article_link "Read more...", article if article.extended? %>  
+  <p class="meta"><div id="posticon"></div><%= article_links article %></p> 
+  </div>
+<% end -%>
+
+<p class="pagination"><%= will_paginate @articles %></p>
+

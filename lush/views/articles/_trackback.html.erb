@@ -1,0 +1,8 @@
+<% $tbalternater+=1 %>
+<li>
+<blockquote <%= onhover_show_admin_tools(:trackback, trackback.id)%> class="trackback<%= $tbalternater.remainder(2) %>">
+<p><%= trackback.excerpt %></p>
+<p><cite><%= trackback.blog_name %> in: <a href="<%= trackback.url %>" rel="nofollow"><%= trackback.title %></a></cite></p>
+
+</blockquote>
+</li>

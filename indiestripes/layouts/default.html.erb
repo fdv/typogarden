@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/indiestripes_base", :media => 'all'  %>
+  <%= stylesheet_link_tag "/stylesheets/theme/beach_house", :media => 'all'  %>
+  <!--[if IE]>
+  <%= stylesheet_link_tag "/stylesheets/theme/indiestripes_ie" %> 
+  <![endif]-->
+</head>
+<body>
+<div id="top_image">
+</div>
+<div style="container">
+  <div id="left">
+      <div id="subtitle">
+        <h2 id="subtitle"><%= this_blog.blog_subtitle.downcase %></h2>
+      </div>
+      <div id="header">
+        <div id="logo">
+          <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+        </div>
+        <div id="top_nav">
+           <span class="brace">{</span> <a href="/">home</a> <span class="brace">}</span>
+           <span class="brace">{</span> <a href="/pages/about">about</a> <span class="brace">}</span>
+           <span class="brace">{</span> <a href="/pages/contact">contact</a> <span class="brace">}</span>
+        </div>
+      </div>
+         <div id="content">
+           <div id="main">
+             <%= @content_for_layout %>
+             <%= javascript_tag "show_dates_as_local_time()" %>
+           </div>
+        </div>
+        <div style="clear: both;"></div>
+   </div>
+      <div id="sidebar">
+            <div id="search"> <%= render :partial => "shared/search" %></div>
+             <div id="search-results"></div>
+             <%= render_sidebars %>
+             <%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+             </div>
+         </div>
+</div>
+</body>
+</html>

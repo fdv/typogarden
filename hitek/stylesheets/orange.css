@@ -1,0 +1,10 @@
+/* Hitek Orange */
+
+#header { 
+	background: url(../../images/theme/headbg_orange.png) no-repeat;
+	}
+	
+#sidebar ul li { 
+	background: url(../../images/theme/bullet_orange.gif) 0 45% no-repeat;
+	padding-left: 17px;
+	}

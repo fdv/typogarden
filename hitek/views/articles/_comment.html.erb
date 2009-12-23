@@ -1,0 +1,15 @@
+<div class="user-comment comment-<%= (comment_counter.even?) ? 'even' : 'odd' %>" 
+   id="comment-<%= comment.id %>" <%= 'style="display:none"' if controller.request.xhr? %>
+   <%= onhover_show_admin_tools(:comment, comment.id) %>>
+   
+  <a name="comment-<%= comment.id %>"></a>
+<div class="auth">
+   <span class="comment-author">
+   <%= (comment.url.blank?) ? h(comment.author) : link_to(h(comment.author), comment.url) %>
+   </span>
+   said 
+   <%= distance_of_time_in_words @article.created_at, comment.created_at %> later</div>
+  <div class="comment_body">
+  <%= comment.body_html %>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<head>
+        <title><%=h page_title %></title>
+        <%= page_header %> 
+        <%= stylesheet_link_tag "/stylesheets/theme/rockstar", :media => 'all' %>
+        <%= stylesheet_link_tag "/stylesheets/user-styles", :media => 'all' %>
+        <%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+      </head>
+<% benchmark "BENCHMARK: layout/body" do %>
+<body>
+    <div id="wrapper">
+    <div id="header">
+        <h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+        <h2><%= this_blog.blog_subtitle %></h2>
+    </div>
+    
+    <div id="containertop"></div> 
+    
+    <div id="maincolumn">
+        <div id="bodytext"> 
+            <% benchmark "BENCHMARK: layout/content" do %>
+
+            <%= @content_for_layout %>
+            <%= javascript_tag "show_dates_as_local_time()" %>
+            <% end %>
+        </div>
+
+        <div id="sidebartext">
+            <div id="search"> <%= render :partial => "shared/search" %></div>
+            <div id="search-results"></div>
+            <% benchmark "BENCHMARK: layout/sidebars" do %>
+              <%= render_sidebars %>
+            <% end %>
+            
+            <%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+        </div>
+
+    </div>
+
+    <div id="containerbottom"></div>
+      
+    <div id="footer">
+        <p>Copyright 2005</p>
+    </div>
+    </div>
+</body>
+</html>
+<% end %>

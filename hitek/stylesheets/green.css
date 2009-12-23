@@ -1,0 +1,10 @@
+/* Hitek Green */
+
+#header { 
+	background: url(../../images/theme/headbg_green.png) no-repeat;
+	}
+	
+#sidebar ul li { 
+	background: url(../../images/theme/bullet_green.gif) 0 45% no-repeat;
+	padding-left: 17px;
+	}

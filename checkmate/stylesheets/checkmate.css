@@ -1,0 +1,225 @@
+body
+{
+	background:		#cdcdcd url('../../images/theme/chessboard_bg.png') ; 
+
+	margin:			0px;
+	padding:		0px;
+
+	padding-top: 		20px;
+	padding-bottom:		30px;
+
+	font-family:		bitstream vera sans, tahoma, arial, sans-serif;
+	font-size:		x-small;
+	text-align:		center;
+}
+
+a
+{
+	color:			#454545;
+	text-decoration:	none;
+}
+
+a:hover
+{
+	color:			#000000;
+}
+
+
+#mainarea
+{
+	background:		transparent url('../../images/theme/content_bg.png') repeat-y;
+
+	width:			680px;
+
+	margin-left:		auto;
+	margin-right:		auto;
+
+	
+	border: 		1px #989898 solid;
+
+	text-align:		left;
+}
+
+#header
+{
+	background:		#000000 url('../../images/theme/header_bg.jpg') no-repeat;
+
+	height:			280px;
+
+	border:			0px #989898 solid;
+	border-bottom-width:	1px;
+
+	color:			#000000;
+	text-align:		center;
+}
+
+#sitename
+{
+	display: 		inline;
+	position:		relative;
+	top:			25px;
+
+	width:			100%;
+}
+
+#sitename a
+{
+	font-size:		37px;
+	color:			#000000;
+	text-decoration:	none;
+}
+
+#subtitle
+{
+	width:			100%;
+	
+	font-size:		20px;
+}
+
+#articles
+{
+	float:			right;
+	width:			415px;
+	
+	padding-top:		20px;
+	padding-right:		25px;
+	padding-bottom:		20px;
+
+	font-size:		110%;
+}
+
+#footer
+{
+	background:		#989898;
+
+	clear:			both;
+
+	padding:		5px;
+
+	color:			#ffffff;
+	text-align:		center;
+}
+
+#sidebar
+{
+	float:			left;
+	width:			200px;
+	
+	padding-top:		5px;
+	padding-right:		5px;	
+	padding-left:		10px;
+	padding-bottom:		20px;
+}
+
+div.sidebar-node
+{
+	margin-top:		20px;
+	padding:		10px;
+
+	background: transparent url('../../images/theme/twotone.gif');
+
+	border:			1px solid #787878;
+}
+
+#sidebar a
+{
+	font-size:		130%;
+}
+
+#sidebar ul
+{
+	margin:			0px;
+	padding:		0px;
+}
+
+#sidebar li
+{
+	margin:			0px;
+	padding:		0px;
+
+	list-style:		url('../../images/theme/bullet_knight_white.gif') circle inside;
+
+	font-weight:		800;
+	font-size:		90%
+}
+
+#sidebar li:hover
+{
+	list-style:		url('../../images/theme/bullet_knight_black.gif') circle inside;
+}
+
+#sidebar li a
+{
+	position:		relative;
+	top:			-5px;
+}
+
+#sidebar a
+{
+	color:			#454545;
+	text-decoration:	none;
+}
+
+#sidebar a:hover
+{
+	color:			#000000;
+}
+
+#sidebar h3
+{
+	background:		url('../../images/theme/h3_bg.gif') no-repeat;
+
+	margin:			0px;
+	margin-bottom:		5px;
+	padding:		0px;
+	padding-left:		20px;
+
+	line-height:		20px;
+	font-size:		150%;
+}
+
+
+
+div.post 
+{
+	background:		url('../../images/theme/stop_king.png') no-repeat center bottom;
+	
+	padding-bottom:		25px;	
+}
+
+a
+{
+	color:			#787878;
+	text-decoration:	none;
+}
+
+div.post h2
+{
+	margin:			0px;
+	padding:		0px;
+}
+
+div.post p
+{
+	margin-top:		0px;
+}
+
+div.post a:visited
+{
+	text-decoration:	line-through;
+}
+
+div.post p.meta a:visited
+{
+	text-decoration:	none;
+}
+
+p.auth
+{
+	margin:			0px;
+	padding:		0px;
+
+	font-size:		80%;
+	font-weight:		800;
+	color:			#787878;
+}

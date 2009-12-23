@@ -1,0 +1,4 @@
+<h1 class="post-title"><%= link_to_permalink article, article.title %></h1>
+<p class="auth clearfix"><cite>Posted by: <strong><%= author_link(article) %></strong>
+<em><%= js_distance_of_time_in_words_to_now article.created_at %></em></cite></p>
+<div class="post-content"><%= article.body_html %></div>

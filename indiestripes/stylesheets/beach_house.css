@@ -1,0 +1,111 @@
+/* Indie Stripes Screen Styles - Beach House */
+body {
+	background: #fff url(../../images/theme/bg_beachhouse.gif) repeat-y;
+	}
+
+a {
+   color: #31AEC4;
+   border-bottom: 1px dotted #31AEC4;
+}
+
+a:hover, a:visited { 
+   color: #99CB43; 
+   border-bottom-color: #99CB43; 
+}
+
+h2 {
+   color: #5B5B5B;
+}
+    
+blockquote {
+   border: 1px dashed #91D250;
+   background-color: #E6FFCD;
+}
+
+#logo h1 a { 
+   color: #31AEC4; 
+}
+
+#top_image {
+   background: url('../../images/theme/topleft_beachhouse.gif') 0px 0px no-repeat;
+}
+
+.brace {
+   color: #D0FF7F;
+}
+
+h2#subtitle {
+   color: #D7D7D7;
+}
+
+#top_nav a, #top_nav a:link,#top_nav  a:active, #top_nav a:hover, #top_nav a:visited {
+   color: #169BB2;
+	border-bottom: 1px dotted #169BB2;
+}
+
+.post h1 {
+  	color: #515151;
+}
+	
+.post h1 a {
+	color: #515151;
+}
+	
+.post h2 a:hover {
+	color: #85ab02;
+}
+	
+div.auth {
+   color: #9a9a9b;
+}
+	
+/*+-------------------------------------------+
+|   			      COMMENTS	 			         |
++-------------------------------------------+*/
+.comment-list li {
+	background: #d3e0ea;
+	color: #555;
+}
+
+.comment-box h3, h3.section_head {
+   color: #31AEC4;
+   border-top: 1px dashed #8FD1DD;
+   border-bottom: 1px dashed #8FD1DD;
+}
+
+.user-comment {
+   border-top: 1px dashed #d1d1d1;
+}
+
+.user-comment .auth {
+   color: #515151;
+}
+
+.comment-even .auth {
+   background: #EDFFD8;
+}
+
+.comment-odd .auth {
+   background: #E5FBFF;
+}
+   
+ /*+-------------------------------------------+
+  |   			SIDEBAR 						       |
+  +-------------------------------------------+*/
+  
+#sidebar h3, #search label {
+		color: #A6D750;
+}
+
+#sidebar a {
+	color: #169BB2;
+	border-bottom: 1px dotted #169BB2;
+}
+
+#sidebar ul li { 
+ 	background: url(../../images/theme/bullet_beachhouse.gif) 0 45% no-repeat;
+}
+
+#sidebar ul#syndicate li { 
+ 	background: url(../../images/theme/rss_beachhouse.gif) 0 45% no-repeat;
+}

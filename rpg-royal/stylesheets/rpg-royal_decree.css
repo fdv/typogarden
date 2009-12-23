@@ -1,0 +1,194 @@
+/*
+Title:      RPG: King's Decree for Typo
+Author:     Gary H. Wilson, www.emagica.com
+Updated:    November 5, 2005
+*/
+
+body {
+	margin: 0;
+	padding: 15px;
+	color: #000;
+	font-size: 62.5%; /* Resets 1em to 10px */
+	font-family: Georgia, "Times New Roman", Times, serif;
+	background: #5E482F url(../../images/theme/wood_bg.jpg) top left;
+}
+
+/* ---[ common elements ]--------------------- */
+
+a {
+	color: #830;
+}
+a:hover {
+	color: #000;
+}
+hr{
+	border: none;
+	border-top: 1px solid #600;
+	height: 1px;
+}
+form {
+	margin: 0;
+	padding: 0;
+}
+code, pre {
+	font-size: 1.1em;
+}
+small {
+	font-size: .9em;
+}
+
+/* ---[ page ]-------------------------------- */
+
+#page {
+	margin: 0 auto;
+	width: 750px;
+	font-size: 1.2em;
+}
+
+/* ---[ header ]------------------------------ */
+
+#header {
+	background: url(../../images/theme/parchment_top.gif) no-repeat top left;
+}
+#header #waxSeal {
+	height: 105px;
+	padding: 85px 90px 0 180px;
+	background: url(../../images/theme/wax_seal.gif) no-repeat 45px 30px;
+	text-align: center;
+}
+#header h1 {
+	margin: 0;
+	padding-bottom: 5px;
+	font-size: 2em;
+}
+#header h1 a {
+	color: #800;
+	text-decoration: none;
+}
+.subtitle {
+	padding-top: 5px;
+	width: 495px;
+	background: url(../../images/theme/hdr_div.gif) no-repeat top left;
+}
+.subtitle h2 {
+	margin: 0;
+	padding-bottom: 5px;
+	font-size: 1.3em;
+	font-weight: bold;
+	font-style: italic;
+	background: url(../../images/theme/hdr_div.gif) no-repeat bottom left;
+}
+
+/* ---[ content ]----------------------------- */
+
+#content {
+	padding: 0 260px 0 60px;
+	line-height: 1.3em;
+	text-align: left;
+	background: url(../../images/theme/parchment_middle.gif) repeat-y top left;
+}
+
+
+/* ---[ post ]-------------------------------- */
+
+.post {
+	padding-bottom: 5px;
+	margin-bottom: 10px;
+	background: url(../../images/theme/side_div.gif) repeat-x bottom left;
+}
+.post p {
+	margin: 0;
+	padding-bottom: 10px;
+}
+.post h1, .post h2, .post h3, .post h4 {
+	margin: 0;
+	padding: 0 0 10px 0;
+}
+.post h1 {
+	font-size: 2.4em;
+}
+.post h2 {
+	font-size: 1.6em;
+}
+.post h3 {
+	font-size: 1.4em;
+}
+.post .auth {
+	margin: 0;
+	padding: 0 0 5px 0;
+	color: #753;
+}
+
+/* ---[ pages ]------------------------------- */
+
+#viewpage {
+	padding-top: 1px;
+}
+
+
+/* ---[ sidebar ]----------------------------- */
+
+#sidebar {
+	float: right;
+	padding-right: 40px;
+	width: 200px;
+	text-align: left;
+}
+#sidebar h3 {
+	margin: 0;
+	padding: 10px 0;
+	color: #333;
+	font-size: 1.3em;
+}
+#sidebar a {
+	color: #a50;
+}
+#sidebar ul {
+	margin: 0;
+	padding: 0 0 10px 30px;
+}
+#sidebar li {
+	margin: 0;
+	padding: 2px 0;
+}
+#sidebar .powered {
+	padding-left: 60px;
+}
+#sidebar .powered img {
+	padding-top: 10px;
+	border: none;
+}
+
+/* ---[ search ]------------------------------ */
+
+#search {
+	padding-bottom: 15px;
+	background: url(../../images/theme/side_div.gif) repeat-x bottom left;
+}
+#search label {
+	padding-right: 5px;
+	color: #753;
+}
+#search #q {
+	width: 100px
+}
+
+
+/* ---[ footer ]------------------------------ */
+
+#footerMsg {
+	clear: both;
+	margin: 0 -200px 0 -40px;
+	padding: 30px 0 26px 0;
+	background: url(../../images/theme/hdr_div.gif) repeat-x 0 20px;
+	text-align: center;
+}
+#footerMsg p {
+	margin-bottom: 10px;
+	background: url(../../images/theme/hdr_div.gif) repeat-x bottom left;
+}
+#footer {
+	margin-top: -26px;
+	height: 175px;
+	background: url(../../images/theme/parchment_bottom.gif) no-repeat top left;
+}

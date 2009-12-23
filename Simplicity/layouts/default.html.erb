@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/es_1", :media => 'screen', :title => 'Simplicity Orange', :rel => 'stylesheet' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/es_2", :media => 'all', :title => 'Simplicity Green', :rel => 'Alternate Stylesheet' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/es_3", :media => 'all', :title => 'Simplicity Brown', :rel => 'Alternate Stylesheet' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+  <%= javascript_include_tag "/javascript/theme/ach" %>
+  <%= javascript_include_tag "/javascript/theme/styleswitcher" %>
+</head>
+
+<body>
+	<div id="container" class="clearfix">
+	
+		<div id="header">
+			<div id="title"><h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1></div>
+			<div id="subtitle">
+				<span id="simplicity-orange" title="Simplicity Orange" onclick="setActiveStyleSheet('Simplicity Orange');"></span>
+				<span id="simplicity-green" title="Simplicity Green" onclick="setActiveStyleSheet('Simplicity Green');"></span>
+				<span id="simplicity-brown" title="Simplicity Brown" onclick="setActiveStyleSheet('Simplicity Brown');"></span>
+				<h2 id="subtitle"><%= this_blog.blog_subtitle %>&nbsp;&nbsp;</h2>
+			</div>
+		</div>  <!-- end header -->
+	
+		<div id="content" class="clearfix">
+		
+			<div id="sidebar">
+			
+				<div id="search"><%= render :partial => "shared/search" %></div>
+			
+				<div id="search-results"></div>
+
+				<%= render_sidebars %>
+
+			
+			</div>  <!-- end sidebar -->
+			
+			<div id="main">
+				<%= @content_for_layout %>
+				<%= javascript_tag "show_dates_as_local_time()" %>
+			</div>  <!-- end main -->
+		
+		</div>  <!-- end content -->
+	
+		<div id="footer">
+			<ul>
+				<li><a href="http://validator.w3.org/check?uri=referer">XHTML</a> | </li>
+				<li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">CSS</a> | </li>
+				<li><a href="http://typosphere.orgtrac/">TYPO</a> | </li>
+				<li><%= this_blog.blog_name %> | </li>
+				<li><%= this_blog.blog_subtitle %></li>
+			</ul>
+		</div>  <!-- end footer -->
+	
+	</div>  <!-- end container -->
+  
+</body>
+</html>

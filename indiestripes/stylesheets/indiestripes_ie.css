@@ -1,0 +1,13 @@
+#left {
+   margin-top: 10px;
+   margin-left: 30px; 
+   margin-right: 0px;
+   width: 400px;
+	}
+
+#sidebar {
+   float: right;
+   width: 160px; 
+   margin: 0px 15px 0px 0px;
+   padding: 0px;
+}

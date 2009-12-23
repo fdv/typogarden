@@ -1,0 +1,34 @@
+<div class="atomentry" id="article-<%= article.id %>">
+  <h2 class="title">
+    <%= (controller.action_name.include? 'permalink') ? article.title : link_to_permalink(article,article.title) %>
+    <%= content_tag(:span, category_links(article) << ' | ', :class => 'categories description') unless article.categories.empty? %>  
+  </h2>
+
+  <div class="content">
+    <%= article.html(:body) %>
+
+    <% if article.extended? -%>
+      <div class="extended">
+        <% if controller.action_name == 'index' -%>
+          <p><%= link_to_permalink article,"Continue reading &raquo;" %></p>
+        <% else -%>
+          <%= article.html(:extended) %>
+        <% end -%>
+      </div>
+    <% end -%>
+  </div>
+	<%= content_tag(:p, tag_links(article), :class => 'tags') unless article.tags.empty? %>
+
+ <div class="postbottom">
+   <ul>
+    <li class="permalink"><%= link_to _("read more"), article.permalink_url %></li>
+    <li class="auth author"><span><%= author_link(article) %></span></li>
+    <li class="date published">
+      <span><%= article.published_at.strftime("%d %b %Y %H:%M") %></span>
+    </li>
+    <li class="comnts">
+      <%= comments_link(article)  if article.allow_comments? %>
+    </li>
+   </ul>
+	</div>
+</div>

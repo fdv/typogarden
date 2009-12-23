@@ -1,0 +1,7 @@
+<h2><%= link_to_permalink article, article.title %></h2>
+<%= article.body_html %><br />
+<%= article_link "Read more...", article if article.extended? %>
+<hr class="artdivider">
+<p class="auth">-Posted <%= js_distance_of_time_in_words_to_now article.created_at %> by <span class="authname"><%= author_link(article) %></span><br />
+    <span class="truedate"><%= article.created_at %></span>
+</p>

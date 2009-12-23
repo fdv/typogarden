@@ -1,0 +1,9 @@
+<% if !@search.to_s.blank? -%>
+  <p>Searched for <em>"<%=h @search %>"</em></p>
+  <ul>
+  <% for article in @articles.to_a -%>
+    <li><%= link_to_permalink article, article.title %></li>
+  <% end -%>
+	</ul>
+<% else %>
+<% end -%>

@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  
+  <!-- Style Switcher -->
+  <%= javascript_include_tag "/javascripts/theme/iotbs2-key" %>
+  <%= javascript_include_tag "/javascripts/theme/iotbs2-core" %>
+  <%= javascript_include_tag "/javascripts/theme/iotbs2-directors" %>
+  <!-- Default -->
+  <!-- Theme Specific -->
+  <%= stylesheet_link_tag "/stylesheets/theme/main" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/local", :media => 'all' %>
+  <%= javascript_include_tag "/javascripts/theme/rounded" %>
+  <%= javascript_include_tag "/javascripts/theme/theme-effects" %>
+  
+</head>
+<body class="<%= "article " if @article %><%= "page " if @page %><%= "articles " if @articles %>"> <%# I'm pretty shure this can be done more "correctly", but does the trick... %> 
+  
+  <div id="container">
+    <div id="top">  
+      <div id="header">
+        <div id="logo">
+          <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+          <h2 id="subtitle"><%= this_blog.blog_subtitle %></h2>
+        </div>
+      </div>
+      <!-- start Style Switcher -->
+      <div id="switchers"><div id="color-switcher"></div><div id="layout-switcher"></div></div>
+      <!-- end Style Switcher -->
+      <div id="search">
+        <%= render :partial => "shared/search" %>
+        <div id="search-results"></div>
+      </div>
+      <!-- start Instant Scroller -->
+      <% if @articles -%> 
+      <div id="scroller">
+        <h3>Instant Scroller&trade;</h3>
+        <ul>
+        <% for article in @articles -%>
+         <li><%= link_to_function article.title, "ScrollVertOrHor('article-#{article.id.to_s}')", {:href => "#article-" + article.id.to_s} %></li>
+        <% end -%>
+        </ul>
+      </div>
+      <% end -%>
+      <!-- End Instant Scroller --> 
+    </div>             
+    <div id="content">
+      <div id="main">
+        <%= @content_for_layout %>
+        <%= javascript_tag "show_dates_as_local_time()" %>
+      </div>
+      <div id="sidebar">
+        <%= render_sidebars %>
+        <%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+      </div>
+    </div>
+  </div>
+  <!-- end container -->
+  <div id="footer"></div>
+</body>
+</html>

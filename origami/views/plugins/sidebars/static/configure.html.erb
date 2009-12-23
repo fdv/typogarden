@@ -1,0 +1,13 @@
+<%= form_tag({},{:id => 'configure_'+@sidebar.id.to_s, :class=>'configblock'}) %>
+  <label>Title</label><br/>
+  <input class="text" type="text" name="configure[title]" value="<%=h @sidebar.staged_config['title'] %>"/><br/>
+  <small>This may be left blank. The wrapping H3 tags will not be rendered. Only available in the Origami theme.</small>
+  <label>Content</label><br/>
+  <textarea rows="10" cols="30" style="width:265px" name="configure[body]">
+
+<%=h @sidebar.staged_config['body'] %></textarea>
+<% end %>
+<%= observe_form "configure_"+@sidebar.id.to_s, 
+    :url => { :action => "save_config", :id=>@sidebar.id},
+    :with => 'value'
+ %>

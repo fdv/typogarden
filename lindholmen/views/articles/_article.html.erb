@@ -1,0 +1,4 @@
+<h2 id="article-<%= article.id %>" ><%= link_to_permalink article, article.title %> <small><%= link_to_function "Top", "ScrollVertOrHor('top')", {:href => "#top"} %></small></h2>
+<p class="auth">Posted by <%= author_link(article) %>
+<%= js_distance_of_time_in_words_to_now article.created_at %></p>
+<%= article.body_html %>

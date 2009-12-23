@@ -1,0 +1,6 @@
+<li id="comment-<%= comment.id %>" <%= 'class="author-comment"' if comment.user %> <%= 'style="display:none"' if controller.request.xhr? %><%= onhover_show_admin_tools(:comment, comment.id) %>>
+  
+  <a name="comment-<%= comment.id %>"></a>
+  <h3><cite><%= (comment.url.blank?) ? h(comment.author) : link_to(h(comment.author), comment.url) %> </cite> wrote <%= distance_of_time_in_words @article.created_at, comment.created_at %> later:</h3>
+  <%= comment.html %>
+</li>

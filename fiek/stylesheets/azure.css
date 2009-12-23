@@ -1,0 +1,361 @@
+/* Azure Screen Styles */
+
+body {
+	margin: 0;
+	text-align: center;
+	background-color: #fff;
+	font: 1em/1.2em Arial, Verdana, Helvetica, sans-serif;
+	color: #333;
+	}
+	
+#container {
+	margin: 0 auto;
+	width: 100%;
+	text-align: left;
+	background: #fff;
+	font-size: 80%;
+	}
+	
+	
+#header { 
+	background: #ECEBEC url(../../images/theme/hdr.gif) repeat-x;
+	width: 100%;
+	height: 101px;
+	margin: 0;
+	text-align: center;
+	border-bottom: 1px solid #B3B2B2;
+	}
+
+.header-arrows {
+	float: left;
+	_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale src='../../images/theme/left-logo.png');
+	height: 101px;
+	width: 211px;
+}
+
+.header-arrows[class] {
+	float: left;
+	background: transparent url(../../images/theme/left-logo.png) left no-repeat !important;
+	height: 101px;
+	width: 211px;
+}
+
+#content {
+	background:  #fff url(../../images/theme/sbar-tile.gif) left repeat-y;
+	padding-top: 10px;
+	padding-bottom: 1px; /* fix bottom gap */
+	}
+
+#main { 
+	width: 65%;
+	margin-left: 249px;
+	}
+
+#sidebar {
+	float: left;
+	background: #EFEFEF;
+	width: 239px;
+	border-right: 1px solid #B3B2B2;
+	}
+	
+#footer a { border: none; }
+	
+/*+-------------------------------------------+
+  |   			LINKS 						  |
+  +-------------------------------------------+*/
+  a {
+  	color: #3F61CE;
+	text-decoration: none;
+	}
+	
+ a:hover { color: #fff; background-color: #3F61CE; }
+/*+-------------------------------------------+
+  |   			UTILITY 					  |
+  +-------------------------------------------+*/
+  
+  h1, h2, h3, h4, h5, h6 {
+  	margin: 0;
+	padding: 0;
+	}
+	
+  form, div { padding: 0; margin: 0; }
+  p { margin: 0 0 1em 0; padding: 0; }
+  img { border: 0; }
+
+  
+/*+-------------------------------------------+
+  |   			HEADER 						  |
+  +-------------------------------------------+*/
+  
+#logo {
+	padding-top: 30px;
+	position: relative;
+	right: 80px;
+	}
+	
+#logo h1 a { color: #AE4040; text-decoration: none; border: none; }
+#logo h1 a:hover { background-color: #AE4040; color: #fff; text-decoration: none; border: none; }
+#logo h2 { color: #3F61CE; padding-top: .2em; font-size: 12px; }
+
+/*+-------------------------------------------+
+  |   			        SEARCH     						    |
+  +-------------------------------------------+*/	
+ #search {
+	 font-weight: bold;
+	 color: #3F61CE;
+	 padding-left: 8px;
+	 }
+
+ #sform { padding-top: 0px; }
+ 
+ #sidebar #searchform #s {
+	width: 130px;
+	margin-top: 20px;
+	}
+
+ #sidebar #searchsubmit {
+	padding: 1px;
+	}
+	
+ #search-results {
+  padding: 2px;
+  }
+  
+
+/*+-------------------------------------------+
+  |   			POST 						                  |
+  +-------------------------------------------+*/
+  .post {
+  	margin: 0 0 20px 5px;
+	padding-bottom: 10px;
+	font-size: 12px;
+	}
+	
+  .post h2 {
+  	font: normal 18px Arial, Verdana, Helvetica, sans-serif;
+	}
+	
+  .post h2 a {
+  	color: #AE4040;
+	font-size: 18px;
+	text-decoration: none;
+	border: none;
+	}
+	
+ .post h2 a:hover {
+	font-size: 18px;
+ 	color: #fff;
+  	background-color: #AE4040;
+	}
+	
+  p.meta {
+  	color: #B3B3B3;
+  	font-size: 11px;
+	text-align: right;
+	margin-right: 5px;
+	margin-top: 15px;
+	border-top: 1px dashed #CFCFCF;
+	}
+	
+ p.auth {
+  	font-size: 11px;
+	color: #9a9a9b;
+	border-bottom: 1px dashed #CFCFCF;
+	}
+	
+ p.auth a {
+ 	color: #3F61CE;
+	border: 0px;
+ 	}
+	
+ p.auth a:hover {
+ 	color: #fff;
+ 	background-color: #3F61CE;
+	border: 0px;
+ 	}	
+	
+ h4.blueblk {
+ 	background: #ECECEC;
+ 	padding: 5px;
+ 	margin: 10px 0;
+ 	border-bottom: 1px solid #DADADA;
+ 	}
+ 	
+ /*+-------------------------------------------+
+  |   			      COMMENTS						         |
+  +-------------------------------------------+*/
+  .comment-list li {
+  	background: #F6F6F6;
+  	padding: 5px;
+  	margin-bottom: 8px;
+  	color: #555;
+	border-top: 1px solid #E0E0E0;
+	border-bottom: 1px solid #E0E0E0;
+  	}
+  	
+ /*+-------------------------------------------+
+  |   			SIDEBAR 						               |
+  +-------------------------------------------+*/
+  
+ #sidebar h3 {
+ 		font: bold 12px Arial, Verdana, Helvetica, sans-serif;
+ 		color: #3F61CE;
+ 		margin-top: 10px;
+		height: 19px;
+		padding-top: 4px;
+		padding-left: 8px;
+		background: #E7E8E7 url(../../images/theme/sidebar-h3-bg.gif) repeat-x;
+ 		}
+ 		
+
+ #sidebar h3 a {
+		color: #AE4040;
+		border: 0;
+		}
+
+ #sidebar h3 a:hover { color: #FFF; background-color: #AE4040; }
+
+ #sidebar ul {
+ 		margin: 0;
+ 		padding: 0;
+ 		list-style-type: none;
+ 		}
+ 		
+ #sidebar ul li { 
+ 	background: url(../../images/theme/sidebar-ul-li.gif) no-repeat;
+ 	padding-left: 24px;
+	height: 21px;
+ 	 }
+	 
+ #sidebar ul li:hover { 
+ 	background: url(../../images/theme/sidebar-ul-li-over.gif) no-repeat;
+ 	padding-left: 24px;
+	height: 21px;
+ 	 }
+	 
+ #sidebar ul li a {
+ 	 color: #9F9F9F; 
+	 border: 0px;
+ 	 }
+	 
+ #sidebar ul li a:hover { 
+ 	 color: #fff;
+ 	 background-color: #9F9F9F; 
+	 border: 0px;
+ 	 }
+	 	  	 
+ #flickr div img {
+ 	border: 4px solid #fff;
+ 	}
+ 	
+ #flickr div {
+ 	margin-left: 10px;
+	width: 108px;
+ 	border: 2px solid #BBBBBB;
+ 	margin-bottom: 5px;
+ 	}
+
+ #flickr div.flickrsquare { 
+        width: 82px;
+        border-right: 3px solid #BBBBBB;
+        float:left;
+        margin-right: 5px;
+        margin-right: 5px;
+        }
+
+  #flickr div a { border: none; }
+  
+ /*+-------------------------------------------+
+   |   			FOOTER 						                 |
+   +-------------------------------------------+*/
+  
+  #footer ul {
+ 		margin: 0;
+ 		padding: 0;
+ 		list-style-type: none;
+  	}
+  	
+  #footer ul li {
+	margin: 0;
+ 	padding-left: 24px;
+	list-style-type: none;
+  	font-size: 75%;
+  	}
+  	
+ /*+-------------------------------------------+
+   |   			       FORMS 						           |
+   +-------------------------------------------+*/
+   
+ input, textarea, select {
+ 	border: 1px solid #D0D0D0;
+ 	background: #F8F8F8;
+ 	}
+ 	
+ 	.frm-tbl td { vertical-align: top; padding: 5px; }
+ 	td#frm-btns { text-align: right; }
+ 	
+ 	#comment_body { height: 220px; }
+ 	#form-submit-button { background: #d3e0ea; }
+  
+ /*+-------------------------------------------+
+   |   		          	MISC 						         |
+   +-------------------------------------------+*/
+   
+ .powered { border: none; }
+ .powered img { margin-top: 20px; }
+ .pullquote {
+		width: 30%;
+		float:right;
+		font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+		color: #666;
+		margin:10px;
+		background: url(../../images/theme/q-close.gif) no-repeat 70% 100% !important;
+		background /**/:url(); /* removing quote graphic in IE5+ */
+		padding: 0 25px 5px 0;
+}
+.pullquote:first-letter {
+	background: url(../../images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+ .light-bg { background: #f7f7f7; padding: 2px; }
+   .clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+ }
+ 
+ #errors {
+   color: red;
+ }
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] { border: none; }
+
+ /* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+ /* End hide from IE-mac */
+
+#categories li em, #archives li em
+{
+  color: #BBBBBB;
+  font-size: smaller;
+}

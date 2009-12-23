@@ -1,0 +1,10 @@
+<% $commentCounter = 1 - $commentCounter %>
+<li class="trackback <%= ($commentCounter == 1 ? 'normal-trackback' : 'alternate-trackback') %>" id="trackback-<%= trackback.id %>"<%= onhover_show_admin_tools(:trackback, trackback.id) %>>
+  <div id="admin-tools-for-trackback"></div>
+  <div class="trackback-body">
+  <cite>
+  	<strong><a href="<%= trackback.url %>" rel="nofollow"><%= trackback.blog_name %></a></strong> posted:
+  </cite>
+  <div><%= trackback.excerpt %></div>
+  </div>
+</li>

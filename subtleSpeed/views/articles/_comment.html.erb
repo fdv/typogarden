@@ -1,0 +1,7 @@
+<li id="comment-<%= comment.id %>" class="comment" <%= 'style="display:none"' if controller.request.xhr? %><%= onhover_show_admin_tools(:comment, comment.id) %>>
+  <div class="content"><a name="comment-<%= comment.id %>" class="anchor"></a><%= comment.body_html %></div>
+  <div class="cite">
+    <cite><strong><%= (comment.url.blank?) ? h(comment.author) : link_to(h(comment.author), comment.url) %></strong>
+    <%= distance_of_time_in_words @article.created_at, comment.created_at %>
+  </cite></div>
+</li>

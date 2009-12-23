@@ -1,0 +1,15 @@
+<h2><%= article_link firstarticle.title, firstarticle %> - 
+	<span id="showlink_<%= firstarticle.id %>" class="showhide">
+		<%= link_to_function( "Hide&laquo;", 
+							  "Element.toggle('showlink_#{firstarticle.id}', 'hidelink_#{firstarticle.id}' , 'postbody_#{firstarticle.id}'); " ) + " " %></span>
+	<span id="hidelink_<%= firstarticle.id %>" class="showhide" style="display:none">
+		<%= link_to_function( "Show&raquo;", 
+							  "Element.toggle('showlink_#{firstarticle.id}', 'hidelink_#{firstarticle.id}', 'postbody_#{firstarticle.id}'); " ) + " " %></span> 
+</h2>
+<p class="auth">
+	Posted by <%= author_link(firstarticle) %>
+	<%= js_distance_of_time_in_words_to_now firstarticle.created_at %> | 
+	<%= comments_link firstarticle %> | 
+	<%= category_links firstarticle %>
+</p>
+<div id="postbody_<%= firstarticle.id %>"><%= html(firstarticle,:body) %></div>

@@ -1,0 +1,103 @@
+
+
+#commentBlock {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/postmirror_ie.png', sizingMethod='crop');
+}
+
+.comment {
+	margin: 0;
+	padding: 0;
+	height: 1px;
+	display: block;
+	list-style: none;
+}
+
+.comment div.content {
+	height: 1px;
+}
+
+.comment .cite {
+	height: 1px;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/cite.png', sizingMethod='scale');
+}
+
+.comment div.content blockquote, .comment div.content table {
+	width: 19em;
+	border-right-style: none;
+	border-left-style: none;
+}
+
+#comment_box .content {
+	padding-top: .5em;
+}
+
+#sidebar {
+	height: 1%;
+}
+
+#search-results a, #search-results a:link, #search-results a:visited {
+	white-space: normal;
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/article.png', sizingMethod='crop');
+	position: relative;
+	height: 1%;
+	padding-left: 2px;
+	margin-right: 10px;
+}
+
+#search-results1 a, #search-results1 a:link, #search-results1 a:visited {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/article.png', sizingMethod='crop');
+}
+
+#sidebar  a, #sidebar  a:link, #sidebar  a:visited {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/link.png', sizingMethod='crop');
+	display: block;
+	position: relative;
+	height: 1%;
+	float: left;
+	clear: left;
+	margin-right: -1em;
+}
+
+#categories li a, #categories li a:link, #categories li a:visited {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/smart_folder.png', sizingMethod='crop');
+}
+
+#archives li a, #archives li a:link, #archives li a:visited {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/folder.png', sizingMethod='crop');
+}
+
+#syndicate li a, #syndicate li a:link, #syndicate li a:visited {
+	background-image: none;
+	filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/rss.png', sizingMethod='crop');
+}
+
+#flickr div a, #flickr div a:link, #flickr div a:visited, #tada li a:link, #tada li a:visited, #tada li del a:link, #tada li del a:visited, #delicious li a:link, #delicious li a:visited, #technorati li a:link, #technorati li a:visited {
+	filter: none;
+}
+
+#flickr h3 a {
+	display: none !important;
+}
+
+#flickr {
+	height: 1px;
+	float: left;
+	margin-right: -.5em;
+}
+
+.flickrrectangle, .flickrsquare {
+	height: 1px;
+	margin-right: 1px;
+}
+
+pre {
+	width: 36em;
+	height: auto;
+}

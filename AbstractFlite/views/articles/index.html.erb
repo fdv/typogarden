@@ -1,0 +1,12 @@
+<% for article in @articles -%>
+<div class="post">
+ <h2><%= link_to_permalink article, article.title %></h2>
+ <p class="auth">Posted by <%= author_link(article) %>
+ <%= js_distance_of_time_in_words_to_now article.created_at %> | <%= comments_link article %></p>
+ <%= html(article,:body) %>
+<p><%= article_link "Read more...", article if article.extended? %></p>
+<p class="meta"><%= category_links article %></p>
+</div>
+<% end -%>
+
+<p id="pagination"><%= will_paginate @articles %></p>

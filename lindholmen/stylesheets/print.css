@@ -1,0 +1,11 @@
+/* print styles */
+
+#sidebar, #scroller, 
+#search, #switchers, 
+#commentform, #footer,
+.post h2 small {
+  display:none;
+  }
+#content {
+  width:95%;
+  }

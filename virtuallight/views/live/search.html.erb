@@ -1,0 +1,11 @@
+<% if !@search.to_s.blank? -%>
+  <div class="sidebar-node">  
+    <h3><em>"<%=h @search %>"</em></h3>
+  <ul>
+  <% for article in @articles.to_a -%>
+    <li><%= link_to_permalink article, article.title %></li>
+  <% end -%>
+	</ul>
+<% else %>
+  &nbsp;
+<% end -%>

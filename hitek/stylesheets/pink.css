@@ -1,0 +1,18 @@
+/* Hitek Pink */
+
+#header { 
+	background: url(../../images/theme/headbg_pink.png) no-repeat;
+	}
+	
+#sidebar ul li { 
+	background: url(../../images/theme/bullet_pink.gif) 0 45% no-repeat;
+	padding-left: 17px;
+	}
+
+* html ul li {
+   list-style-type: disc;
+}
+
+* html ul {
+   list-style-type: disc;
+}

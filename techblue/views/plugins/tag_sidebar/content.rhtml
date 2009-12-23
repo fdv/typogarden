@@ -1,0 +1,13 @@
+<% unless sidebar.tags.blank? -%>
+<div class="sidemenu-head">
+  <h3><%= _("Tags")%></h3>
+</div>
+<div class='sidemenu-content'>
+  <p style="overflow:hidden">
+  <% sidebar.tags.each do |tag| -%>
+    <span style="font-size:<%= sidebar.sizes[tag] %>%"><%= link_to tag.display_name, tag_url(tag) %></span>
+<% end -%>
+  </p>
+</div>
+<div class="sidemen-foot"></div>
+<% end %>

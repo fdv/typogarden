@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag '/stylesheets/theme/application.css', :media => 'all' %>
+</head>
+
+<body>
+<div id="wrap">
+	<div id="header">
+	  <h1 id="sitename">
+	    <%= link_to this_blog.blog_name, this_blog.base_url %>
+	    <span class="caption"><%= this_blog.blog_subtitle %></span>
+    </h1>
+    <div id="nav">
+      <%= render :partial => 'shared/search' %>
+      <div id="topmenu">
+        <ul>
+          <li class="page_item <%= 'current_page_item' if (controller.controller_name == "articles" and controller.action_name == "index") %>">
+          <%= link_to _("Home"), this_blog.base_url %>
+            </li>
+            <li class="page_item <%= 'current_page_item' if (controller.action_name != 'index' and controller.action_name != 'view_page') %>">
+                <%= link_to _("Articles"), {:controller => "articles", :action => "archives"} if (controller.controller_name != "index" )%>
+            </li>
+            <li class="page_item <%= 'current_page_item' if (controller.controller_name == "articles" and controller.action_name == "view_page" and params[:name].to_s == 'about') %>">
+                <%= link_to _("About"), this_blog.base_url + "/pages/about" %>
+            </li>
+        </ul>
+      </div>
+    </div>
+	  <div class="clear"></div>
+	  <div id="breadcrumb">
+    </div>
+	</div>
+	<div id="content">
+    <div id="right">
+      <div id="loading" class="loading" style="display:none;"><%=_("Searching")%>...</div>
+      <div id="results" class="results"></div>
+      
+      <% @featured = Page.find_by_name("related")%>
+      <% if @featured -%>
+      <div id="featured">
+        <div><%= @featured.html(:body).gsub(/<\/?[^>]*>/, "").slice(0..250)%>...</div>
+        <span class="ftd_btm">
+        <%= link_to_permalink(@featured, _("Read More")) %>
+        </span>
+      </div>
+      <% end %>
+  	  <%= @content_for_layout %>
+  	  <%= javascript_tag 'show_dates_as_local_time()' %>
+  	</div>
+  	<div id="sidebar">
+  	  <div id="sidebartop"></div>
+    	<%= render_sidebars %>
+    	<div id="sidebarbtm"></div>
+  	</div>
+    <div class="clear">
+	</div>
+  <div id="bottom">
+    <p>Copyright &copy; <%= this_blog.blog_name %></p>
+    <p>Powered by <a href="http://typosphere.org">Typo</a></p>
+  </div>
+</div>
+<div id="footer">
+  <div id="credits">
+    <a href="http://ramblingsoul.com">CSS Template</a> by RamblingSoul | <a href="http://www.themelab.com/2008/05/21/clearpixels-free-wordpress-theme/">ClearPixels</a> theme by <a href="http://www.themelab.com">Theme Lab</a> | Typo port <a href="http://t37.net">Frédéric de Villamil</a></div>
+  </div>
+</div>
+
+</body>
+</html>

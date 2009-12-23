@@ -1,0 +1,8 @@
+<% @ta=0 %>
+<% for article in @articles -%>
+
+  <%= render :partial => "articles/article", :object => article %>
+  <% @ta+=1 %>
+<% end -%>
+
+<p id="pagination" class="pink"><%= will_paginate @articles %></p>

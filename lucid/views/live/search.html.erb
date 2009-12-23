@@ -1,0 +1,20 @@
+<% unless @search.to_s.blank? -%>
+<div id="search-panel">
+  <div class="bt"><div></div></div>
+	<div id="s1"><div id="s2"><div id="s3">
+    <p>Searched for <em>"<%=h @search %>"</em></p>
+<% unless @articles.empty? -%>
+    <ul>
+<% for article in @articles.to_a -%>
+      <li><%= link_to_permalink article, article.title %></li>
+<% end -%>
+    </ul>
+<% else -%>
+    <p>No results found.</p>
+<% end -%>		  
+	</div></div></div>
+	<div class="bb"><div></div></div>
+</div>
+<% else -%>
+&nbsp;
+<% end -%>

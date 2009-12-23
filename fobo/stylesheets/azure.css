@@ -1,0 +1,394 @@
+/* Azure Screen Styles */
+
+body {
+	margin: 0;
+	text-align: center;
+	background-color: #FFF;
+	font: 1em/1.2em Arial, Verdana, Helvetica, sans-serif;
+	color: #333;
+	}
+	
+#container {
+	margin: 0 auto;
+	width: 762px;
+	text-align: left;
+	background: #fff;
+	border: 10px solid #fff;
+	font-size: 80%;
+	}
+		
+#header { 
+	background: #8ab3d1 url(../../images/theme/hdr.gif) no-repeat;
+	width: 758px;
+	height: 128px;
+	margin: 0;
+	text-align: center;
+	float: left;
+	}
+	
+#content {
+	background-color:  #fff;
+	margin-top: 135px;
+	}
+
+#main { 
+	float: left;
+	width: 520px;
+	background: #fff;
+	padding: 1px;
+	}
+
+#sidebar {
+	margin-left: 540px;
+	padding: 0px;
+	}
+	
+	
+#footer {
+	background: #d3e0ea;
+	margin-top: 7px;
+	height: 35px;
+	text-align: center;
+	}
+	
+#footer a { border: none; }
+#footer img { border: none; margin-top: 10px; }
+	
+/*+-------------------------------------------+
+  |   			LINKS 						  |
+  +-------------------------------------------+*/
+  a {
+  	color: #E3780E;
+	text-decoration: none;
+	border-bottom: 1px dotted #E3780E;
+	}
+	
+ a:hover { color: #208D18; border-bottom-color: #208D18; }
+/*+-------------------------------------------+
+  |   			UTILITY 					  |
+  +-------------------------------------------+*/
+  
+  h1, h2, h3, h4, h5, h6 {
+  	margin: 0;
+	padding: 0;
+	}
+	
+  form, div { padding: 0; margin: 0; }
+  p { margin: 0 0 1em 0; padding: 0; }
+  img { border: 0; }
+
+  
+/*+-------------------------------------------+
+  |   			HEADER 						  |
+  +-------------------------------------------+*/
+  
+#logo {
+	padding-top: 48px;
+	}
+	
+#logo h1 a { color: #fff; text-decoration: none; border: none; }
+#logo h1 a:hover { color: #57B3FB; text-decoration: none; border-bottom: none; }
+#logo h2 { color: #57B3FB; padding-top: 0em; font-size: 1.2em; text-decoration: none;}
+
+/*+-------------------------------------------+
+  |   			        SEARCH     						    |
+  +-------------------------------------------+*/	
+
+ #search { color: #208D18; }
+
+ #sform { padding-top: 10px; }
+ 
+ #sidebar #searchform #s {
+	width: 130px;
+	margin-top: 20px;
+	}
+
+ #sidebar #searchsubmit {
+	padding: 1px;
+	}
+	
+ #search-results {
+  padding: 2px;
+  }
+  
+
+/*+-------------------------------------------+
+  |   			POST 						                  |
+  +-------------------------------------------+*/
+  .post {
+  	margin: 0 0 10px 0px;
+	padding-bottom: 10px;
+	padding-left: 10px;
+	}
+	
+  .post h2 {
+	font: bold 110%/1.4em Arial, Verdana, Helvetica, sans-serif;
+	background:  #FCCF94 url(../../images/theme/post-h2-bg.gif);
+	width: 520px;
+	height: 24px;
+	padding-left: 12px;
+	padding-top: 3px;
+	position: relative;
+	right: 10px;
+	}
+	
+  .post h2 a {
+  	color: #E3780E;
+	text-decoration: none;
+	border: none;
+	}
+	
+ .post h2 a:hover {
+ 	color: #208D18;
+	}
+	
+  p.meta {
+  	font-size: 75%;
+	text-align: right;
+	margin-right: 5px;
+	}
+	
+ p.auth {
+ 	padding-left: 5px;
+	font-size: 85%;
+	font-weight: bold;
+	color: #9a9a9b;
+	background-color:  #FFECCB;
+	border-bottom: 1px dotted #FDD4AF;
+	border-left: 1px solid #FDD4AF;
+	border-right: 1px solid #FDD4AF;
+	}
+	
+ p.auth a {
+  	color: #208D18;
+	text-decoration: none;
+	border: 0px;
+	}
+	
+ p.auth a:hover {
+	color: #E3780E;
+	text-decoration: none;
+	border-bottom: 1px dotted #E3780E;
+	}
+
+ h4.blueblk {
+ 	background: #CEEAFF;
+ 	padding: 5px;
+ 	margin: 10px 0;
+ 	border-bottom: 1px dotted #88C5F6;
+ 	}
+ 	
+ /*+-------------------------------------------+
+  |   			      COMMENTS						         |
+  +-------------------------------------------+*/
+  .comment-list li {
+  	background: #E6F5FF;
+  	padding: 5px;
+  	margin-bottom: 8px;
+  	color: #555;
+	border-top: 1px solid #F2F9FF;
+	border-left: 1px solid #F2F9FF;
+	border-right: 1px solid #CEEAFD;
+	border-bottom: 1px solid #CEEAFD;
+  	}
+  	
+ /*+-------------------------------------------+
+  |   			SIDEBAR 						               |
+  +-------------------------------------------+*/
+  
+ #sidebar h3 {
+ 		font: 105%/1.4em Arial, Verdana, Helvetica, sans-serif;
+ 		color: #208D18;
+		width: 195px;
+		height: 23px;
+		padding-top: 4px;
+		padding-left: 14px;
+		margin-top: 6px;
+		background: #AEF6A9 url(../../images/theme/sidebar-h3-bg.gif) no-repeat;
+ 		}
+ 		
+
+ #sidebar h3 a {
+		color: #E3780E;
+		border-bottom: 1px dotted #d75a20;
+		}
+
+ #sidebar h3 a:hover { color: #208D18; border-bottom-color: #208D18; }
+
+ #sidebar ul {
+ 		margin: 0;
+ 		padding: 0;
+ 		list-style-type: none;
+ 		}
+
+ #sidebar ul li a:link,
+ #sidebar ul li a:visited,
+ #sidebar ul li a:active {
+ 		color: #E3780E;
+  		text-decoration: none;
+		border: 0px;
+		}
+
+ #sidebar ul li a:hover {
+ 		color: #208D18;
+		border-bottom: 1px dotted #208D18;
+		}
+
+ #sidebar ul li { 
+ 	font: 105%/1.4em Arial, Verdana, Helvetica, sans-serif;
+ 	background-color: #E9FEE7;
+	width: 183px;
+	height: 21px;
+	margin-left: 9px;
+	border-left: 1px solid #BAE7B6;
+	border-right: 1px solid #BAE7B6;
+	border-bottom: 1px dotted #BAE7B6;
+	padding-left: 8px;
+	}
+	
+ #sidebar ul li:hover { 
+ 	font: 105%/1.4em Arial, Verdana, Helvetica, sans-serif;
+ 	background-color: #BAE7B6;
+	width: 183px;
+	height: 21px;
+	margin-left: 9px;
+	border-top: 1px solid #E3F8E2;
+	border-left: 1px solid #BAE7B6;
+	border-right: 1px solid #BAE7B6;
+	padding-left: 8px;
+	}
+		  
+ #flickr h3{
+ 	margin-bottom: 5px;
+ 	}
+		  	 
+ #flickr div img {
+ 	border: 4px solid #fff;
+ 	}
+ 	
+ #flickr div {
+    width: 108px;
+ 	border: 2px solid #B6E4B2;
+ 	margin-bottom: 5px;
+	margin-left: 9px;
+ 	}
+
+ #flickr div.flickrsquare { 
+        width: 82px;
+        border-right: 3px solid #B6E4B2;
+        float:left;
+        margin-right: 5px;
+        margin-right: 5px;
+        }
+
+  #flickr div a { border: none; }
+  
+ /*+-------------------------------------------+
+   |   			FOOTER 						                 |
+   +-------------------------------------------+*/
+  
+  #footer {
+		background: #B3DEFF url(../../images/theme/footer-bg.gif);
+		width: 758px;
+		height: 36px;
+		}
+
+  
+  #footer ul {
+  	margin: 0;
+  	padding: 7px 0 0 0;
+  	list-style: none;
+  	}
+  	
+  #footer ul li {
+  	display: inline;
+  	margin: 0;
+  	padding: 0 5px 0 0;
+  	font-size: 75%;
+  	}
+	
+  #footer ul li a {
+	color: #57B3FB;
+  	}  	
+	
+  #footer ul li a:hover {
+	color: #FFFFFF;
+  	}  	
+
+ /*+-------------------------------------------+
+   |   			       FORMS 						           |
+   +-------------------------------------------+*/
+   
+ input, textarea, select {
+ 	border: 1px solid #D3D3D3;
+ 	background: #F0F0F0;
+ 	}
+ 	
+ 	.frm-tbl td { vertical-align: top; padding: 5px; }
+ 	td#frm-btns { text-align: right; }
+ 	
+ 	#comment_body { height: 220px; }
+ 	#form-submit-button { background: #d3e0ea; }
+  
+ /*+-------------------------------------------+
+   |   		          	MISC 						         |
+   +-------------------------------------------+*/
+   
+ .powered { border: none; }
+ .powered img { margin-top: 20px; margin-left: 20px; }
+ .pullquote {
+		width: 30%;
+		float:right;
+		font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+		color: #666;
+		margin:10px;
+		background: url(../../images/theme/q-close.gif) no-repeat 70% 100% !important;
+		background /**/:url(); /* removing quote graphic in IE5+ */
+		padding: 0 25px 5px 0;
+}
+.pullquote:first-letter {
+	background: url(../../images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+ .light-bg { background: #f7f7f7; padding: 2px; }
+   .clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+ }
+ 
+ #errors {
+   color: red;
+ }
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] { border: none; }
+
+ /* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+ /* End hide from IE-mac */
+
+#categories li em, #archives li em
+{
+  color: #000000;
+  font-size: smaller;
+}

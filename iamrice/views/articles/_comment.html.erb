@@ -1,0 +1,22 @@
+<li id="comment-<%= comment.id %>" <%= 'class="author_comment"' if comment.user %> <%= 'style="display:none"' if controller.request.xhr? %><%= onhover_show_admin_tools(:comment, comment.id) %>>
+    <div class="comment-list-num">
+        <% comment_num = 1
+           comment.article.comments.each do |pcom| 
+               if pcom.id == comment.id -%>
+                   <%= comment_num %>.
+                   <% break
+               end
+               comment_num += 1
+            end -%>
+            
+    </div>
+
+    <div class="comment-list-content">
+        
+        <a name="comment-<%= comment.id %>"></a>
+        <%= gravatar_tag(comment.email) if this_blog.use_gravatar and comment.email %>
+        <cite><strong><%= (comment.url.blank?) ? h(comment.author) : link_to(h(comment.author), comment.url) %></strong> </cite> said <%= distance_of_time_in_words @article.created_at, comment.created_at %> later:<br />
+        <%= comment.html %>
+     </div>
+     <br/>
+</li>

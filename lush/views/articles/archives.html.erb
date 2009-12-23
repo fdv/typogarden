@@ -1,0 +1,27 @@
+<% if @articles.to_a.empty? -%>
+<div class="post">
+<p>No articles found...</p>
+</div>
+<% else
+     currentmonth = 0
+     currentyear = 0 
+     for article in @articles 
+       if (article.created_at.month != currentmonth || article.created_at.year != currentyear) 
+       	 currentmonth = article.created_at.month
+       	 currentyear = article.created_at.year -%>
+       	  <h2 class="month"><%= Date::MONTHNAMES[article.created_at.month] %> <%= article.created_at.year %></h2>
+ 	   <% end -%>
+  <div class="post">
+  <div class="postcontent">
+  <div class="archivedate"><%= article.created_at.mday %>:</div>
+  <div class="archivelink">
+  <%= link_to_permalink article, article.title %>
+  </div> 
+  <% if !article.categories.empty? %><div class="archivemeta"><small>posted in 
+  <%= article.categories.collect {|c| link_to c.name, :controller=>"articles", :action=>"category", :id=>c.name }.join(", ") -%>
+  </small></div>
+  <% end -%>
+ </div>
+ </div>
+<% end 
+  end -%>

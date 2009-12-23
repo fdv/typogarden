@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="nl">
+<!--
+      'Lush' - A sophisticated Typo theme.
+      Copyright 2005 by Marco van Hylckama Vlieg
+      All Rights Reserved.
+
+      http://www.i-marco.nl/weblog/
+      
+      This template is licensed under the Creative Commons
+      Attribution Non Commercial License
+      http://creativecommons.org/licenses/by-nc/2.5/
+-->
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/lush", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+  <!--[if IE]>
+  <%= stylesheet_link_tag "/stylesheets/theme/msie" %>  
+  <![endif]--> 
+  <!--[if lt IE 6]>
+  <%= stylesheet_link_tag "/stylesheets/theme/msie5" %>  
+  <![endif]--> 
+  <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+  <% font_small_path = url_for :controller => 'stylesheets', :action => 'theme', :id => 'small.css' %>
+  <link rel="alternate stylesheet" type="text/css" href="<%= font_small_path %>" title="smallfont" />
+  <% font_medium_path = url_for :controller => 'stylesheets', :action => 'theme', :id => 'medium.css' %>
+  <link rel="alternate stylesheet" type="text/css" href="<%= font_medium_path %>" title="mediumfont default" />
+  <% font_large_path = url_for :controller => 'stylesheets', :action => 'theme', :id => 'large.css' %>
+  <link rel="alternate stylesheet" type="text/css" href="<%= font_large_path %>" title="largefont" />
+  <% js_path = url_for :controller => 'javascript', :action => 'theme', :id => 'lush.js' %>
+  <% js_style_path = url_for :controller => 'javascript', :action => 'theme', :id => 'styleswitcher.js' %>
+  <script src="<%= js_style_path %>" type="text/javascript"></script>
+  <script src="<%= js_path %>" type="text/javascript"></script>
+</head>
+<body onload="init();">
+  <div id="container">
+    <div id="content">
+      <div id="head">
+        <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1><br />
+        <h3 id="subtitle"><%= this_blog.blog_subtitle %></h3><br />
+	<a id="ffplug" title="Get Firefox" href="http://www.getfirefox.com/"></a>
+	      <div id="ladybug" onclick="new Effect.ScrollTo('naughty');">&nbsp;</div>
+      </div>
+      <%= @content_for_layout %>
+      <%= javascript_tag "show_dates_as_local_time()" %>
+      <a id="naughty" href="javascript:void(null);" onclick="wtyl('on');" onmouseout="wtyl('off');">&nbsp;</a>
+      <div id="wtyl">&nbsp;</div>
+    </div>
+    <div id="sidebar">
+      <div id="search">
+        <%= render :partial => "/shared/search" %>
+      </div>
+      <div class="sidebar-node" id="fontprefs">
+      <a id="fontsmall" href="javascript:void(null);" title="small article text" onclick="setActiveStyleSheet('smallfont');">&nbsp;</a>
+      <a id="fontmedium" href="javascript:void(null);" title="medium article text" onclick="setActiveStyleSheet('mediumfont');">&nbsp;</a>
+      <a id="fontlarge" href="javascript:void(null);" title="large article text" onclick="setActiveStyleSheet('largefont');">&nbsp;</a>
+	  <div id="fontlabel">&nbsp;</div>
+	  </div>
+	<div class="sidebar-node">
+	<h3>About</h3>
+	<ul>
+	<li><%= link_to("About this site", :controller => "pages", :action => "about") %></li>
+	</ul>
+	</div>
+      <%= render_sidebars %>
+	<div class="sidebar-node">
+      <div id="sidefooter"></div>
+      </div>
+      <%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+      </div>
+      <div id="footer">
+        <div id="validation">
+<% css_url = url_for :controller => '', :only_path => false %>	
+          <a title="Valid CSS" id="csslink" href="http://jigsaw.w3.org/css-validator/validator?uri=<%= css_url %>">&nbsp;</a>
+          <a title="Valid XHTML 1.0 Strict" id="xhtmllink" href="http://validator.w3.org/check?uri=referer">&nbsp;</a>
+	      <a title="Template design by Marco van Hylckama Vlieg" id="marcolink" href="http://www.i-marco.nl/weblog/">&nbsp;</a>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

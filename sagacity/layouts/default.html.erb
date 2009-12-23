@@ -1,0 +1,64 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html>
+
+	<head>
+		
+		<title><%=h page_title %></title>
+		
+        <%= page_header %>
+        <%= stylesheet_link_tag "/stylesheets/theme/style" %>
+        <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+		
+	</head>
+	
+	<body>
+		
+		<div id="bg-left"><div id="bg-right"><div id="bg-upper-left"><div id="bg-upper-right"><div id="bg-inner-top"><div id="bg-inner-left"><div id="bg-inner-right">
+		    
+		<div id="main">
+		    
+		    <div id="header">
+    		    <h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+    		    <h2><%= this_blog.blog_subtitle %></h2>
+    		</div>
+    		
+    		<div id="sidebar">
+		
+		        <div id="search"> <%= render :partial => "shared/search" %></div>
+
+                <div id="search-results"></div>
+		    
+		            <%= observe_field "q", 
+                        :frequency => 1, 
+                        :url => { :controller => "live", :action => "search" }, 
+                        :loading => "Element.show('search_spinner')",
+                        :complete => "Element.hide('search_spinner')",
+                        :update => "search-results" -%>
+
+                <%= render_sidebars %>
+		    
+		    </div>
+		
+		    <div id="posts">
+		        <%= @content_for_layout %>
+                <%= javascript_tag "show_dates_as_local_time()" %>
+		    </div>
+		
+		</div>
+		
+		</div></div></div></div></div></div></div>
+		
+		<div id="bg-foot"><div id="bg-lower-left"><div id="bg-lower-right"><div id="bg-bottom">
+		&nbsp;
+		</div></div></div></div>
+		
+		<div id="footer">
+		    <a href="href="http://validator.w3.org/check?uri=referer"">Valid XHTML 1.0</a> |
+		    <a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">Valid CSS</a> |
+		    Powered by <a href="http://typosphere.org">Typo</a>
+		</div>
+		
+	</body>
+
+</html>

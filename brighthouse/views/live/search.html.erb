@@ -1,0 +1,15 @@
+<% if !@search.to_s.blank? -%>
+<div id="search-results-content">
+  <a class="close" onclick="Element.remove('search-results-content'); return false;" title="Close"></a>
+  <p>Searched for <em>"<%=h @search %>"</em></p>
+  <ul>
+  <% if @articles.to_a.empty? -%>
+    <li class="no-results-message">No Results</li>
+  <% else -%>
+    <% for article in @articles.to_a -%>
+      <li><%= link_to_permalink article, article.title %></li>
+    <% end -%>
+  <% end -%>
+  </ul>
+</div>
+<% end -%>

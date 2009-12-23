@@ -1,0 +1,18 @@
+<div id="results-panel">
+	<% if !@search.to_s.blank? -%>
+	<h3>SEARCH TERM<small>(s)</small></h3>
+	<p id="search-terms"><em>"<%=h @search %>"</em></p>
+	<h4>SEARCH RESULTS</h4>
+	<% if !@articles.blank? -%>
+	<ol>
+		<% for article in @articles.to_a -%>
+		<li><%= link_to_permalink article, article.title %></li>
+		<% end -%>
+	</ol>
+	<% else %>
+	<p>Sorry no results match your keywords.</p>
+	<% end -%>
+	<% else %>
+	<p>Please enter your search keywords.</p>
+	<% end -%>
+</div>

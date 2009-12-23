@@ -1,0 +1,3 @@
+<p class="auth">Posted by <%= author_link(article) %>
+<%= js_distance_of_time_in_words_to_now article.created_at %></p>
+<%= html(article,:body) %>

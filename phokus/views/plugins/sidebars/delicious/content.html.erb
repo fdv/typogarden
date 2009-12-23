@@ -1,0 +1,9 @@
+<% if @delicious -%>
+<h3>Del.icio.us</h3>
+<ul id="delicious">
+<% for item in @delicious.items.to_a.slice(0,@sb_config['count'].to_i) -%>
+<li><a href="<%= item.link %>" title="<%= item.title %>"><%= item.title %> </a></li>
+<% end -%>
+<li><%= link_to "View more at del.icio.us", @delicious.link %></li>
+</ul>
+<% end -%>

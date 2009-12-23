@@ -1,0 +1,36 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title><%= this_blog.blog_name %> <%= ("| #{@article.title}") if @article %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<%= page_header %>
+	<%= stylesheet_link_tag "/stylesheets/theme/abstractlights", :media => 'all'  %>
+</head>
+
+<body>
+
+<div id="header">
+  <div id="header_text">
+	<h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+	<p><%= this_blog.blog_subtitle %></p>
+  </div>
+</div>
+
+<div id="content">
+	<div id="main"><%= @content_for_layout %></div>
+	<div id="sidebar">
+	    <div id="search"> <%= render :partial => "shared/search" %></div>
+            <div id="search-results"></div>
+	    <%= render_sidebars %>
+	    <a title="Validate this Site" href="http://validator.w3.org/check?uri=referer"><%= image_tag '/images/theme/xhtml.gif', :alt => 'Valid XHTML 1.0' %></a><br />
+            <a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>"><%= image_tag '/images/theme/css.gif', :alt => 'Valid CSS' %></a><br />
+	    <%= link_to image_tag("powered.gif"),  "http://typosphere.org/", {:class => "powered", :rel => 'powered_by' } %>
+	</div>
+	<em class="clear">&nbsp;</em>
+</div>
+<p style="clear: both;">Design by <a href="http://cwilliams.textdriven.com" rel="designed_by" title="Chris Williams">Chris Williams</a>.</p>
+
+</body>
+</html>

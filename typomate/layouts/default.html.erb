@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+ <%= page_header %>
+ <%= stylesheet_link_tag "/stylesheets/theme/typomate", :media => 'screen', :title => 'TypoMate Red', :rel => 'stylesheet' %>
+ <%= stylesheet_link_tag "/stylesheets/theme/typomate-orange", :media => 'all', :title => 'TypoMate Orange', :rel => 'Alternate Stylesheet' %>
+ <%= stylesheet_link_tag "/stylesheets/theme/typomate-green", :media => 'all', :title => 'TypoMate Green', :rel => 'Alternate Stylesheet' %>
+<!--[if lt IE 7]> 
+	<%= stylesheet_link_tag "/stylesheets/theme/ie" %>
+<![endif]-->
+<%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+  <%= javascript_include_tag "/javascript/theme/styleswitcher" %>
+</head>
+<body>
+	<h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+<div id="wrapper">
+	<div id="tl"></div>
+	<div id="tr"></div>
+<div id="content-head">
+
+<span id="typomate-red" title="TypoMate Red" onclick="setActiveStyleSheet('TypoMate Red');"></span>
+<span id="typomate-orange" title="TypoMate Orange" onclick="setActiveStyleSheet('TypoMate Orange');"></span>
+<span id="typomate-green" title="TypoMate Green" onclick="setActiveStyleSheet('TypoMate Green');"></span>
+<img src="/images/theme/tm_icon.gif" alt="TextMate icon" />
+<h2 id="subtitle"><%= this_blog.blog_subtitle %></h2>
+
+
+</div>
+	<div id="content">
+		<div id="content-bl">
+			<div id="content-br">
+				<div id="sidebar">
+					<div id="sidebar-content">
+          			<div id="search"> <%= render :partial => "shared/search" %></div>
+			         <div id="search-results"></div>
+			              <%= observe_field "q", 
+			                  :frequency => 1, 
+			                  :url => { :controller => "live", :action => "search" }, 
+			                  :loading => "Element.show('search_spinner')",
+			                  :complete => "Element.hide('search_spinner')",
+			                  :update => "search-results" -%>
+
+			            	<%= render_sidebars %>
+					</div>
+				</div>
+				<div id="main">
+					<div id="main-content">
+      					<%= @content_for_layout %>
+          				<%= javascript_tag "show_dates_as_local_time()" %>
+      			</div>
+				</div>
+				<br style="clear:left; height:0;" />
+			</div>
+		</div>
+	</div>
+	<div id="content-foot">
+		
+		<div id="bl"></div>
+		<div id="br"></div>
+		
+		<ul>
+       <li><a href="http://validator.w3.org/check?uri=referer">Valid XHTML 1.0</a></li>
+       <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">Valid CSS</a></li>
+     </ul>
+
+	</div>		
+	
+	</div>
+	<%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+</body>
+</html>

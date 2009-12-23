@@ -1,0 +1,17 @@
+#search-results  {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+#content h2  {
+  border-bottom:1px #ccc solid;	
+}
+#fontprefs  {
+  padding:0 40px 0 0;
+}
+#flickr a {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=50);	
+}
+
+#flickr a:hover {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);	
+} 

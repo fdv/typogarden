@@ -1,0 +1,15 @@
+<h2><%= link_to_permalink article, article.title %> - 
+	<span id="showlink_<%= article.id %>" class="showhide">
+		<%= link_to_function( "Show&raquo;", 
+							  "Element.toggle('showlink_#{article.id}', 'hidelink_#{article.id}', 'postbody_#{article.id}')" ) + " " %></span>
+	<span id="hidelink_<%= article.id %>" class="showhide" style="display:none">
+		<%= link_to_function( "Hide&laquo;", 
+							  "Element.toggle('showlink_#{article.id}', 'hidelink_#{article.id}', 'postbody_#{article.id}'); " ) + " " %></span>
+</h2>
+<p class="auth">
+	Posted by <%= author_link(article) %>
+	<%= js_distance_of_time_in_words_to_now article.created_at %> | 
+	<%= comments_link article %> | 
+	<%= category_links article %>
+</p>
+<div id="postbody_<%= article.id %>" style="display:none;"><%= html(article,:body) %></div>

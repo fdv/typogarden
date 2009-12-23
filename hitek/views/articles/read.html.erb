@@ -1,0 +1,66 @@
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about=""
+    trackback:ping="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+    dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
+    dc:identifier="<%= url_for :controller=>"articles", :action=>"read", :id=>@article %>"
+    dc:description="<%=h (@article.html.strip_html[0..255]).gsub(/-+/, '-') %>"
+    dc:creator="<%= h @article.author %>"
+    dc:date="<%= @article.updated_at.xmlschema %>" />
+</rdf:RDF>
+-->
+
+<div class="post individual"<%= onhover_show_admin_tools(:article) %>>
+   <%= link_to("edit", { :controller => "admin/content", :action => "edit", :id => @article },
+         :class => "admintools", :style => "display: none", :id => "admin_article") %>
+         <h1 class="title"><%= link_to_permalink @article, @article.title %></h1>
+         <div class="round_block">
+            <div class="incidentals_top"></div>
+            <div class="incidentals">
+               <div class="date"><%= @article.created_at.strftime("%b %d") %></div>
+               <div class="auth">
+                  posted <%= js_distance_of_time_in_words_to_now @article.created_at %></div>
+                  <div class="category_links"><%= category_links @article%></div>
+               <div class="num_comments"><%= comments_link @article %></div>
+               <div class="num_trackbacks"><%= trackbacks_link @article %></div>
+            </div>
+            <div class="incidentals_bottom"></div>   
+         </div>
+   <%= @article.html(:body) %>
+</div>
+<div id="interactions">
+   <% if @article.allow_comments? or @article.comments.size > 0 -%>
+     <a name="comments"></a>
+       <center><small><a href="#respond">Leave a comment</a></small></center>
+     </h3> 
+   <% if @article.allow_comments? -%>
+   <% end -%>
+     <%= render(:partial => "comment", :collection => @article.comments) %>
+   <% end -%>
+
+   <% if @article.allow_comments? -%>
+     <%= render :partial => 'comment_box' %>
+   <% else -%>
+     <p>Comments are disabled</p>
+   <% end -%>
+
+   <% if @article.allow_pings? -%>
+     <a name="trackbacks"></a>
+     <h3 class="section_head">Trackbacks</h3>
+     <p>
+       Use the following link to trackback from your own site:<br/>
+       <span class=""><%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %></span>
+       </p>    
+     <%= content_tag(:ol, render(:partial => "trackback", :collection => @article.trackbacks), :id => 'trackbackList', :class => 'trackback-list') %>  
+   <% end -%>
+
+   <p class="postmetadata alt">
+     <small>
+     <a href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'atom', :id => @article %>">Atom feed for this post</a>
+     <a href="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>">trackback uri</a>  
+     </small>
+   </p>
+</div>

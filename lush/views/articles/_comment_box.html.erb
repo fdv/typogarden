@@ -1,0 +1,48 @@
+<div id="preview" style="display:none;"></div>
+<% form_remote_tag :url      => @article.comment_url,
+                    :position => :bottom,
+                    :update   => {:success => 'commentList'},
+                    :loading  => "loading()",
+                    :complete => "complete(request)",
+                    :failure  => "failure(request)",
+                    :html     => {:id => 'commentform', :class => 'comments' } \
+    do %>
+<p id="commentformtop">&nbsp;</p>
+<div class="comment-box">
+  <div id="cformtop">
+    <div id="errors"></div>
+    <a name="respond" id="respond"></a>
+    <p id="guest_name">
+      <label for="comment_author">Name:</label>
+      <%= text_field "comment", "author", :size => 20 %>
+    </p>
+    <div id="mailurl">
+      <p id="guest_email">
+        <label for="comment_email">Email:</label>
+        <%= text_field "comment", "email" %>
+      </p>
+      <p id="guest_url">
+        <label for="comment_url">URL:</label>
+        <%= text_field "comment", "url" %>
+      </p>
+    </div>
+  </div>
+  <p id="cformtoggle"><a href="javascript:void(null);" onclick="toggleMailUrl();">leave url/email</a></p>
+  <p>
+    <label for="comment_body">Message:</label>
+    <%= text_area "comment", "body" %>
+  </p>
+  <p id="commentbuttons">
+    <a href="" id="previewbutton" onclick="new Ajax.Updater('preview', '<%= url_for :action => 'comment_preview' %>',  {asynchronous:true, evalScripts:true, parameters:Form.serialize('commentform'), onComplete:function(request){Effect.Appear('preview')}}); return false;" />
+    <a href="" id="form-submit-button" onclick="ff15(); new Ajax.Updater({success:'commentList'}, '<%= url_for :action => "comment", :id => @article %>', {asynchronous:true, evalScripts:true, insertion:Insertion.Bottom, onComplete:function(request){complete(request)}, onFailure:function(request){failure(request)}, onLoading:function(request){loading()}, parameters:Form.serialize('commentform')}); return false;"></a>
+    <input type="submit" value="Submit comment" id="noscriptsubmit" />
+    <%= hidden_field_tag "alternater", $alternater %>
+    <span id="comment_loading" style="display:none;"><%= image_tag "/images/theme/submitspinner.gif" %></span>
+  </p>
+  <br style="clear:both;" />
+  <p id="cformfoot">&nbsp;</p>
+</div>
+<% end %>
+<script type="text/javascript">
+showButtons();
+</script>

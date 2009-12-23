@@ -1,0 +1,15 @@
+<% unless sidebar.categories.blank? -%>
+<div class="sidemenu-head">
+  <h3><%= _("Categories")%></h3>
+</div>
+<div class="sidemenu-content">
+  <ul id="categories">
+<% for category in sidebar.categories -%>
+  <% unless empty.blank? and category.article_counter == 0 %>
+    <li><%= link_to h(category.name), category_url(category)  %> <% unless count.blank? %><em>(<%= category.article_counter %>)</em><% end %></li>
+  <% end %>
+<% end -%>
+  </ul>
+</div>
+<div class="sidemen-foot"></div>
+<% end %>

@@ -1,0 +1,481 @@
+/*+-------------------------------------------+
+	Theme Name: Bauhaus | v 1.0
+	Description: Typo Design Theme Contest
+	Author: Melanie A. Mikulich | melaniec@mac.com
+  +-------------------------------------------+*/
+
+	body {
+		margin: 0;
+		padding: 0;
+		text-align: center;
+		background: #fff url(/images/theme/left-background.jpg) repeat-y;
+		font-family: 'Lucida Grande', Verdana, Arial, Sans-Serif;
+		color: #333;
+		font-size: 12px;
+		}
+		
+	#container {
+		margin: 0;
+		padding: 0;
+		text-align: left;
+		background: url(/images/theme/container-background.jpg) no-repeat top right; 
+		}
+		
+	#header { 
+		width: 70%;
+		height: 100px;
+		margin: 0;
+		padding: 10px 10px 0 0;
+		text-align: right;
+		float: right;
+		background: url(/images/theme/header-background.gif) repeat-x bottom right;
+		}
+		
+	#content {
+		margin: 0;
+		}
+	
+	#main { 
+		float: right;
+		width: 70%;
+		padding: 1px;
+		}
+	
+	#search {
+		height: 50px;
+		width: 25%;
+		margin: 8px 527px 8px 0px;
+		padding: 0px 20px 0px 10px;
+		color: #fff200;
+		}
+		
+	#sidebar {
+		width: 25%;
+		background: url(/images/theme/sidebar-background.jpg) no-repeat top left;
+		margin: 0px 530px 0px 0px;
+		padding: 0px 10px 0px 10px;
+		}
+		
+	#footer {
+		height: 35px;
+		margin: 0px 7px 0px 0px;
+		text-align: right;
+		}
+		
+	#footer a { border: none; }
+	#footer img { border: none; margin-top: 10px; }
+	
+/*+-------------------------------------------+
+	L I N K S
+   +-------------------------------------------+*/
+
+	a {
+		color: #999;
+		text-decoration: none;
+		border-bottom: 1px dotted #ccc;
+		}
+		
+	a:hover { 
+		color: #333; 
+		border-bottom-color: #fff200; 
+		}
+ 	
+/*+-------------------------------------------+
+    U T I L I T Y
+   +-------------------------------------------+*/
+
+	h1, h2, h3, h4, h5, h6 {
+		margin: 0;
+		padding: 0;
+		}
+		
+	form, div { 
+		padding: 0; 
+		margin: 0; 
+		}
+		
+	p { 
+		margin: 0 0 1em 0; 
+		padding: 0; 
+		}
+		
+	img { 
+		border: 0; 
+		}
+  
+/*+-------------------------------------------+
+    H E A D E R
+   +-------------------------------------------+*/
+	
+   #logo h1 a { 
+	   color: #333; 
+	   text-decoration: none; 
+	   border: none;
+	   padding: 1em 1em 0 0; 
+	   }
+	   
+   #logo h2 { 
+	   color: #666; 
+	   padding-top: 3px; 
+	   font-size: 11px; 
+	   text-decoration: none; 
+	   text-transform: lowercase; 
+	   letter-spacing: 3px; 
+	   font-weight: normal;
+	   }
+
+/*+-------------------------------------------+
+    S E A R C H
+   +-------------------------------------------+*/	
+
+	#sform { 
+		padding-top: 20px; 
+	}
+	
+	#sidebar #searchform #s {
+		width: 130px;
+		margin-top: 20px;
+	}
+	
+	#sidebar #searchsubmit {
+		padding: 1px;
+	} 
+	
+	#search-results {
+		padding: 2px;
+	}
+	
+	#search label {
+		display: block;
+	}
+  
+
+/*+-------------------------------------------+
+    P O S T 
+   +-------------------------------------------+*/
+  
+	.post {
+		 margin: 0 0 20px 5px;
+		 border-bottom: 1px solid #f4f4f4;
+		 padding: 0px 0px 10px 2px;
+	}
+	
+	.post p {	
+		 padding-left: 5px;
+	}
+	
+	.post h2 {
+		 font: bold 130%/1.3em Arial, Verdana, Helvetica, sans-serif;
+		 color: #333;
+		 border-left: 2px dotted #fff200;
+		 padding-left: 0.5em;
+	}
+	
+	.post h2 a {
+		color: #333;
+		text-decoration: none;
+		border: none;
+	}
+	
+	.post h2 a:hover {
+		color: #666;
+	}
+	
+	p.meta {
+		font-size: 10px;
+		text-align: right;	
+		margin-right: 5px;
+	}
+	
+	p.auth {
+		 padding: 0 .5em;
+		 font-size: 85%;
+		 margin-left: 0px;
+		 font-weight: normal;
+		 color: #444;
+		 background: url(/images/theme/post-auth-background.gif) no-repeat bottom left;
+		 text-align: left;
+		 text-transform: uppercase;
+		 border-bottom: 2px dotted #fff200;
+		 border-left: 2px dotted #fff200;
+	}
+	
+	h4.blueblk {
+		 padding: 0px;
+		 margin: 10px 0 0 0;
+		 color: #444;
+		 text-transform: lowercase;
+		 letter-spacing: 3px;
+		 border-bottom: 1px solid #666;
+	}
+	
+	.post table {
+		margin: 1em 0;
+		}
+	
+	.post table th {
+		 background: url(/images/theme/post-auth-background.gif) no-repeat bottom left;
+		 border: 1px solid #fff200;
+		 text-transform: uppercase;
+		 font-size: 10px;
+	}
+	
+	.post table td {
+		 border: 1px dotted #fff200;
+		 background-color: #fff;
+	}
+	
+	.post table tr.alt td {
+		background-color: #f1f1f1;
+	}
+	
+	.post blockquote {
+		background: url(/images/theme/blockquote-background.gif) no-repeat top left;
+		padding:1em 1em 0em 2em;
+		color: #777;
+		border-left: 2px dotted #fff200;
+		margin-left: 25px;
+	}
+	
+	.post code {
+		display: block;
+		margin: 1em 0 0 25px;
+		background: url(/images/theme/code-background.gif) no-repeat top left;
+		padding:1em 1em 0em 2em;
+		color: #777;
+		border-left: 2px dotted #fff200;
+	}
+	
+	small a {
+		display: block;
+		text-align: right;
+		margin: 1px;
+		font-size: 10px;
+		color: #666;
+		text-transform: uppercase;
+	}
+ 	
+ /*+------------------------------------------+
+     C O M M E N T S
+    +-------------------------------------------+*/
+
+	.comment-list li {
+		 border: 1px solid #fff200;
+		 padding:1em 1em 0em 2em;
+		 margin: 0 1em 0 8px;
+		 color: #555;
+		 background: #fffbc7 url(/images/theme/comment-background.gif) no-repeat top left;
+	}
+	
+	.comment-list li a {
+		 color: #666;
+		 text-decoration: none;
+		 border-bottom: 1px dotted #ccc;
+	}
+	
+	.comment-list li a:hover { 
+		color: #333; 
+		border-bottom-color: #fff200; 
+	}
+	
+	.comment-list li cite { 
+		font-style: normal 
+	}
+	
+	.comment-list p {
+		margin-top: 5px;
+		padding: 2px 5px;
+	}
+  	
+ /*+-------------------------------------------+
+     S I D E B A R
+    +-------------------------------------------+*/
+  
+	 #sidebar h3 {
+		 font: 1em 'Lucida Grande', Verdana, Arial, Sans-Serif;
+		 color: #ff0;
+		 margin-top: 10px;
+		 background: url(/images/theme/category-background.gif) no-repeat top left;
+		 height: 35px;
+		 padding: 15px 0px 0px 15px;
+		 text-transform: lowercase;
+		 letter-spacing: 3px;
+	}	
+	  
+	 #sidebar a {
+		color: #fff;
+		text-decoration: none;
+		border-bottom: 1px dotted #999;
+	}
+		
+	 #sidebar a:hover { 
+		color: #fff200; 
+		border-bottom-color: #ff0; 
+	}
+	
+	 #sidebar h3 a {
+		color: #ff0;
+	}
+	
+	#sidebar h3 a:hover { 
+		color: #fff200; 
+	 }
+	
+	#sidebar ul {
+		margin: 0;
+		padding: 0;
+		list-style-type: none;
+	 }
+			
+	#sidebar ul li { 
+		background: url(/images/theme/sidebar-bullet.gif) 0 45% no-repeat;
+		padding-left: 25px;
+		margin: 3px;
+	}
+	
+	#sidebar ul li em {
+		color: #ccc;
+	}
+	
+	#flickr div img {
+		border: 4px solid #fff;
+	}
+	
+	#flickr div {
+		width: 108px;
+		border: 2px solid #dbd1c1;
+		margin-bottom: 5px;
+	}
+	
+	#flickr div.flickrsquare { 
+		 width: 82px;
+		 border-right: 3px solid #dbd1c1;
+		 float:left;
+		 margin-right: 5px;
+	 }
+	
+	#flickr div a { 
+		border: none; 
+		}
+  
+ /*+-------------------------------------------+
+     F O O T E R
+    +-------------------------------------------+*/
+  
+	#footer ul {
+		 margin: 0;
+		 padding: 10px 0 0 0;
+		 list-style: none;
+	}
+	
+	#footer ul li {
+		display: inline;
+		margin: 0;
+		padding: 0 5px 0 0;
+		font-size: 75%;
+	}
+  	
+ /*+-------------------------------------------+
+     F O R M S
+    +-------------------------------------------+*/
+   
+	 input, textarea, select {
+		border: 1px solid #999;
+		background: #f1f1f1;
+	 }
+	 
+	 .frm-tbl td { 
+		vertical-align: top; 
+		padding: 5px; 
+	 }
+	 
+	 td#frm-btns { 
+		text-align: right; 
+	 }
+	 
+	 #comment_body { 
+		height: 220px; 
+	 }
+	 
+	 #form-submit-button { 
+		background: #f1f1f1; 
+	 }
+  
+ /*+-------------------------------------------+
+     M I S C
+    +-------------------------------------------+*/
+   
+	#sidebar a.powered { 
+		border: 0px; 
+		text-decoration: none;
+	}
+	
+	.powered img { 
+		margin: 20px 45px;
+	}
+	
+	.pullquote {
+		width: 30%;
+		float:right;
+		font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+		color: #666;
+		margin:10px;
+		background: url(images/theme/q-close.gif) no-repeat 70% 100% !important;
+		background /**/:url(); /* removing quote graphic in IE5+ */
+		padding: 0 25px 5px 0;
+	}
+	
+	.pullquote:first-letter {
+		 background: url(images/theme/q-open.gif) no-repeat left top !important;
+		 padding:5px 2px 10px 35px!important;
+		 padding /**/:0px; 	/* resetting padding in IE5+ */
+		 background /**/: url(); /* removing quote graphic in IE5+ */
+	}
+	
+	.light-bg { 
+		background: #f1f1f1; 
+		padding: 2px; 
+	}
+	
+	.clearfix:after {
+		content: "."; 
+		display: block; 
+		height: 0; 
+		clear: both; 
+		visibility: hidden;
+	}
+
+	#errors {
+		color: red;
+	}
+	
+	.admintools {
+		float: right;
+		background-color: #fff;
+		font-size: smaller;
+		padding: 0 2px;
+		margin: 0 1px;
+		color: #ccc;
+		border: 1px solid #ccc;
+	}
+	
+	.admintools:hover {
+		color: #c00;
+		border: 1px solid #c00;
+	}
+	
+	a[name] { 
+		border: none; 
+		}
+	
+	/* Hides from IE-mac \*/
+	* html .clearfix {
+		height: 1%;
+	}
+	/* End hide from IE-mac */
+	
+	#categories li em, #archives li em {
+		color: #ccc;
+		font-size: smaller;
+	}
+	

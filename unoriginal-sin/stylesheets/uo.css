@@ -1,0 +1,152 @@
+@import url(shadow_border.css);
+
+/* Unoriginal Sin Stylesheet */
+
+body {
+  width: 55em; margin: 0 auto;
+  font-size: 85%; font-family: Georgia, serif;
+  color: #222;
+}
+
+h1, h2, h3 { 
+  font-family: Helvectia, sans-serif; letter-spacing: -1px;
+}
+
+h1 a, h1 a:visited, h1 a:hover,
+h2 a, h2 a:visited, h2 a:hover { 
+  text-decoration: none;
+  color: black;
+}
+
+p, li {
+  line-height: 1.5em;
+}
+
+li { list-style: square; }
+
+a { color: #333382; }
+a:visited { color: #5c5cbf; }
+a:hover { color: white; background: #333382; }
+
+.auth { color: #444; font-style: italic; }
+
+.clearer {
+  clear: both;
+}
+
+#container { 
+  margin: 0 17px;
+  padding: 17px 0 28px 0;
+  /* border: 1px solid #ccc; */
+}
+
+#header {
+  position: relative;
+  background: #333; color: white; 
+  padding: 30px 0;
+  text-align: center;
+}
+#header a { color: white; text-decoration: none; }
+#header a:hover { background: transparent; }
+#sitename { font-size: 225%; margin-bottom: 0.1em; }
+#navlink { position: absolute; bottom: 0.5em; right: 1em; color: #ccc; }
+a#navlink:hover { background: #cecece; color: black; }
+
+#content {
+  padding: 0 3em;
+}
+
+/* Post
+------------------------------------------------------------------------------*/
+
+.post h2 { font-size: 200%; margin-bottom: 0; padding-bottom: 0; }
+.auth { margin-top: 0.2em; }
+
+/* Comments & Trackbacks
+------------------------------------------------------------------------------*/
+
+#comments-heading, #trackbacks-heading { margin-top: 2em; }
+
+#commentList {  margin: 0; padding: 0; color: #666; }
+#commentList li { list-style: none; border-top: 1px dotted #ccc; padding-top: 0.5em; }
+
+#comment-box { padding: 2% 2% 2.5% 2.5%; background: #f5f5f5; }
+#comment-box label { display: block; font-weight: bold; }
+#comment-textarea { width: 50%; margin-left: 0; float: left; }
+#comment-textarea textarea { height: 19em; width: 97%; padding: 2px; }
+#comment-name, #comment-url, #comment-email { width: 48%; margin-left: 2%; float: right; }
+#comment-name input, #comment-url input, #comment-email input { width: 95%; padding: 2px; } 
+#comment-url label, #comment-email label { margin-top: 0.7em; font-weight: normal; }
+#comment-submit { clear: both; width: 48%; margin-left: 2%; margin-top: -2.1em; float: right; }
+#comment-submit input { padding: 3px 6px; font-weight: bold; }
+
+/* Nav
+------------------------------------------------------------------------------*/
+
+#nav {
+  font-family: Verdana, sans-serif;
+  border-top: 1px solid #ccc;
+  background: #f7f7f7;
+}
+
+#nav h3 { margin-bottom: -0.1em; }
+
+/* turned off */
+#search, #search-results { padding-left: 2%; padding-right: 2%; display: none; }
+
+#search form { margin: 10px 0; overflow: auto; }
+#search label, #search input { padding: 2px; }
+#search label { float: left; width: 15%; color: #333; margin-top: 0.25em; font-weight: bold; }
+#search input { float: left; width: 70%; margin-right: 2%;}
+#search img { float: left; margin-top: 0.2em; }
+
+#search-results { clear: both; border-bottom: 1px solid #eee; }
+#search-results ul, #search-results p  { margin: 0; }
+#search-results ul { padding-bottom: 1em; }
+#search-results li { padding: 0.5em 0; } 
+
+#sidebar {
+  padding: 1.5em 0;
+}
+
+.sidebar-node {
+  border-top: 3px solid #333;
+  background: white;
+	padding: 0 1%;
+  margin: 0 3em 1em 3em;
+}
+
+/* these only get applied with js */
+.sidebar-left, .sidebar-right  {
+	width: 45%;
+	margin: 0 0 1em 0;
+}
+
+.sidebar-left {
+  float: left; clear: left;
+  margin-left: 2%; margin-right: 1%;
+}
+
+.sidebar-right {
+  float: right; clear: right;
+  margin-right: 2%; margin-left: 1%;
+}
+
+/* Footer
+------------------------------------------------------------------------------*/
+
+#footer {
+  font-family: Verdana, sans-serif; font-size: 0.9em; text-align: center;
+  margin: -10px 0 5px 0;
+  /* border: 1px solid white; border-top: 1px solid #aaa; */
+  clear: both;
+}
+#footer a { color: #bbb; }
+#footer ul { margin: 0.5em 0; padding: 0; }
+#footer li { list-style: none; display: inline; padding: 0 1em; }
+
+
+/* Admin Tools - turned off
+------------------------------------------------------------------------------*/
+
+.admintools { display: none; }

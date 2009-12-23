@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<title><%= this_blog.blog_name %> <%= ("| #{@article.title}") if @article %></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta name="MSSmartTagsPreventParsing" content="true" />
+	<%= page_header %>
+	<%= auto_discovery_link_tag :atom, :controller => 'xml', :action => 'atom' %>
+	<%= stylesheet_link_tag "/stylesheets/theme/laughingatyou" %>
+</head>
+
+<body>
+
+<div id="header">
+	<h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+	<p><%= this_blog.blog_subtitle %></p>
+</div>
+
+<div id="content">
+	<div id="main"><%= @content_for_layout %></div>
+	<div id="sidebar">
+		<%= render_sidebars %>
+	</div>
+	<em class="clear">&nbsp;</em>
+</div>
+
+</body>
+</html>

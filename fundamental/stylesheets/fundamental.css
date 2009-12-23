@@ -1,0 +1,455 @@
+/* Fundamental CSS by Martin Wulffeld <martin.wulffeld@aeonblue.dk> */
+
+body {
+        margin: 0;
+        padding: 0;
+        background-color: #FFF;
+        font-size: 14px;
+        font-family: Verdana, Arial, Helvetica, sans-serif;
+        background: url("../../images/theme/bgsidebar.gif") repeat-y;
+}
+        
+h1, h2, h3, h4, h5, h6 {
+        margin: 5px 0;
+        font-family: 'Trebuchet MS', Verdana, Arial, Helvetica, sans-serif;
+}
+
+h1 {
+        font-size: 21px;
+}
+
+h2 {
+        font-size: 18px;
+}
+
+h3 {
+        font-size: 14px;
+}
+
+h4 {
+        font-size: 12px;
+}
+
+h5 {
+        font-size: 11px;
+}
+
+h6 {
+        font-size: 9px;
+}
+
+span,
+p,
+code,
+pre,
+li,
+th,
+td,
+blockquote {
+        font-size: 11px;
+}
+
+form, div {
+        padding: 0;
+        margin: 0;
+}
+
+p {
+        margin: 0 0 1em 0;
+        padding: 0;
+}
+
+img {
+        margin: 0;
+        padding: 0;
+        border: none;
+}
+
+#page {
+        float: left;
+        margin: 0;
+        padding: 0 5px 0 7px;
+        text-align: left;
+        background-color: #FFF;
+}
+
+#header { 
+        margin: 0;
+        padding: 0;
+        background-color: #464646;
+        border-bottom: 10px solid #4CC4EE;
+        border-bottom: 7px solid #EEE;
+        width: 510px;
+}
+
+#footer {
+        margin: 0;
+        padding: 0;
+        height: 2em;
+        background-color: #464646;
+        border-top: 7px solid #00BBEE;
+        width: 510px;
+}
+
+#main { 
+        width: 490px;
+        border-bottom: none;
+        padding: 0;
+        margin: 15px 10px 5px 10px;
+}
+
+#sidebar {
+        height: 1px; /* Fixes IE bug. */
+        margin: 0 0 0 520px;
+        padding: 15px 14px 15px 24px;
+        color: #FFF;
+}
+
+#header h1#sitename {
+        margin: 0;
+}
+     
+#header h1#sitename a,
+#header h1#sitename a:hover {
+        display: block;
+        color: #FFF;
+        padding: 30px 10px 4px 10px;
+        font-size: 1.2em;
+        border: none;
+        text-align: right;
+}
+
+#header h4#subtitle {
+        color: #FFF;
+        padding: 4px 10px 6px 10px;
+        background-color: #00BBEE;
+        margin: 0;
+        text-align: right;
+}
+
+#page a {
+        color: #00BBEE;
+        text-decoration: none;
+        border-bottom: 1px solid #00BBEE;
+}
+        
+#page a:hover {
+        color: #FFF;
+        background-color: #00BBEE;
+        border-bottom: 1px solid #00BBEE;
+}
+
+#sidebar a {
+        color: #AAF100;
+        text-decoration: none;
+        border-bottom: 1px solid #AAF100;
+}
+        
+#sidebar a:hover {
+        color: #FFF;
+        background-color: #AAD100;
+        border-bottom: 1px solid #AAD100;
+}
+
+#sidebar p {
+        margin: 0 0 5px 0;
+}
+
+#search #sform {
+        padding: 5px 3px;
+}
+ 
+/* Apparently search borks if font-size is specified here. */
+#search #q {
+}
+
+.post {
+        margin: 0 0 5px 0px;
+        padding-bottom: 10px;
+}
+
+.post h2.articletitle {
+        text-align: right;
+}
+
+.post table {
+        margin: 5px 0;
+        padding: 0;
+}
+
+.post thead td {
+        background-color: #555;
+        color: #FFF;
+        font-size: 0.8em;
+        padding: 1px 3px;
+        margin: 0;
+}
+
+.post tbody td {
+        background-color: #DDD;
+        color: #222;
+        font-size: 0.8em;
+        padding: 1px 3px;
+        margin: 0;
+}
+
+.post p {
+        line-height: 1.6em;
+}
+        
+#page .post span.typo_date {
+        font-size: 1em;
+        text-transform: uppercase;
+        text-align: right;
+}
+
+.post p.meta {
+        text-align: right;
+        color: #666;
+        font-size: 0.6em;
+        text-transform: uppercase;
+}
+
+.post p.author {
+        display: block;
+        padding: 2px 0 0 0;
+        font-size: 0.6em;
+        margin: 0;
+        color: #999;
+        text-align: right;
+        border-top: 1px dashed #A2DFFC;
+        text-transform: uppercase;
+}
+
+.post ul.postmetadata {
+        text-align: right;
+        margin: 0 0 10px 0;
+        padding: 0;
+        list-style-type: none;
+        font-size: 0.7em;
+}
+
+.post ul.postmetadata li {
+        text-transform: uppercase;
+        display: inline;
+        font-size: 0.9em;
+}
+
+.post table {
+        margin: 5px 0;
+        padding: 0;
+}
+
+.post thead td,
+.post th {
+        background-color: #FF6600;
+        color: #FFF;
+        border: 1px solid #EE5500;
+        padding: 1px 3px;
+        margin: 0;
+}
+
+.post tbody td,
+.post td {
+        background-color: #EEE;
+        color: #222;
+        border: 1px solid #DDD;
+        padding: 1px 3px;
+        margin: 0;
+}
+
+blockquote {
+        font-style: italic;
+}
+
+code {
+        display: block;
+        background-color: #F4F4F4;
+        border: 1px solid #E4E4E4;
+        margin: 3px;
+        padding: 5px;
+}
+
+ol.comment-list {
+        list-style-type: none;
+        margin: 0 0 30px 0;
+        padding: 0;
+}
+
+ol.comment-list li {
+        border-bottom: 1px dashed #00BBEE;
+        padding:  0 0 5px 0;
+        margin: 0 0 10px 0;
+        color: #222;
+}
+
+ol.comment-list li h4.commentauthor {
+        margin: 0 0 8px 0;
+        padding: 2px 4px;
+        background-color: #00BBEE;
+        color: #FFF;
+}
+
+#page ol.comment-list li h4.commentauthor a {
+        color: #FFF;
+        text-decoration: none;
+        border-bottom: 1px solid #FFF;
+}
+
+#page ol.comment-list li h4.commentauthor a:hover {
+        color: #00BBEE;
+        background-color: #FFF;
+        text-decoration: none;
+        border-bottom: 1px solid #FFF;
+}
+
+ol.comment-list li div.commentbody {
+        padding: 0 4px 4px 4px;
+}
+
+h4.blueblk {
+        padding: 5px 0;
+        margin: 10px 0;
+        border-bottom: 1px dashed #DDD;
+        color: #AAA;
+}
+
+table.comment {
+        padding: 2px 0px;
+}
+
+table.comment td {
+        vertical-align: top;
+        padding: 2px;
+}
+
+table.comment td.meta {
+        padding: 3px 0;
+}
+
+table.comment td#comments-buttons {
+        text-align: right;
+}
+
+table.comment p {
+        margin: 0;
+}
+
+table.comment input#comment_author,
+table.comment input#comment_url,
+table.comment input#comment_email,
+table.comment textarea#comment_body {
+        width: 485px;
+        background-color: #F4F4F4;
+        color: #555;
+        border: 1px dashed #DDD;
+        padding: 2px;
+}
+
+input#form-submit-button {
+        background-color: #86868A;
+        color: #FFF;
+        border: none;
+        padding: 2px;
+}
+
+input#form-submit-button:hover {
+        background-color: #46464A;
+        color: #FFF;
+        border: none;
+        padding: 2px;
+}
+
+table.comment textarea#comment_body {
+        height: 140px;
+}
+
+.light-bg {
+        background: #F727F7;
+        padding: 2px;
+}
+
+#errors {
+        color: red;
+}
+
+/* Sidebar */
+#sidebar h3 {
+        margin-top: 10px;
+        font-size: 0.8em;
+}
+
+#sidebar ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style-type: square;
+}
+         
+#sidebar ul li { 
+        margin: 0 0 2px 0;
+        font: 0.8em Verdana, Helvetica, sans-serif;
+}
+
+#sidebar ul li em {
+        font-size: 8px;
+        font-style: normal;
+}
+          
+#sidebar #flickr div img {
+        border: 2px solid #FFF;
+}
+         
+#sidebar #flickr div {
+        width: 108px;
+        margin-bottom: 5px;
+}
+
+#sidebar #flickr div.flickrsquare { 
+        display: inline;
+        width: 82px;
+}
+
+#sidebar #flickr div a {
+        border: none;
+}
+
+#sidebar #flickr div a:hover {
+        border: none;
+        color: #FFF;
+        border-bottom: 1px solid #AAF100;
+}
+
+#sidebar div#pagemeta {
+        margin-top: 10px;
+}
+
+#sidebar div#pagemeta h4 {
+        margin-bottom: 0;
+}
+
+#sidebar div#pagemeta ul {
+        list-style-type: none;
+        margin: 3px 0 5px 0;
+        padding: 0;
+}
+
+#sidebar div#pagemeta ul li {
+        margin: 0;
+        padding: 1px 0;
+}
+
+.post .admintools {
+        float: left;
+}
+
+.admintools {
+        float: right;
+        background-color: #FFF;
+        font-size: smaller;
+        padding: 0 2px;
+        margin: 0;
+        color: #CCC;
+}
+
+.admintools:hover {
+}

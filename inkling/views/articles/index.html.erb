@@ -1,0 +1,6 @@
+<dl class="entries">
+  <%= render :partial => "article", :collection => @articles %>
+</dl>
+  
+<p class="pagination"><%= will_paginate @articles %></p>
+

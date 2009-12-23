@@ -1,0 +1,41 @@
+8
+
+dir
+1706
+http://svn.typosphere.org/typo/trunk/themes/dirtylicious/stylesheets
+http://svn.typosphere.org/typo
+
+
+
+2008-04-30T20:33:39.871932Z
+1688
+neuro
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+820eb932-12ee-0310-9ca8-eeb645f39767
+
+application.css
+file
+
+
+
+
+2008-06-09T16:29:14.000000Z
+ec3fec8de0be462fed2f04d2273612da
+2008-04-30T20:33:39.871932Z
+1688
+neuro
+has-props
+

@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/typo/!svn/ver/1640/trunk/themes/dirtylicious/views/articles
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/index.html.erb
+END
+read.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/read.html.erb
+END
+_comment_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/_comment_list.html.erb
+END
+_comment.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/_comment.html.erb
+END
+_article.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/typo/!svn/ver/1640/trunk/themes/dirtylicious/views/articles/_article.html.erb
+END
+comment_preview.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/comment_preview.html.erb
+END
+_comment_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/_comment_form.html.erb
+END
+_trackback.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/typo/!svn/ver/1599/trunk/themes/dirtylicious/views/articles/_trackback.html.erb
+END

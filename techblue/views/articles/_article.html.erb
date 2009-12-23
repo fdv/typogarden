@@ -1,0 +1,25 @@
+<div class="post atomentry" id="article-<%= article.id %>">
+  <h2 class="title">
+    <%= (controller.action_name.include? 'permalink') ? article.title : link_to_permalink(article,article.title) %>
+  </h2>
+
+  <div class="entry">
+    <%= article.html(:body) %>
+
+    <% if article.extended? -%>
+      <div class="extended">
+        <% if controller.action_name == 'index' -%>
+          <p><%= link_to_permalink article,"Continue reading &raquo;" %></p>
+        <% else -%>
+          <%= article.html(:extended) %>
+        <% end -%>
+      </div>
+    <% end -%>
+  	<%= content_tag(:p, tag_links(article), :class => 'tags') unless article.tags.empty? %>
+  </div>
+
+  <p class="meta">
+    <%= category_links(article) unless article.categories.empty? %> |
+    <%= _("Posted on") + " " +  article.published_at.strftime("%d %b %Y %H:%M") + _("by") + " " + author_link(article) %> | <%= comments_link(article)  if article.allow_comments? %>
+  </p>
+</div>

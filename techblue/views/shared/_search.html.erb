@@ -1,0 +1,15 @@
+<% form_tag({ :controller => 'articles', :action => 'search' },
+            { :method => 'get', :id => 'sform' }) do -%>
+  <div id="searchbg">
+    <input type="text" id="q" name="q" class="searchform" size="16" value="" />
+    <input class="searchsubmit" type="submit" value=""/>
+  </div>
+<% end -%>
+  <%= observe_field 'q',
+                    :url        => { :controller => 'live', :action => 'search' },
+                    :frequency  => 1,
+                    :loading    => "Element.show('loading')",
+                    :complete   => "Element.hide('loading')",
+                    :update     => 'results',
+                    :with       => "'q=' + encodeURIComponent($F('q'))" %>
+

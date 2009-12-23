@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= meta_tag 'ICBM', this_blog. geourl_location %>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/subtletheme", :media => 'screen' %>
+<!--[if IE 5]>
+  <%= stylesheet_link_tag "/stylesheets/theme/subtletheme_IE5", :media => 'screen' %>
+<![endif]-->
+<!--[if gt IE 5]>
+  <%= stylesheet_link_tag "/stylesheets/theme/subtletheme_IE55", :media => 'screen' %>
+<![endif]-->
+  <%= stylesheet_link_tag "/stylesheets/theme/local", :media => 'screen' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/subtletheme_print", :media => 'print'  %>
+</head>
+<body>
+<div id="container" class="clearfix">
+  <div id="header">
+    <div id="logo">
+      <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+      <h2 id="subtitle"><%= this_blog.blog_subtitle %></h2>
+    </div>
+  </div>
+  <div id="search">
+    <span class="toplinks">
+      <a href="<%= url_for :controller=>'xml', :action=>'rss' %>" title="<%= this_blog.blog_name %> RSS 2.0 feed"><%= image_tag "theme/rss.gif", :alt => "RSS" %></a>
+      <a href="#sidebar">menu</a>
+    </span>
+    <%= render :partial => "shared/search" %>
+    <div id="search-results"></div>
+  </div>
+  <div id="content" class="clearfix">
+    <div id="main">
+      <%= @content_for_layout %>
+      <%= javascript_tag "show_dates_as_local_time()" %>
+    </div>
+    <div id="sidebar">
+      <div id="side_search" class="sidebar-node">
+        <!-- Yeah, i know this should be a partial -->
+		    <% form_tag({ :controller => 'articles', :action => 'search' },
+		                { :method => 'get', :id => 'sform1' }) do -%>
+		         <h3><label for="q">Search</label><input type="text" id="q_bottom" name="q" value="" size="15" /><%= image_tag "theme/spinner.gif", :id => 'search_spinner1', :style => 'display:none;' %></h3>
+        
+        <% end %>
+        <%= observe_field "q_bottom", :frequency => 1, 
+            :url => { :controller => "live", :action => "search" }, 
+            :loading => "Element.show('search_spinner1')",
+            :complete => "Element.hide('search_spinner1')",
+            :update => "search-results1",
+            :with => "'q=' + escape($F('q_bottom'))" -%>
+        <!-- /Yeah, i know this should be a partial -->
+        <div id="search-results1"></div>
+      </div>
+      <%= render_sidebars %>
+      <br clear="all" />
+    </div>
+  </div>
+  <div id="footer">
+    <ul>
+      <li><%= link_to image_tag("powered.gif"), "http://typosphere.org", {:class => "powered" } %></li>
+      <li><a href="http://validator.w3.org/check?uri=referer" title="Validate the XHTML of this page with the W3C">Valid XHTML 1.0</a></li>
+      <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>" title="Validate the CSS of this page with the W3C">Valid CSS</a></li>
+      <li id="taylott"><cite>theme by <a href="http://subtlegradient.com/articles/2005/11/26/subtletheme" title="SubtleTheme Typo Theme Announcement Page">Thomas Aylott</a> of <a href="http://design42.com/">design42</a></cite></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

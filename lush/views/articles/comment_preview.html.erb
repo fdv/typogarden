@@ -1,0 +1,14 @@
+<% default_gravatar = url_for :controller => 'images', :action => 'theme', :id => 'default_gravatar.png', :only_path => false %>
+<% $alternater = params[:alternater] %>
+<% $alternater = $alternater.to_i + 1 %>
+<ul class="comment-list preview">
+<li class="comment<%= $alternater.remainder(2) %><%= ' author_comment' if @comment.user %>">
+<div class="commenthead"><em><%= $alternater %>.</em>&nbsp;(later)<a name="preview"></a>
+</div>
+<div class="commenttext">
+<%= gravatar_tag(@comment.email, :default => default_gravatar, :size => '30') if this_blog.use_gravatar and @comment.email %><%= comment.html(@comment) %>
+</div>
+<p class="commentmeta"><cite><strong><%= (@comment.url.blank?) ? h(@comment.author) : link_to(h(@comment.author), @comment.url) %></strong></cite></p>
+</li>
+</ul>
+<% $alternater-=1 %>

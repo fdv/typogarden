@@ -1,0 +1,69 @@
+/*
+######################################################
+#           METROPOLITAN TYPO THEME STYLES           #
+#           IE STYLES
+#           November 2005                            #
+#	    Copyright Micah Wylde		           #
+######################################################
+*/
+#titles {
+  background-image: none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/theme/textbg.png',sizingMethod='scale');
+}
+#header {
+ height: 100px;
+}
+#maincolumn
+	{
+	display: inline;
+	}
+#maincolumn {
+margin-left: 3px;
+}
+#sidecolumn {
+
+ width: 175px;
+}
+#footer {
+
+	margin-left: 3px;
+	width: 726px;
+}
+ .typocode pre {
+  word-wrap: break-word;
+}
+#search-results
+{
+  margin-top: 2px;
+  }
+#search-results ul
+{
+        background-color: #397AAC;
+        border-top: thin white solid;
+        text-align: left;
+        margin-left: 5px;
+	margin-left: 0;
+ margin-top: 0;
+        padding: none;
+        margin-bottom: 5px;
+}
+#search-results a
+{
+        display: block;
+        text-decoration: none;
+        padding: 5px;
+        border-bottom: none;
+}
+#search-results a:hover
+{
+       background-color: white;
+       text-decoration: none;
+}
+#search-results ul li
+{
+	background: none;
+	border: thin white solid;
+	border-top: none;
+	padding: 0px;
+	margin: 0;
+}

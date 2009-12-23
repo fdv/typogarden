@@ -1,0 +1,12 @@
+<% form_tag({ :controller => 'articles', :action => 'search' },
+            { :method => 'get', :id => 'sform' }) do -%>
+<%= image_tag('../../images/theme/header-search-lt.gif', options={:border => '0', :id => 'search-lt'}) %>
+<input type="text" id="q" name="q" value="Live search" size="15" onclick="if(this.value=='Live search')this.value='';" />
+<%= image_tag('../../images/theme/header-search-rt.gif', options={:border => '0', :id => 'search-rt'}) %>
+<% end %>
+<%= observe_field "q", :frequency => 1, 
+    :url => { :controller => "live", :action => "search" }, 
+    :loading => "Wired.loading('search-rt')",
+    :complete => "Wired.complete('search-rt')",
+    :update => "search-results",
+    :with => "'q=' + escape($F('q'))" -%>

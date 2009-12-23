@@ -1,0 +1,117 @@
+/* Indie Stripes Screen Styles - Fruit Salad */
+
+body {
+	background: #fff url(../../images/theme/bg_fruitsalad.gif) repeat-y;
+	}
+
+a {
+   color: #FB2255;
+   border-bottom: 1px dotted #FB2255;
+}
+
+a:hover { 
+   color: #C14461; 
+   border-bottom-color: #C14461; 
+}
+
+h2 {
+   color: #5B5B5B;
+}
+    
+blockquote {
+   border: 1px dashed #FBD84C;
+   background-color: #FFFFCC;
+}
+
+#logo h1 a { 
+   color: #FB2255; 
+}
+
+#top_image {
+   background: url('../../images/theme/topleft_fruitsalad.gif') 0px 0px no-repeat;
+}
+
+.brace {
+   color: #FBD84C;
+}
+
+h2#subtitle {
+   color: #D7D7D7;
+}
+
+#top_nav a, #top_nav a:link,#top_nav  a:active, #top_nav a:hover, #top_nav a:visited {
+   color: #FB2255;
+	border-bottom: 1px dotted #FB2255;
+}
+
+.post h1 {
+  	color: #515151;
+}
+	
+.post h1 a {
+	color: #515151;
+}
+	
+.post h2 a:hover {
+	color: #85ab02;
+}
+	
+div.auth {
+   color: #9a9a9b;
+}
+	
+ /*+-------------------------------------------+
+  |   			      COMMENTS				        |
+  +-------------------------------------------+*/
+.comment-list li {
+	background: #d3e0ea;
+	color: #555;
+}
+
+.comment-box h3, h3.section_head {
+   color: #fb2255;
+   border-top: 1px dashed #fbc1ce;
+   border-bottom: 1px dashed #fbc1ce;
+}
+
+.user-comment {
+   border-top: 1px dashed #d1d1d1;
+}
+
+.user-comment .auth {
+   color: #515151;
+}
+
+.comment-even .auth {
+   background: #ffffcc;
+}
+
+.comment-odd .auth {
+   background: #fbe7ec;
+}
+   
+ /*+-------------------------------------------+
+  |   			SIDEBAR 						       |
+  +-------------------------------------------+*/
+  
+#sidebar h3, #search label {
+		color: #F5CD2F;
+}
+
+#sidebar h3 a {
+	color: #d75a20;
+	border-bottom: 1px dotted #d75a20;
+}
+
+#sidebar h3 a:hover { 
+   color: #C14461; 
+   border-bottom-color: #C14461; 
+   }
+ 		
+#sidebar ul li { 
+ 	background: url(../../images/theme/bullet_fruitsalad.gif) 0 45% no-repeat;
+}
+
+#sidebar ul#syndicate li { 
+ 	background: url(../../images/theme/rss_fruitsalad.gif) 0 45% no-repeat;
+}

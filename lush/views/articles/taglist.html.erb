@@ -1,0 +1,22 @@
+<div class="post">
+<h2 id="taghead">Tags used on this weblog</h2>
+<div class="postcontent">
+<p>These are all tags used on this weblog. A larger tag indicates more entries tagged.</p>
+<% unless @tags.empty? -%>
+<% max_counter = @tags[0].article_counter -%>
+<ul id="taglist" class="tags">
+<% for tag in @tags.sort_by{|tag|tag.name} -%>
+	<li class="<%= calc_distributed_class(tag.article_counter, max_counter, "tags", 0, 10) %>">
+		<%= link_to( tag.name, 
+			{ :controller=>"articles", :action=>"tag", :id=> tag.name }, 
+			:rel => "tag",
+			:title => "#{pluralize(tag.article_counter, 'post')} tagged '#{tag.name}'")
+		%>
+	</li>
+<% end -%>
+</ul>
+<% else -%>
+<p>There are no tags.</p>
+<% end -%>
+</div>
+</div>

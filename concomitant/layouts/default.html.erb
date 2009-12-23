@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%
+  # 
+  # 'concomitant orange' is the factory-default stylesheet.
+  # 
+  # Set your site's default concomitant style by removing  
+  #   ", :rel => 'Alternate Stylesheet'"  
+  # from the stylesheet you want to be default.
+  # 
+  # Make sure to have only one stylesheet set as default, or 
+  # else you may see bad-funky style-action.
+  # 
+  %>
+  <%= stylesheet_link_tag "/stylesheets/theme/co-orange", :media => 'all', :title => 'concomitant orange' %>
+  
+  <%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+  
+  <%= javascript_include_tag "/javascript/theme/styleswitcher" %>
+  <% benchmark "BENCHMARK: layout/script" do %>
+  <% end %>
+</head>
+<% benchmark "BENCHMARK: layout/body" do %>
+<body>
+  <div id="container" class="clearfix">
+      <div id="header">
+        <div id="logo">
+          <p class="invisible">Jump to: <a href="#content">Body Content</a>, <a href="#search">Search</a>, <a href="#navi">Site Navi</a></p>
+          <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' }, { :title => "Home of #{this_blog.blog_name}" } %></h1>
+          <h2 id="subtitle"><%= this_blog.blog_subtitle %></h2>
+        </div>
+      </div>
+      
+      <% benchmark "BENCHMARK: layout/content" do %>
+      <div id="content" class="clearfix">
+        <div id="main">
+          <a class="anchor_shim" name="content">&nbsp;</a>
+          <%= @content_for_layout %>
+          <%= javascript_tag "show_dates_as_local_time()" %>
+        </div>
+      </div>
+      <% end %>
+      
+      
+      <div id="sidebar">
+        
+        <div id="style_switcher">
+          <p class="invisible">Select interface style:</p>
+          <a class="tiny_button" id="style_high_viz" href="#" 
+onclick="setActiveStyleSheet('concomitant high visibility'); 
+return false;" title="select high visibility interface"><span class="invisible">high visibility</span></a>
+          <a class="tiny_button" id="style_orange" href="#" 
+onclick="setActiveStyleSheet('concomitant orange'); 
+return false;" title="select orange interface (default)"><span class="invisible">orange</span></a>
+          <a class="tiny_button" id="style_blue" href="#" 
+onclick="setActiveStyleSheet('concomitant blue'); 
+return false;" title="select blue interface"><span class="invisible">blue</span></a>
+          <a class="tiny_button" id="style_green" href="#" 
+onclick="setActiveStyleSheet('concomitant green'); 
+return false;" title="select green interface"><span class="invisible">green</span></a>
+          <br class="clear" />
+        </div>
+        
+        <a class="anchor_shim" name="search">&nbsp;</a>
+        <div id="search"><%= render :partial => "shared/search" %></div>
+        <div id="search-results"></div>
+        
+        <% benchmark "BENCHMARK: layout/sidebars" do %>
+          <a class="anchor_shim" name="navi">&nbsp;</a>
+          <%= render_sidebars %>
+        <% end %>
+        
+        <ul>
+          <li><a href="http://validator.w3.org/check?uri=referer">Valid XHTML 1.0</a></li>
+          <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">Valid CSS</a></li>
+          <li><a href="http://typo.leetsoft.com/">typo Powered</a></li>
+          <li><a href="http://marsorange.com/">Theme by Mars</a></li>
+        </ul>
+        
+        
+      </div>
+  </div>
+</body>
+</html>
+<% end %>

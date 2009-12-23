@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/general" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/local" %>
+</head>
+<body>
+  <div id="container" class="clearfix">
+      <div id="header">
+      </div>
+
+      
+      <div id="content" class="clearfix">
+        <div id="headerBG">
+    	      <div class="roundCorner"><a name="header-top"></a></div>      
+    	     <div id="headerInner">
+	            <h1 id="sitename"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+	            <h2 id="subtitle"><%= this_blog.blog_subtitle %></h2>
+	          </div>
+	      	<div class="BroundCorner"><a name="header-bottom"></a></div>          
+        </div>	              	
+	        <div id="main">
+	        
+	        <!-- TOP rounded corners -->
+			  <div class="roundCorner"><a name="content-top"></a></div>
+	        <!-- /TOP rounded corners -->			  
+	        
+			  <div id="mainContent">
+		          <%= @content_for_layout %>
+		          <%= javascript_tag "show_dates_as_local_time()" %>
+				 <br class="noMargin" clear="all"/>		          
+	          </div>
+	          
+	        <!-- BOTTOM rounded corners -->	          
+	          <div class="BroundCorner"><a name="content-bottom"></a></div>
+	        <!-- BOTTOM rounded corners -->	          
+	        
+	        </div> <!-- end of #main -->
+	        
+       		<div id="sidebar">
+          
+            	
+
+		        <!-- TOP rounded corners -->
+				  <div class="roundCorner"><a name="sidebar-top"></a></div>
+		        <!-- /TOP rounded corners -->				
+
+				<div id="sidebarMain">
+					 <div id="search"> <%= render :partial => "shared/search" %></div>     				
+      
+					  <div id="search-results"></div>      
+					 
+				    <%= render_sidebars %>
+				    <div class="noMargin"></div>
+			    </div>
+
+	        <!-- BOTTOM rounded corners -->	          
+	          <div class="BroundCorner"><a name="sidebar-bottom"></a></div>
+	        <!-- BOTTOM rounded corners -->				    
+			    
+		    </div><!-- end of #sidebar -->
+
+            <br clear="all" />
+      </div>
+      <div id="footer">
+        <ul>
+          <li><a href="http://validator.w3.org/check?uri=referer">Valid XHTML 1.0</a></li>
+          <li><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">Valid CSS</a></li>
+          <li><%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %></li>
+        </ul>
+      </div>
+  </div>
+</body>
+</html>

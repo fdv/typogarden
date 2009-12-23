@@ -1,0 +1,66 @@
+8
+
+dir
+1706
+http://svn.typosphere.org/typo/trunk/themes/dirtylicious
+http://svn.typosphere.org/typo
+
+
+
+2008-04-30T20:33:39.871932Z
+1688
+neuro
+
+
+svn:special svn:externals svn:needs-lock
+
+
+
+
+
+
+
+
+
+
+
+820eb932-12ee-0310-9ca8-eeb645f39767
+
+layouts
+dir
+
+preview.png
+file
+
+
+
+
+2008-06-09T16:29:14.000000Z
+4b37b7e310f927744702fb47ec8fc414
+2007-12-20T17:35:41.271996Z
+1578
+neuro
+has-props
+
+images
+dir
+
+about.markdown
+file
+
+
+
+
+2008-06-09T16:29:14.000000Z
+35d00405a9de379ff29143602e1e160b
+2007-12-20T17:35:41.271996Z
+1578
+neuro
+has-props
+
+stylesheets
+dir
+
+views
+dir
+

@@ -1,0 +1,34 @@
+<a name="commentform" class="clear"></a>
+<% form_remote_tag :url      => @article.comment_url,
+                    :position => :bottom,
+                    :update   => {:success => 'commentList'},
+                    :loading  => "loading()",
+                    :complete => "complete(request)",
+                    :failure  => "failure(request)",
+                    :html     => {:id => 'commentform', :class => 'comments' } \
+    do %>
+<h2>Add a comment</h2>
+
+<div id="errors" style="display:none"> </div>
+<div id="preview" style="display: none"><h3>Preview</h3><div id="preview-content"></div></div>
+
+<dl>
+  <dt><label for="comment_author">Your name:</label></dt>
+  <dd><%= text_field "comment", "author", :size => 20 %> <small><%= link_to_function("(leave url/email &#187;)", "Element.toggle('lbl-url'); Element.toggle('fld-url'); Element.toggle('lbl-email'); Element.toggle('fld-email')") %></small></dd>
+
+  <dt id="lbl-url" style="display: none;"><label for="comment_url">Your blog:</label></dt>
+  <dd id="fld-url" style="display: none;"><%= text_field "comment", "url" %> </dd>
+
+  <dt id="lbl-email" style="display: none;"><label for="comment_email">Your email:</label></dt>
+  <dd id="fld-email" style="display: none;"><%= text_field "comment", "email" %> </dd>
+
+  <dt><label for="comment_body">Your message:</label></dt>
+  <dd><%= text_area "comment", "body" %></dd>
+
+</dl>
+<div id="comment-box-footer">
+<span id="comment_loading" style="display:none;"><%= image_tag "spinner.gif" %></span>&nbsp;&nbsp;
+<a href="#" onclick="new Ajax.Updater('preview-content', '<%= url_for :action => 'comment_preview' %>',  {asynchronous:true, evalScripts:true, parameters:Form.serialize('commentform'), onComplete:function(request){Element.show('preview')}}); return false;">Preview comment</a>      
+<input type="image" src="/images/theme/submit.gif" name="submit" id="form-submit-button" value="submit" class="button" />
+</div>
+<% end %>

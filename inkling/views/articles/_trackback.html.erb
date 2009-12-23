@@ -1,0 +1,7 @@
+<li id="trackback-<%= trackback.id %>"<%= onhover_show_admin_tools(:trackback, trackback.id) %>>
+  
+  <a name="trackback-<%= trackback.id %>"></a>
+  <h3>From <cite><%= trackback.blog_name %></cite></h3>
+  <a href="<%= trackback.url %>" rel="nofollow"><%= trackback.title %></a><br/>
+  <%= trackback.excerpt %>
+</li>

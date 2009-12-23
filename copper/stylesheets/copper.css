@@ -1,0 +1,168 @@
+/*
+ FONTS and TEXT
+*/
+
+body { 
+  font-family: Monaco, "Lucida Console", "LucidaTypewriter", monospace;
+}
+
+h1, h1 a, h2, h2 a, h3, h4, h5, h6 { 
+  font-family: "Copperplate", "Copperplate Gothic Bold";
+  text-decoration: none;
+}
+
+div#footer { 
+  font-family: "Copperplate", "Copperplate Gothic Light";
+  font-size: 75%;
+}
+
+div#leftside { 
+  font-family: "Copperplate", "Copperplate Gothic Light";
+}
+
+div.post p.meta, div.post p.auth { 
+  font-family: "Copperplate", "Copperplate Gothic Light";
+}
+
+/*
+ COLORS and IMAGES
+*/
+
+body { 
+  background-color: #403127;
+  color: #f2d7c4;
+}
+
+h1, h1 a, h2, h2 a, h3, h4, h5, h6 { 
+  color: #6eefcc;
+}
+
+table, td, th {  
+  border-color: #f2d7c4;
+}
+
+th {
+  color: #403127;
+  background-color: #9cd69b;
+}
+
+textarea, input, select { 
+  background-color: #f2e8e1;
+}
+
+a { 
+  color: #9cd6b9;
+}
+
+blockquote { 
+  background-image: url(../../images/theme/quote.png);
+  background-repeat: no-repeat;
+  padding: 3em;
+}
+
+pre {
+  color: #403127;
+  background-color: #f2d7c4;
+  border: 1px solid #1aa37e;
+}
+
+div#header { 
+  background-image: url(../../images/theme/copper.jpg);
+  background-repeat: repeat-x;
+  border-color: #6eefcc;
+}
+
+div#footer { 
+  border-color: #6eefcc;
+  background-image: url(../../images/theme/copper.jpg);
+  background-repeat: repeat-x;
+}
+
+div#leftside { 
+  color: #6eefcc;
+}
+
+/* 
+ positioning, padding, margins
+*/
+
+
+pre {
+  padding: 1em;
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+}
+
+h1 { 
+  margin-bottom: 0;
+}
+
+div#header h2 { 
+  margin-top: 0;
+}
+
+
+div#header { 
+  border-style: solid;
+  border-width: 0px;
+  border-bottom-width: 1px;
+  border-right-width: 30px;
+  padding-left: 1em;
+  margin-top: -21px;
+}
+
+
+div#leftside { 
+  width: 175px;
+  float: left;
+  margin-left: .5em;
+  margin-right: 1em;
+  margin-top: 3em;
+}
+
+div#main { 
+  width: 75%;
+  float: left;
+}
+
+
+div#footer { 
+  text-align: center;
+  padding: 0;
+  margin:0;
+  clear: both;
+  border-style: solid;
+  border-width: 0;
+  border-top-width: 1px;
+  border-left-width: 30px;
+  height: 6em;
+}
+
+div.post { 
+  border-bottom: 1px solid #1aa37e;
+  margin-bottom: 3em;
+}
+
+div.post p.meta, div.post p.auth { 
+  color: #9cd6b9;
+}
+
+table { 
+  border-collapse: collapse;
+}
+
+table, td, th { 
+  border: 1px solid;
+}
+
+div.comment-box table, div.comment-box td, div.comment-box th { 
+  border: none;
+}
+
+div.sidebar-node em { 
+    font-size: smaller;
+    font-style: normal;
+}

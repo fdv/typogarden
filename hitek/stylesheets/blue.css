@@ -1,0 +1,10 @@
+/* Hitek Blue */
+
+#header { 
+	background: url(../../images/theme/headbg_blue.png) no-repeat;
+	}
+	
+#sidebar ul li { 
+	background: url(../../images/theme/bullet_blue.gif) 0 45% no-repeat;
+	padding-left: 17px;
+	}

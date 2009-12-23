@@ -1,0 +1,22 @@
+<% if @flickr -%>
+<h3 id="flicr-heading"><%= @flickr.title  %> (<%= link_to "flickr", @flickr.link %>)</h3>
+<ul id="flickr-list">
+<% for pic in @flickr.choose(@sb_config['count'].to_i) -%>
+  <li class="flickr<%= @sb_config['format']%>">
+  
+<% case @sb_config['format']
+    when 'square': %>
+	<a href="<%= pic.link %>" title="Click to enlarge: <%= pic.title %>">
+		<small>Click To Enlarge: <%= pic.title %></small>
+		<img src="<%= pic.square %>" alt="<%= pic.title %>" />
+	</a>
+<% when 'rectangle': %>
+	<a href="<%= pic.link %>" title="Click to enlarge: <%= pic.title %>">
+		<small>Click To Enlarge: <%= pic.title %></small>
+		<img src="<%= pic.thumb %>" alt="<%= pic.title %>" />
+	</a>
+<% end %>
+</li >
+  <% end -%>
+  </ul>
+<% end -%>

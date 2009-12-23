@@ -1,0 +1,169 @@
+body {
+	background-image:url(../../images/theme/background.png);
+	margin:0px;
+	padding:0px;
+}
+
+div#wrapper{
+	width:784px;
+	margin:0px auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	color:#f00303;
+	background-color:transparent;
+	font-family:impact, verdana, sans-serif;
+	font-weight:lighter;
+}
+
+#header {
+	background-image:url(../../images/theme/header.png);
+	background-repeat:no-repeat;
+	height:289px;
+	width:784px;
+	margin:0px 21px 15px 0px;
+}
+
+h1 {
+	padding: 115px 0 0 205px;
+	margin:0px;
+	text-align:center;
+}
+
+h1 a{
+	font-size:45px;
+	font-family:impact, verdana, sans-serif;
+	text-decoration:none;
+	font-weight:lighter;
+}
+
+h2 {
+	padding-left: 380px;
+	margin:0px;
+	 
+}
+
+div.post h2 {
+	padding:0px;
+}
+
+div.post h2 a{
+	font-family:impact, verdana, sans-serif;
+	text-decoration:none;
+}
+
+div.post p.auth{
+	font-family:impact, verdana, sans-serif;
+	color:#f00303;
+	background-color:transparent;
+}
+
+p.meta{
+	font-size:10px;
+}
+
+p {
+	font-family:lucida, sans-serif;
+	 
+}
+
+ul {
+	font-family:lucida, sans-serif;
+}
+
+ol {
+	font-family:lucida, sans-serif;
+}
+
+
+a  {
+	color:#f00303;
+	font-family:lucida, sans-serif;
+	 
+}
+
+#containertop {
+	background-image:url(../../images/theme/top2.png);
+	background-repeat:no-repeat;
+	height:20px;
+	width:771px;
+	padding:0px;
+	 
+
+}
+
+#maincolumn {
+	background-image:url(../../images/theme/middle.png);
+	background-repeat:repeat-y;
+	padding:0px;
+	float:left;
+	width:771px;
+		 
+}
+
+#bodytext {
+	float:left;
+	width:500px;
+	margin-left:10px;
+}
+
+#sidebartext {
+	margin:0 0 0 537px;
+	width:212px;
+	padding-left:10px;
+}
+
+#containerbottom {
+	background-image:url(../../images/theme/bottom2.png);
+	background-repeat:no-repeat;
+	width:771px;
+	height:41px;
+	clear:both;
+		 
+}
+
+#footer {
+	clear:both;
+	background-image:url(../../images/theme/footer.png);
+	background-repeat:no-repeat;
+	height:55px;
+	color:white;
+	padding:5px 0 10px 10px;
+}
+
+.comment-list li, #preview {
+  	background: white;
+  	padding: 5px;
+  	margin-bottom: 8px;
+	margin-right: 30px;
+  	clear: right;
+  	min-height: 60px;
+	font-size:12px;
+}
+
+.comment-list li p{
+	padding-left:15px;
+}
+
+#errors {
+   color: red;
+}
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a img{
+	border:0px;
+}

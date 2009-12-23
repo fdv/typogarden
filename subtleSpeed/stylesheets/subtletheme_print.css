@@ -1,0 +1,354 @@
+/* 
+
+
+Typo Theme by 
+Thomas Aylott of 
+design42's subtlegradient 
+
+design42.com
+subtlegradient.com
+
+
+*/
+
+/* PRINT */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 87%;
+}
+
+#sitename {
+	padding-left: 16px;
+	padding-right: 16px;
+	text-align: center;
+	text-shadow: 0px -1px 2px #666666;
+	z-index: 1000;
+	position: relative;
+	margin-bottom: -16px;
+}
+
+#sitename a:link, #sitename a:visited {
+	color: #999999;
+	border-bottom-style: none;
+	font: bold 2em "New York", Georgia, "Times New Roman", Times, serif;
+}
+
+#subtitle {
+	color: #000000;
+	border-top: 1em solid #999999;
+	text-align: center;
+	text-shadow: 1px 2px 3px #999999;
+	font: 1.5em Georgia, 'Times New Roman', Times, serif;
+	letter-spacing: .25em;
+	margin-bottom: 1em;
+}
+
+.post, #viewpage {
+	width: auto;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 1em;
+	margin-bottom: 1em;
+}
+
+.content {
+	padding: .25em;
+	border-bottom: 2px solid #cccccc;
+}
+
+/*<group=content>*/
+
+div.content h1 {
+	font-size: 2.5em;
+	line-height: 1.2em;
+}
+
+div.content h2, div.content h3, div.content h4, div.content h5, div.content h6 {
+	font-weight: bold;
+}
+
+div.content p {
+	margin-bottom: 1em;
+	margin-top: 1em;
+	text-indent: 1em;
+	text-align: justify;
+	color: #000000;
+}
+
+div.content p:first-line {
+	font-size: 1.1em;
+	line-height: 1em;
+}
+
+div.content h2.postTitle, div.content h2.postTitle a:link, div.content h2.postTitle a:visited {
+	color: #000000;
+	text-shadow: 1px 2px 2px #cccccc;
+	font-family: "New York", Georgia, "Times New Roman", Times, serif;
+
+	font-weight: bold;
+
+	border-bottom-style: none;
+}
+
+div.content h2.postTitle {
+	border-bottom: 1px #999999 solid;
+	font-size: 1.5em;
+	line-height: 1em;
+	padding-top: .5em;
+	padding-bottom: 4px;
+	text-align: center;
+}
+
+div.content h2.postTitle:first-line {
+	font-size: 1.25em;
+}
+
+div.content h2.postTitle a:hover {
+	color: #000080;
+	border-bottom: 1px solid #004080;
+	text-shadow: none;
+}
+
+div.content p.auth, div.post p.meta {
+	color: #999999;
+	padding-top: 2px;
+	margin: 0;
+	text-indent: 0;
+	text-align: center;
+	border-top: 2px solid #ffffff;
+	font-size: 76%;
+	font-style: italic;
+}
+
+div.post p.meta, #viewpage p.meta {
+	color: #999999;
+	text-align: center;
+	text-indent: 0;
+	border-top: 1px solid #ffffff;
+}
+
+div.content p.meta a {
+	white-space: nowrap;
+}
+
+div.content table {
+	width: auto;
+	padding: .5px;
+	border-spacing: 0px 0px;
+	border: 2px solid #eeeeee;
+	border-collapse: collapse;
+	border-bottom-color: #cccccc;
+	margin: 1em auto;
+}
+
+div.content td, div.content th {
+	border-spacing: 0;
+	padding: 2px 3px;
+	font: .75em Geneva, Arial, Helvetica, sans-serif;
+	text-align: center;
+}
+
+div.content * th {
+	border-bottom: 1px solid #cccccc;
+	color: #666666;
+	font-weight: bold;
+	font-size: 110%;
+}
+
+div.content td {
+	border-bottom: 1px solid #eeeeee;
+	border-right: 1px solid #eeeeee;
+	color: #000000;
+}
+
+div.content li {
+	color: #666666;
+}
+
+div.content ul, div.content ol {
+	margin-left: 1.25em;
+	font: 0.900000em Georgia, 'Times New Roman', Times, serif;
+	margin-bottom: 1em;
+}
+
+div.content ol ol, div.content ul ul, div.content ul ol, div.content ol ul {
+	margin-bottom: .1em;
+	font-size: 1em;
+}
+
+div.content blockquote {
+	color: #666666 !important;
+	font-size: .9em;
+	font-style: italic;
+	border-style: none;
+	margin-right: 1em;
+	margin-left: 1em;
+}
+
+div.content p code {
+	color: #000000;
+	font: 12px ProFont, MPW, Monaco, "Courier New", Courier, mono;
+	padding-right: .5em;
+	padding-left: .5em;
+	border: solid #666666 1px;
+}
+
+div.content pre {
+	font: 12px ProFont, MPW, Monaco, "Courier New", Courier, mono;
+	color: #000000;
+	overflow: auto;
+	padding: 5px;
+	position: relative;
+	clear: both;
+	border: solid #666666 1px;
+	width: auto;
+	margin: 1em auto;
+}
+	
+/*</group>*/
+
+#search {
+	display: none;
+}
+
+.post p {
+	font-size: 1em;
+	line-height: 1.5em;
+}
+
+p.meta {
+	text-align: center;
+	display: none;
+}
+
+div.cite {
+}
+
+a:link, a:visited {
+	text-decoration: none;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+	padding-left: .2em;
+	padding-right: .2em;
+	font: 1em Geneva, Helvetica, Arial, sans-serif;
+}
+
+a {
+	
+}
+
+a:link {
+	
+}
+
+a:visited {
+	
+}
+
+a.anchor {
+	display: none;
+}
+
+ol {
+	margin-left: 1em;
+}
+
+li {
+	margin-left: 1em;
+}
+
+/*<group=Comments>*/
+
+li div.content {
+	padding: 0;
+	border-style: none;
+}
+
+li .cite {
+	color: #999999;
+	padding: 0em;
+	border-top-width: 1px;
+	border-top-style: none;
+	text-decoration: underline;
+}
+
+li cite a, li cite a:link, li cite a:visited {
+	border-style: none;
+	color: #999999;
+	font-family: Georgia, Times New Roman, Times, serif;
+	font-style: italic;
+	font-weight: bold;
+}
+
+#commentBlock {
+	width: auto;
+	font-size: 85%;
+	margin: 2em;
+	line-height: 1em;
+}
+
+li.comment {
+	list-style: upper-alpha;
+	font-weight: bold;
+	font-size: 200%;
+	border-left: 4px #eeeeee solid;
+	color: #cccccc;
+	padding-left: .5em;
+	padding-right: .5em;
+}
+
+li.comment * {
+	font-weight: normal;
+	font-size: 50%;
+}
+
+li.comment * * {
+	font-size: 100%;
+}
+
+li.comment ol {
+	margin-top: 1em;
+}
+
+li.comment ol ol {
+	margin: 0;
+}
+
+/*</group>*/
+
+.sidebar-node {
+	float: left;
+}
+
+.sidebar-node p a {
+	border-bottom-style: none;
+}
+
+#comment_box, #sidebar {
+	display: none;
+}
+
+#footer {
+	text-align: center;
+	padding: 16px;
+	font: 1.5em Georgia, 'Times New Roman', Times, serif;
+}
+
+#footer ul, #footer li {
+	list-style: none;
+	display: inline;
+	font: 10px Geneva, Helvetica, Arial, sans-serif;
+}
+
+#footer a, #footer a:link, #footer a:visited {
+	border-bottom: 1px solid #666666 !important;
+}
+
+#footer a img, #footer a:link img, #footer a:visited img {
+	margin-bottom: -3px;
+}

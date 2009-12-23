@@ -1,0 +1,64 @@
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about=""
+    trackback:ping="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+    dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
+    dc:identifier="<%= url_for :controller=>"articles", :action=>"read", :id=>@article %>"
+    dc:description="<%=h (@article.html.strip_html[0..255]).gsub(/-+/, '-') %>"
+    dc:creator="<%= h @article.author %>"
+    dc:date="<%= @article.updated_at.xmlschema %>" />
+</rdf:RDF>
+-->
+<div class="post normal-post" <%= onhover_show_admin_tools(:article) %>>
+	<p id="admin-tools">
+		<%= link_to("edit", { :controller => "admin/content", :action => "edit", :id => @article }, :class => "admintools", :style => "display: none", :id => "admin_article") %>
+	</p>
+	<h1 class="post-title"><%= @article.title %></h1>
+	<p class="auth">
+		Posted by <strong><%= author_link(@article) %></strong>
+		<em><%= js_distance_of_time_in_words_to_now @article.created_at.utc %></em>
+	</p>
+	<div id="post-content">
+	<%= @article.html(:body) %>
+	</div>
+	<p class="meta">
+	<a href="#comment-reply-form" title="Leave a comment">Leave a comment</a>, <a href="#comments" title="View Comments">View comments</a>, <a href="#trackbacks" title="View Trackbacks">View trackbacks</a>	</p>
+</div>
+<% if @article.allow_comments? or @article.comments.size > 0 -%>
+<div id="comments" class="section">
+	<h2 class="section-title">Your Comments.</h2>
+	<% if @article.allow_comments? -%>
+		<p id="leave-a-response" class="important"><a href="#respond">Leave your own response</a></p>
+	<% end -%>
+	<% $commentCounter = 0 %>
+	<%= content_tag(:ol, render(:partial => "comment", :collection => @article.comments), :id => 'commentList', :class => 'comment-list') %>
+</div>
+<% end -%>
+<% if @article.allow_pings? -%>
+<% $trackbackCounter = 0 %>
+<div id="trackbacks" class="section">
+<h2 class="section-title">Other posts about this post.</h2>
+  <p class="important" id="trackback-address">This post has been discussed on the following web sites / blogs. If you wish to <a href="http://en.wikipedia.org/wiki/Trackback" title="Read more about trackbacks at Wikipedia" class="help">trackback</a> to this post please use the following trackback address: <strong><%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %></strong></p>    
+  	<%= content_tag(:ol, render(:partial => "trackback", :collection => @article.trackbacks), :id => 'trackbackList', :class => 'trackback-list') %>  
+</div>
+<% end -%>
+<div id="syndicate" class="section">
+<h2 class="section-title">Spread the word.</h2>
+<p class="important">
+  <strong><%= this_blog.blog_name %></strong> supports <a href="http://en.wikipedia.org/wiki/RSS_(file_format)" title="Read more about RSS at Wikipedia" class="help">RSS (Real Simple Syndication)</a>, and <a href="http://en.wikipedia.org/wiki/Trackback" title="Read more about trackbacks at Wikipedia" class="help">Trackbacks</a> from other blogs.</p>
+<p id="sydication-buttons">
+  <a clas="rss" href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'atom', :id => @article %>">Atom feed for this post</a>
+  <a class="trackbacks" href="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>" title = "Trackback URI">Trackback URI</a>  
+</p>
+</div>
+<% if @article.allow_comments? -%>
+  <%= render :partial => 'comment_box' %>
+<% else -%>
+  <div class="section" id="comment-reply-form">
+	<h2 class="section-title">Your Reply</h2>
+	<p>Sorry, comments are disabled for this post</p>
+  </div>
+<% end -%>

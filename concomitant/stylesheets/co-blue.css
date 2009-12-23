@@ -1,0 +1,22 @@
+@import url(concomitant.css);
+
+body {
+  background-image: url(../../images/theme/tangle.gif);
+  background-position: 40px 100px;
+}
+
+:link { 
+  color: #039;
+}
+:visited { 
+  color: #006;
+}
+
+em {
+  color: #004;
+}
+
+#header :link,
+#header :visited { 
+  color: #36f;
+}

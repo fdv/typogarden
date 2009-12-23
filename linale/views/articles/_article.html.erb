@@ -1,0 +1,7 @@
+<h2>
+	<div id="post-title"><%= link_to_permalink article, article.title %></div>
+	<div id="auth">Posted by <%= author_link(article) %> <%= js_distance_of_time_in_words_to_now article.created_at %></div>
+</h2>
+<div id="post-head"></div>
+<div id="post-body">
+<%= article.body_html %>

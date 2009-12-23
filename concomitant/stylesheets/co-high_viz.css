@@ -1,0 +1,28 @@
+@import url(concomitant.css);
+
+
+body
+{
+  color: black;
+  background-color: white;
+  background-image: none;
+}
+
+
+h1, h2, h3, h4, h5 {
+  color: black;
+}
+
+.meta, .auth {
+  color: black;
+}
+
+#header {
+  background-color: black;
+  background-image: none;
+}
+
+#header :link,
+#header :visited { 
+  color: white;
+}

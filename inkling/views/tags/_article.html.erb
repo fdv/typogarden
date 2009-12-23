@@ -1,0 +1,17 @@
+<dt>
+  <%= link_to_permalink article, article.title %> <span class="date"><%= article.created_at.strftime("%b ") + article.created_at.day.ordinalize %></span>
+</dt>
+<dd class="meta">
+  Posted by <strong><%= author_link(article) %></strong>
+  <%= category_links article %>
+  
+  <%= js_distance_of_time_in_words_to_now article.created_at %>
+  <span class="tags"><%= "<br/>" + tag_links(article) if article.tags.size > 0%></span>
+</dd>
+<dd>
+  <%= html(article,:body) %>
+</dd>
+<dd class="entry-nav">
+  <a href="<%= article_url(article) %>" class="read-more"><strong><%= article.extended? ? "Read more..." : "Comments..."  %></strong>(<%= "#{article.comments.size} " +  pluralize(article.comments.size,"comment", "comment", "comments") %>)</a> 
+  <a href="<%= article_url(article) %>" class="permalink"><span>Permalink</span></a>
+</dd>

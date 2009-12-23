@@ -1,0 +1,544 @@
+/* 
+-----------------------------------------------
+Theme name: Lindholmen
+Blog Engine: Typo 2.6.0
+Author:  Anders Fajerson, anders |at| perifer |dot| se
+Version: 1.08 - 27 Nov 2005
+
+Structure:
+  Common:  
+    Layout
+    Header
+    Search
+    Post
+    Page
+    Comment
+    Sidebar
+    Footer
+    Utility
+    Typography
+  Extra:
+    Rounded Corners
+    Instant Scroller
+    Style Switcher
+      Layout Style
+      Color Styles
+----------------------------------------------- */
+
+
+
+/* =Layout
+----------------------------------------------- */
+body {
+  background:#BDDE10 url("/images/theme/green_back.png") repeat-x;
+  color:#333;
+  font:1em/1.2em Arial, Verdana, Helvetica, sans-serif;
+  }
+#container {
+  font-size:80%;
+  position:relative;
+  text-align:left;
+  width:65em;
+  z-index:1;
+  }
+body.articles #container {
+  width:483em;
+  }
+#content {
+  float:left;
+  margin-top:4.5em;
+  }
+#main {
+  float:none;
+  }
+body.articles #main {
+  float:left;
+  }
+#top {
+  margin:4.5em 1em 1em;
+  float:left;
+  width:15em;
+  display:inline;
+  }
+#scroller, #logo, #search {
+  background:#fff;
+  margin-bottom:2em;
+  padding:5px 10px;
+  width:13em;
+  }
+#sidebar {
+  border-top:1em solid #444;
+  float:left;
+  padding:0 0 1em 1em;
+  width:39em;
+  }
+body.articles #sidebar {
+  border-top:none;
+  border-left:1em solid #444;
+  }
+#pagination {
+  margin:0 1em 1em 0;
+  float:left;
+  }
+
+/* =Header
+----------------------------------------------- */
+#logo {
+  text-align:center;
+  padding: 5px 10px;
+  }
+#logo h1 {
+  font-size:240%;
+  line-height:1em;
+  margin:0;
+}
+#logo h1 a {
+  color:#a2bd20;
+  text-decoration:none;
+  border:none;
+  }
+#logo h2 {
+  color:#aaa;
+  font-size:0.9em;
+  line-height:1.2em;
+  text-transform:uppercase;
+  font-weight:normal;
+  margin:0.5em 0 0 0;
+  }
+
+/* =Search
+----------------------------------------------- */
+#search #sform #q {
+  width:7.8em;
+  border:1px solid #555;
+  margin:0.4em 0;
+  }
+#search-results {
+  background-color:#333;
+  color:#fff;
+  margin-top:-0.25em; /* subtract #q's margin-bottom */
+  position:absolute;
+  text-align:left;
+  z-index:9;
+  opacity:0.85; /* opacity for Mozilla and Safari */
+  filter:alpha(opacity=85); /* opacity for IE */
+  }
+#search-results ul {
+  margin:0;
+  }
+#search-results li {
+  list-style:none;
+  margin:0;
+  border-bottom:#999 thin solid;
+  padding:0 1em;
+  }
+#search-results li:hover {
+  background-color:#000;
+  }
+#search-results li a {
+  display:block;
+  color:#fff;
+  text-decoration:none;
+  }
+* html #search-results li a:hover { /* hover effect only for IE */
+  background-color:#000;
+  }
+
+#search-results p {
+  padding:0 1em;
+  }
+#search label {
+  background:url(/images/theme/t_livesearch.gif) no-repeat;
+  display:block;
+  text-indent:-1000em;
+  width:33px;
+  float:left;
+  margin:0.4em 3px 0 0;
+  }
+
+/* =Post
+----------------------------------------------- */
+.post {
+  background:#fff;
+  width:38em;
+  position:relative;
+  padding:5px 10px;
+  margin:0 1em 3.5em 0;
+  }
+body.articles .post {
+  float:left;
+  margin-bottom:0;
+  }
+.post h2 {
+  font-size:180%;
+  line-height:1.1em;
+  margin:0;
+  }
+.post h2 a {
+  color:#555;
+  text-decoration:none;
+  border:none;
+  }
+ .post h2 a:hover {
+   color:#000;
+   text-decoration:underline;
+  }
+.post h2 small a {
+  background:url(/images/theme/top_hor.gif) no-repeat;
+  display:block;
+  height:20px;
+  left:0;
+  position:absolute;
+  text-decoration:none!important;
+  text-indent:-1000em;
+  top:-30px;
+  width:20px;
+  }
+p.meta {
+  bottom:-3.3em;
+  font-size:92%;
+  position:absolute;
+  right:0;
+  text-align:right;
+  }
+p.auth {
+  font-size:85%;
+  color:#9a9a9b;
+  }
+
+/* =Page
+----------------------------------------------- */
+#viewpage {
+  background:#fff;
+  width:38em;
+  padding:5px 10px;
+  margin-bottom:1em;
+  }
+
+/* =Comment
+----------------------------------------------- */
+#commentList li {
+  background:#fff;
+  color:#666;
+  display:block;
+  margin: 0 0 4em 0;
+  padding:5px 10px;
+  position:relative;
+  width:38em;
+  }
+#commentList .author {
+  background:url(/images/theme/bubble_tail.gif) no-repeat 90% 100%;
+  bottom:-41px;
+  height:36px;
+  position:absolute;
+  right:0;
+  text-align:right;
+  width:40em;
+  }
+#commentList .author img {
+  background:url(/images/theme/gravatar.gif) no-repeat;
+  float:right;
+  height:32px;
+  margin: 4px 0.5em 0 3em;
+  width:32px;
+  }
+form #comment_body {
+  height:16em;
+  }
+.comment-box .frm-tbl td { 
+  vertical-align: top; 
+  }
+.comment-box td#frm-btns { 
+  text-align: right; 
+  }
+
+/* =Sidebar
+----------------------------------------------- */
+#sidebar ul {
+  margin:0;
+  padding:0;
+  list-style-type:none;
+  }
+#sidebar ul li {
+  margin:0;
+  padding-right:1em;
+  float:left;
+  }
+#sidebar h3 {
+  margin: 1em 0 0 0;
+  }
+#flickr div a {
+  padding:4px;
+  display:block;
+  background: #fff;
+  }
+#flickr div a:hover {
+  background:#ccc;
+  }
+#flickr div {
+  float:left;
+  margin:0.2em;
+  }
+.powered img {
+  margin-top:1em;
+  }
+#categories li em, #archives li em {
+  font-style:normal;
+  color:#666;
+  }
+
+/* =Footer
+----------------------------------------------- */
+/* The Man in Blue's footerStickAlt
+   http://www.themaninblue.com/experiment/footerStickAlt */
+html {
+  height:100%;
+  }
+body {
+  height:100%;
+  }
+#container {
+  position:relative;
+  min-height:100%;
+  }
+* html #container {
+  height:100%;
+  }
+#footer {
+  background:url("/images/theme/green_foot.png") repeat-x scroll bottom left;
+  font-size:80%;
+  height:160px;
+  position:relative;
+  margin-top:-160px;
+  width:100%;
+  z-index:0;
+  }
+body.articles #footer {
+  width:482em;
+  }
+
+/* =Utility
+----------------------------------------------- */
+html, body, form, fieldset,div {
+  margin:0;
+  padding:0;
+  }
+h1, h2, h3, h4, h5, h6, p, pre,
+blockquote, ul, ol, dl, address {
+  margin:0 0 0.97em 0;
+  padding:0;
+  }
+ul, li, dd, blockquote {
+  margin-left:1em;
+  }
+fieldset {
+  border:none;
+  }
+img {
+  border:0;
+  }
+small {
+  font-size:91%;
+}
+/* -- start clearfix code */
+#container:after, #sidebar ul:after, #flickr:after {
+  content:".";
+  display:block;
+  height:0;
+  clear:both;
+  visibility:hidden;
+  }
+#container:after {
+  height:1%; /* this is needed for the footerStickAlt */
+  }
+/* Hides from IE-mac \*/
+* html .clearfix, * html #sidebar ul, * html #flickr {
+  height:1%;
+  }
+/* End hide from IE-mac */
+/* -- end clearfix code */
+
+/* =Typography
+----------------------------------------------- */
+a {
+  color:#005F94;
+  }
+a:hover {
+  text-decoration:none;
+  }
+pre {
+  font-size:1.2em;
+  margin:1em 0; padding: 10px;
+  border-left:2px solid;
+  overflow:auto;
+  }
+blockquote {
+  border: 1px dashed #ccc;
+  padding:0.3em;
+}
+#errors {
+  color:red;
+  }
+.admintools {
+  color:#999;
+  float:right;
+  margin:0 0.2em;
+  }
+.admintools:hover {
+  color:#c00;
+  }
+
+/* =Rounded Corners
+----------------------------------------------- */
+/* Based on Alessandro Fulciniti's Nifty Corners v.1
+   http://pro.html.it/esempio/nifty/ */
+b.rtop,b.rbottom {
+  display:block;
+  background:transparent;
+  margin:0 -10px;
+  position:relative
+  }
+b.rtop {top:-5px;}
+b.rbottom {bottom:-5px;}
+b.rtop b, b.rbottom b {
+  background:#fff;
+  display:block;
+  height:1px;
+  overflow:hidden;
+  }
+b.r1 {margin:0 5px;}
+b.r2 {margin:0 3px;}
+b.r3 {margin:0 2px;}
+b.r4 {margin:0 1px;}
+b.rtop b.r4, b.rbottom b.r4 {
+  margin: 0 1px;
+  height: 2px
+  } 
+
+/* =Instant Scroller
+----------------------------------------------- */
+#scroller ul {
+  border-top:1px solid #ddd;
+  list-style:none;
+  margin:0;
+  padding:0;
+  }
+#scroller li {
+  margin:0;
+  border-bottom:1px solid #ddd;
+  }
+#scroller li a{
+  display:block;
+  text-decoration:none;
+  width:13em;
+  }
+#scroller li a:hover{
+  background:url(/images/theme/hor.gif) no-repeat 100% 100%;
+  }
+
+/* =Style =Switcher
+----------------------------------------------- */
+/* Styling of IOTBS2.0, directors interface
+  see http://www.stuffandnonsense.co.uk/resources/iotbs.html */
+#switchers {
+  position:absolute;
+  top:1.3em;
+  left:1em;
+  }
+#switchers * {
+  float:left;
+  }
+#switchers dt {
+  display:block;
+  height:5px;
+  width:0px;
+  text-indent:-1000em;
+  }
+#layout-switcher {
+  background:url(/images/theme/t_layout.gif) no-repeat;
+  display:none;
+  }
+body.articles #layout-switcher {
+  display:block;
+  }
+#color-switcher {
+  background:url(/images/theme/t_color.gif) no-repeat;
+  }
+#switchers dd {
+  margin:10px 5px 0 0;
+  }
+#switchers dd a, #switchers dd.selected {
+  border:none;
+  display:block;
+  height:20px;
+  text-decoration:none;
+  text-indent:-1000em;
+  width:20px;
+  }
+#switch-Horizontal a, #switch-Horizontal.selected {
+  background:url(/images/theme/hor.gif) no-repeat;
+  }
+#switch-Vertical a, #switch-Vertical.selected {
+  background:url(/images/theme/ver.gif) no-repeat;
+  }
+#switch-Pink a, #switch-Pink.selected {
+  background:url(/images/theme/pink_s.gif) no-repeat;
+  }
+#switch-Green a, #switch-Green.selected {
+  background:url(/images/theme/green_s.gif) no-repeat;
+  }
+#switch-Blue a, #switch-Blue.selected {
+  background:url(/images/theme/blue_s.gif) no-repeat;
+  }
+
+/* =Layout styles
+----------------------------------------------- */
+/* layout styles used in the Style Switcher */
+body.vertical #main {
+  float:none;
+  }
+body.vertical #container {
+  width:65em;
+  }
+body.vertical #sidebar {
+  border-left:none;
+  border-top:1em solid #444;
+  }
+body.vertical #pagination {
+  float:none;
+  }
+body.vertical #footer {
+  width:100%;
+  }
+body.vertical .post {
+  margin-bottom:3.5em;
+  float:none;
+  }
+body.vertical .post h2 small a {
+  background:url(/images/theme/top_ver.gif) no-repeat;
+  }
+body.vertical #scroller li a:hover{
+  background:url(/images/theme/ver.gif) no-repeat 100% 100%;
+  }
+
+/* =Color styles
+----------------------------------------------- */
+/* color styles used in the Style Switcher */
+body.pink {
+  background:#ff99cc url(/images/theme/pink_back.png) repeat-x;
+  }
+body.pink #logo h1 a {
+  color:#c77c9f;
+  }
+body.pink #footer {
+  background:#ff99cc url(/images/theme/pink_foot.png) repeat-x scroll bottom left;
+  }
+body.blue {
+  background:#66CCFF url(/images/theme/blue_back.png) repeat-x;
+  }
+body.blue #logo h1 a {
+  color:#51a0cc;
+  }
+body.blue #footer{
+  background:none;
+  }

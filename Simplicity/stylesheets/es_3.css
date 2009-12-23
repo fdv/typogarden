@@ -1,0 +1,198 @@
+/*+-------------------------------------------+
+  Screen Styles
+  +-------------------------------------------+*/
+
+body {
+	background: #dc8;
+	color: #333;
+}
+	
+#container {
+	background: #dc8 url(../../images/theme/bg3.jpg) repeat-y;
+}
+
+#header #title {
+	background: #dda;
+}
+
+#header #subtitle {
+	background: #651 url(../../images/theme/switcher.gif) 5px 5px no-repeat;
+}
+
+#footer {
+	background: #651;
+}
+
+/*+-------------------------------------------+
+  LINKS
+  +-------------------------------------------+*/
+a {
+	color: #651;
+	border-bottom: 1px dotted #dc8;
+}
+	
+a:hover { 
+	color: #dc8;
+	border-bottom-color: #dc8;
+}
+
+#header a {
+	color: #651;
+}
+	
+#header a:hover { 
+	color: #651; 
+	border-bottom: 1px dashed #fff;
+}
+
+#footer a { 
+	color: #fff;
+}
+
+/*+-------------------------------------------+
+  POST
+  +-------------------------------------------+*/
+.post {
+	border-top: 1px solid #acacac;
+	background: #fff;
+}
+
+	
+.post h2 {
+	color: #000;
+}
+	
+.post h2 a {
+	color: #000;
+}
+	
+.post h2 a:hover {
+ 	color: #00;
+ 	border-bottom: 1px dotted #fff;
+}
+	
+p.auth {
+	color: #651;
+}
+	
+h4.blueblk {
+ 	border-top: 1px dotted #acacac;
+ 	color: #000;
+ }
+ 
+ .showhide {
+	background: #eec;
+}
+ 	
+ 	
+/*+-------------------------------------------+
+  COMMENTS
+  +-------------------------------------------+*/
+.comment-list li {
+	background: #fff;
+	border-left: 1px solid #acacac;
+  	color: #555;
+}
+
+ 
+/*+-------------------------------------------+
+  SIDEBAR
+  +-------------------------------------------+*/
+#sidebar h3 {
+ 	color: #000;
+	border-bottom: 1px solid #acacac;
+ }
+ 		
+#sidebar h3 a {
+	color: #000;
+	border-bottom: 1px dotted #fff;
+}
+
+#sidebar h3 a:hover { 
+	color: #fff; 
+	border-bottom-color: #fff; 
+}
+
+#sidebar ul li a {
+	color: #222;
+}
+
+#sidebar ul li a:hover {
+	color: #fff;
+}
+ 	 
+#flickr div img {
+ 	border: 2px solid #fff;
+}
+  
+  
+/*+-------------------------------------------+
+  FOOTER
+  +-------------------------------------------+*/
+#footer ul li {
+	color: #dda;
+}
+ 
+  	
+/*+-------------------------------------------+
+  FORMS
+  +-------------------------------------------+*/
+   
+input, textarea, select {
+ 	border: 1px solid #dc8;
+ 	background: #f9f9f9;
+}
+
+#form-submit-button { 
+	background: #fff;
+}
+
+  
+/*+-------------------------------------------+
+  MISC
+  +-------------------------------------------+*/
+
+.pullquote {
+	color: #666;
+	background: url(/images/theme/q-close.gif) no-repeat 70% 100% !important;
+	background /**/:url(); /* removing quote graphic in IE5+ */
+}
+
+.pullquote:first-letter {
+	background: url(/images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+.light-bg { 
+	color: #651;
+}
+ 
+#errors {
+   color: red;
+}
+
+.admintools {
+  background-color: #fff;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+a[name] {
+	border: none;
+}
+
+/* Hides from IE-mac \*/
+ * html .clearfix {height: 1%;}
+/* End hide from IE-mac */
+
+#categories li em, #archives li em {
+	color: #651;
+	font-size: smaller;
+}

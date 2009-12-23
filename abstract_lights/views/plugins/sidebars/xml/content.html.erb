@@ -1,0 +1,27 @@
+<h3>Syndicate</h3>
+<ul>
+  <% if @sb_config['articles'] -%>
+  <li>
+    Articles 
+    <a href="<%= url_for :controller=>'xml', :action=>'feed', :format => 'rss20', :type => 'feed' %>" title="RSS 2.0 feed" id="rss_articles_feed" class="rss">RSS</a>
+    <strong>|</strong>
+    <a href="<%= url_for :controller=>'xml', :action=>'feed', :format => 'atom10', :type => 'feed' %>" title="Atom 1.0 feed" id="atom_articles_feed" class="atom">Atom</a>
+  </li>
+  <% end %>
+  <% if @sb_config['comments'] -%>
+  <li>
+    Comments 
+    <a href="<%= url_for :controller=>'xml', :action=>'feed', :format => 'rss20', :type => 'comments' %>" title="Comments RSS 2.0 feed" id="rss_comments_feed" class="rss">RSS</a>
+    <strong>|</strong>
+    <a href="<%= url_for :controller=>'xml', :action=>'feed', :format => 'atom10', :type => 'comments' %>" title="Comments Atom 1.0 feed" id="atom_comments_feed" class="atom">Atom</a>
+  </li>
+  <% end %>
+  <% if @sb_config['trackbacks'] -%>
+  <li>
+    Trackbacks 
+    <a href="<%= url_for :controller=>'xml', :action=>'feed', :format => 'rss20', :type => 'trackbacks' %>" title="Trackbacks RSS 2.0 feed" id="rss_trackbacks_feed" class="rss">RSS</a>
+    <strong>|</strong>
+    <a href="<%= url_for :controller=>'xml', :action=>'feed', :format => 'atom10', :type => 'trackbacks' %>" title="Trackbacks Atom 1.0 feed" id="atom_trackbacks_feed" class="atom">Atom</a>
+  </li>
+<% end %>
+</ul>

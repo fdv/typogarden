@@ -1,0 +1,20 @@
+<div class="post_title"> <h2><%= link_to_permalink article, article.title %></h2></div>
+<div class="post_details">
+<div class="post_left">
+  <div class="post_date">
+			<span class="datenum"><%=  article.created_at.day %></span><br/>
+			<span class="month"><%=  article.created_at.strftime("%b") %></span>
+  </div>
+	<div class="post_comments">
+	<%= link_to_permalink(article,pluralize(article.published_comments.size, _('no comments') , _('1 comment'), __('%d comments')),'comments', 'comments') %>
+	</div>
+</div>
+ <div class="post_author"> <%= author_link(article) %> | <% if article.categories.nil?%>
+	<%= category_links article   %> | 
+	<% end %>
+	</div>
+
+ <div class="post_body">
+<%= article.body_html %>
+</div>
+</div>

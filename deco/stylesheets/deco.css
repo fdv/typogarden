@@ -1,0 +1,180 @@
+html
+{
+    margin: 0;
+    padding: 0;
+    background: #D7D7D7 url(../../images/theme/htmlback.jpg) repeat-x center top;
+}
+
+body
+{
+    font-family: Trebuchet MS, verdana, arial, sans-serif;
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+    background: transparent url(../../images/theme/bodyback.jpg) repeat-y center;
+    text-align: center;
+}
+
+#container
+{
+    width: 820px;
+    margin: 0 auto;
+    text-align: left;
+    background: transparent url(../../images/theme/containerback.jpg) no-repeat center top;
+}
+
+#container h1
+{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 618px;
+	text-align: center;
+	bottom: -10px;
+	left: 0;
+	text-transform: uppercase;
+	font-size: 1.8em;
+	line-height: 1.8em;
+	font-weight: normal;
+	color: #F0F0F0;
+	letter-spacing: .25em;
+}
+
+#container h1 a, #container h1 a:hover
+{
+    color: #F0F0F0;
+    text-decoration: none;
+    border: none;
+    padding: 0;
+}
+
+#header
+{
+    width: 618px;
+    height: 40px;
+    position: relative;
+}
+
+#content
+{
+    width: 468px;
+    display: inline;
+    float: left;
+    margin: 43px 0 0 76px;
+}
+
+#content a
+{
+    padding: 1px;
+    text-decoration: none;
+    border-bottom: 1px solid #638296;
+    color: #638296;
+}
+
+#content a:hover
+{
+    background: #638296;
+    color: white;
+}
+
+#content h2
+{
+    font-size: 2.4em;
+    font-weight: normal;
+    margin: 0 0 1em 0;
+    color: #8B8B8B;
+}
+
+#content h2 a, #content h2 a:hover
+{
+    color: #8B8B8B;
+    text-decoration: none;
+    background: transparent;
+    border: none;
+}
+
+
+#content p
+{
+    font-size: 1.2em;
+    margin: 1em 0;
+    padding: 0;
+    line-height: 1.6em;
+    color: #242424;
+    text-align: justify;
+}
+
+
+
+#sidebar
+{
+    display: inline;
+    float: right;
+    text-align: right;
+    margin: 43px 57px 0 0;
+    width: 178px;
+    color: #F0F0F0;
+}
+
+#sidebar em
+{
+    font-style: normal;
+}
+
+#search label
+{
+    display: block;
+}
+
+
+
+#sidebar h3, #search label
+{
+    margin: 0 0 .5em 0;
+    font-weight: normal;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: .25em;
+}
+
+#sidebar a
+{
+    color: #A8DDFF;
+    text-decoration: none;
+    font-size: 1.1em;
+    padding: 2px;
+}
+
+#sidebar a:hover
+{
+    background: #A8DDFF;
+    color: black;
+}
+
+#sidebar ul
+{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#sidebar ul li
+{
+    margin: .8em 0;
+}
+
+.sidebar-node
+{
+    margin-bottom: 4em;
+}
+
+#footer
+{
+    clear: both;
+    padding: 0 0 40px 0;
+    text-align: right;
+}
+
+#footer p
+{
+}

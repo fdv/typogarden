@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta name="ROBOTS" content="ALL" />
+		<meta http-equiv="imagetoolbar" content="no" />
+		<meta name="MSSmartTagsPreventParsing" content="true" />
+		<meta name="Copyright" content="(c) 2005 Copyright content:  Copyright design: PassionStreams.com" />
+		<title><%=h page_title %></title>
+		<link rel="EditURI" type="application/rsd+xml" title="RSD"
+			href="<%= url_for :controller => 'xml', :action => 'rsd' %>" />
+		<%= page_header %>
+		<%= stylesheet_link_tag "/stylesheets/theme/style.css" %>
+	</head>
+<body>
+
+	<div id="toppanel">
+		
+		<div id="search"> <form action="/articles/search" id="sform" method="get">
+			<label for="q">Live Search: &nbsp; </label><input autocomplete="off" id="q" name="q" value="" size="15" type="text">
+			</form>
+		</div>
+		
+		<div id="search-results"></div>
+		<%= observe_field "q", :frequency => 1, 
+                 	 :url => { :controller => "live", :action => "search" }, 
+                 	 :update => "search-results" -%>
+					 
+	</div>
+	<div id="mainpanel">
+		
+		<div id="contentside">
+			
+			<h1 id="blog_name"><%= link_to this_blog.blog_name, {:controller => '/'} %></h1>
+			<h2 id="blog_subtitle"><%= this_blog.blog_subtitle %></h2>
+			<div id="titlefooter">&nbsp;</div>
+			
+			<%= @content_for_layout %><%= javascript_tag "show_dates_as_local_time()" %>
+						
+		</div>
+		<div id="sidebar">
+			<div id="splash"></div>
+			<%= render_sidebars %>
+		</div>
+		<br clear="all"/>
+		
+	</div>
+	
+	<div id="closemainpanel">
+		<p>Template By Passion Streams Technology <%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+		</p>
+	</div>
+	
+</body>
+</html>

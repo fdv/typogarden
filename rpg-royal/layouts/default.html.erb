@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title><%= page_title %></title>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<%= meta_tag 'ICBM', this_blog. geourl_location  %>
+	<link rel="EditURI" type="application/rsd+xml" title="RSD" href="<%= url_for :controller => 'xml', :action => 'rsd' %>" />
+	<%= auto_discovery_link_tag :rss, :controller => 'xml', :action => 'rss' %>
+	<%= stylesheet_link_tag "/stylesheets/theme/rpg-royal_decree" %>
+	<%= stylesheet_link_tag "/stylesheets/theme/local" %>
+	<%= javascript_include_tag "cookies" %>
+	<%= javascript_include_tag "prototype" %>
+	<%= javascript_include_tag "effects" %>
+	<%= javascript_include_tag "typo" %>
+	<script type="text/javascript"><%= @content_for_script %></script>
+</head>
+<body>
+<div id="page">
+	<div id="header">
+		<div id="waxSeal">
+			<h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+			<% if this_blog.blog_subtitle != "" %>
+			<div class="subtitle"><h2><%= this_blog.blog_subtitle %></h2></div>
+			<% end %>
+		</div>
+	</div>
+	<div id="sidebar">
+		<div id="search"><%= render :partial => "shared/search" %></div>
+        <div id="search-results"></div>
+        <%= observe_field "q", 
+            :frequency => 1, 
+            :url => { :controller => "live", :action => "search" }, 
+            :loading => "Element.show('search_spinner')",
+            :complete => "Element.hide('search_spinner')",
+            :update => "search-results" -%>
+
+        <%= render_sidebars %>
+        <%= link_to image_tag("powered.gif"),  "http://typosphere.org", {:class => "powered" } %>
+	</div>
+	<div id="content">
+		<%= @content_for_layout %>
+		<%= javascript_tag "show_dates_as_local_time()" %>
+		<div id="footerMsg">
+			<strong><%= this_blog.blog_name %></strong> is powered by <a href="http://typosphere.org">Typo</a> and valid <a href="http://validator.w3.org/check/referer" title="This page validates as XHTML 1.0 Transitional (most of the time)">XHTML</a> and <a href="http://jigsaw.w3.org/css-validator/check/referer" title="Valid CSS; hopefully...">CSS</a>. <br />
+			<a href="http://www.emagica.com/">Design by Gary H. Wilson.</a>
+		</div>
+	</div>
+	<div id="footer">&nbsp;</div>
+</div>
+</body>
+</html>

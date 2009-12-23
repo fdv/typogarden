@@ -1,0 +1,336 @@
+/* drink, drive, go to jail Screen Styles */
+
+body {
+	margin:30px 0px;
+	padding:0px;
+	color:#3B3B3B;
+	background-color:#0E0434;
+	font-family: 'Lucida Grande', Geneva, Arial, Verdana, sans-serif;
+	font-size:12px;
+}
+	
+#container {
+	width:760px;
+	margin:0px auto;
+}
+
+#header { 
+	height:250px;
+	background: url(../../images/theme/header_back.jpg);
+	margin-bottom:1px;
+}
+	
+div#header h1, div#header h2{
+	color:#FFFFF2;
+	font-weight:normal;
+	float:right;
+	background: url(../../images/theme/header_h_back.png);
+}
+
+div#header h1{
+	font-size:60px;
+	margin:30px 18px 0px 0px;
+	padding:9px 18px;
+}
+
+div#header h2{
+	font-size:30px;
+	margin:18px 54px 0px 0px;
+	padding:3px 12px;
+}
+
+div#header h1 a{
+	color:#FFFFF2;
+	text-decoration:none;
+	border-bottom:0px;
+}
+
+div#header h1 a:hover{
+	color:#FFFFF2;
+	text-decoration:none;
+}
+
+div#content{
+	background: url(../../images/theme/content_back.jpg);
+}
+
+div#main_content{
+	float:left;
+	width:437px;
+	padding:15px;
+}
+
+div#sidebar{
+	float:right;
+	width:263px;
+	padding:15px;
+}
+
+div#footer{
+	clear:both;
+	background-color:#AFB4EA;
+	height:50px;
+	border-top:2px solid #0E0434;
+	text-align:center;
+}
+
+a{
+	color:#F95138;
+	text-decoration:none;
+}
+
+div#sidebar #search-results {
+	width:263px;
+	padding: 2px;
+}
+
+div.post{
+	margin:0px 0px 30px 0px;
+}
+
+div.post h2 a{
+	font-size:24px;
+	font-weight:normal;
+	color:#F95138;
+	text-decoration:none;
+}
+
+div.post p.auth{
+	font-size:14px;
+	font-weight:normal;
+	margin:0px 0px 15px 0px;
+}
+
+div.post p{
+	line-height:18px;
+}
+
+div.post p.meta{
+	text-align:right;
+}
+
+div#sidebar h3 {
+	font-weight:normal;
+ 	margin-top: 10px;
+	clear:both;
+}
+
+div#sidebar ul {
+	margin: 0px;
+	padding: 0px;
+	list-style-type: none;
+}
+
+div#footer ul {
+	margin: 0px;
+	padding: 13px 0px 0px 0px;
+	list-style: none;
+}
+  	
+div#footer ul li {
+	display: inline;
+	margin: 0px;
+	padding: 0px 5px 0px 0px;
+	font-size: 75%;
+}
+
+div#sidebar input#q {
+	width:170px;
+}
+
+div#sidebar div#flickr div.flickrrectangle {
+	background:url(../../images/theme/flickr_back_rect.png);
+	width:130px;
+	height:130px;
+	padding-bottom:10px;
+	text-align:center;
+	line-height:130px
+}
+
+div#sidebar div#flickr div.flickrrectangle img{
+	vertical-align:middle;
+	margin-right:3px;
+}
+
+div#sidebar div#flickr div.flickrsquare { 
+	background:url(../../images/theme/flickr_back_square.png);
+	width:75px;
+	height:75px;
+	padding:21px 28px 32px 25px; 
+	float:left;
+}
+
+div#sidebar div#flickr div img {
+	border: 1px solid black;
+}
+
+div#sidebar ul{
+	list-style:none;
+}
+
+div#sidebar ul li{
+	padding-left:20px;
+}
+
+.comment-list li, #preview {
+  	background: #CCD7E2;
+  	padding: 5px;
+  	margin-bottom: 8px;
+  	clear: right;
+  	min-height: 60px;
+  	}
+  	
+  .gravatar {
+  	float: right;
+  	padding: 0 5px;
+  	}
+
+/*+-------------------------------------------+
+  |   			UTILITY 					  |
+  +-------------------------------------------+*/
+  
+  h1, h2, h3, h4, h5, h6 {
+  	margin: 0;
+	padding: 0;
+	}
+	
+  form, div { padding: 0; margin: 0; }
+  img { border: 0; }
+  
+  
+  	
+ /*+-------------------------------------------+
+   |   			       FORMS 						           |
+   +-------------------------------------------+*/
+ 	
+	textarea, input, select{
+		border:1px solid #0E0434;
+	}
+	
+ 	.frm-tbl td { vertical-align: top; padding: 5px; }
+	.frm-tbl td p{margin:0px;}
+ 	td#frm-btns { text-align: right; }
+ 	
+ 	#comment_body { height: 220px; }
+
+	#form-submit-button { background: #CCD7E2; }
+	#form-submit-button:hover{background:#F95138;}
+  
+ /*+-------------------------------------------+
+   |   		          	MISC 						         |
+   +-------------------------------------------+*/
+   
+ .powered { border: none; }
+ .powered img { margin-top: 20px; }
+ .pullquote {
+		width: 30%;
+		float:right;
+		font: 150%/1.5em Times, Helvetica, "Times New Roman", serif;
+		color: #666;
+		margin:10px;
+		background: url(../../images/theme/q-close.gif) no-repeat 70% 100% !important;
+		background /**/:url(); /* removing quote graphic in IE5+ */
+		padding: 0 25px 5px 0;
+}
+.pullquote:first-letter {
+	background: url(../../images/theme/q-open.gif) no-repeat left top !important;
+	padding:5px 2px 10px 35px!important;
+	padding /**/:0px; 	/* resetting padding in IE5+ */
+	background /**/: url(); /* removing quote graphic in IE5+ */
+}
+
+ .light-bg { background: #f7f7f7; padding: 2px; }
+   .clearfix:after {
+    content: "."; 
+    display: block; 
+    height: 0; 
+    clear: both; 
+    visibility: hidden;
+ }
+ 
+ #errors {
+   color: red;
+ }
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+/* Syntax highlighting */
+.typocode_ruby .normal {}
+.typocode_ruby .comment { color: #005; font-style: italic; }
+.typocode_ruby .keyword { color: #A00; font-weight: bold; }
+.typocode_ruby .method { color: #077; }
+.typocode_ruby .class { color: #074; }
+.typocode_ruby .module { color: #050; }
+.typocode_ruby .punct { color: #447; font-weight: bold; }
+.typocode_ruby .symbol { color: #099; }
+.typocode_ruby .string { color: #944; background: #FFE; }
+.typocode_ruby .char { color: #F07; }
+.typocode_ruby .ident { color: #004; }
+.typocode_ruby .constant { color: #07F; }
+.typocode_ruby .regex { color: #B66; background: #FEF; }
+.typocode_ruby .number { color: #F99; }
+.typocode_ruby .attribute { color: #7BB; }
+.typocode_ruby .global { color: #7FB; }
+.typocode_ruby .expr { color: #227; }
+.typocode_ruby .escape { color: #277; }
+.typocode_xml .normal {}
+.typocode_xml .namespace { color: #B66; font-weight: bold; }
+.typocode_xml .tag { color: #F88; }
+.typocode_xml .comment { color: #005; font-style: italic; }
+.typocode_xml .punct { color: #447; font-weight: bold; }
+.typocode_xml .string { color: #944; }
+.typocode_xml .number { color: #F99; }
+.typocode_xml .attribute { color: #BB7; }
+.typocode_yaml .normal {}
+.typocode_yaml .document { font-weight: bold; color: #07F; }
+.typocode_yaml .type { font-weight: bold; color: #05C; }
+.typocode_yaml .key { color: #F88; }
+.typocode_yaml .comment { color: #005; font-style: italic; }
+.typocode_yaml .punct { color: #447; font-weight: bold; }
+.typocode_yaml .string { color: #944; }
+.typocode_yaml .number { color: #F99; }
+.typocode_yaml .time { color: #F99; }
+.typocode_yaml .date { color: #F99; }
+.typocode_yaml .ref { color: #944; }
+.typocode_yaml .anchor { color: #944; }
+
+.typocode {
+  background-color:#eee;
+  padding:2px;
+  margin:5px;
+  margin-left:1em;
+  margin-bottom:1em;
+}
+
+.typocode pre {
+  padding: 0px;
+  margin: 0px;
+  background: transparent;
+  font-family: monospace;
+  overflow:auto;
+}
+
+
+.typocode .lineno {
+  text-align: right;
+/*  color: #B00;*/
+  font-family: monospace;
+  padding-right: 1em;
+}
+
+code {
+  font-size:120%;
+}

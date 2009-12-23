@@ -1,0 +1,42 @@
+<div class="flip">
+<a href="#header" onclick="new Effect.ScrollTo('header'); return false" class="flip-top" title="Scroll to the top"> </a>
+<% if @ta < (@articles.size-1) %>
+<a href="#post-<%= @ta+1 %>" onclick="new Effect.ScrollTo('post-<%= @ta+1 %>'); return false" class="flip-next" title="Scroll to the next post"> </a>
+<% end %>
+<a href="#menu" onclick="new Effect.ScrollTo('menu'); return false" class="flip-menu" title="Scroll to the menu"> </a>
+</div>
+
+<h3 id="post-<%= @ta %>">
+    <%= link_to_permalink article, article.title %>
+    <%= author_link(article) %>
+    <span class="h-date"><%= article.created_at.strftime("%b. %d") %></span>
+</h3>
+
+<%= html(article,:body) %>
+
+<% if article.extended? %>
+<p class="pink"><%= article_link "Read more...", article %></p>
+<% end %>
+<div class="post-meta">
+    <div>
+        <ul>
+        
+            <li><%= comments_link(article) if article.allow_comments? %></li>
+            <li><%= trackbacks_link(article) if article.allow_pings? %></li>
+
+            <%=
+
+            '<li class="post-meta-cat">'+article.categories.collect { |c| link_to c.name,
+          { :controller=>"articles", :action=>"category", :id=>c.permalink },
+          :rel => "category tag"
+        }.join('</li><li class="post-meta-cat">')+'</li>'
+
+            %>
+            
+            
+        </ul>
+        <span class="clear"> </span>
+    </div>
+</div>
+
+<div class="leaf">&nbsp;</div>

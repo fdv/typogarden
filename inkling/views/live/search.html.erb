@@ -1,0 +1,10 @@
+<h3>Searched for <em>"<%=h @search %>"</em></h3>
+<% if !@search.to_s.blank? -%>
+  <ul>
+  <% for article in @articles.to_a -%>
+    <li><%= link_to_permalink article, article.title %></li>
+  <% end -%>
+	</ul>
+<% else %>
+  Your search returned no results
+<% end -%>

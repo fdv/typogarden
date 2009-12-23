@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag '/stylesheets/theme/application.css', :media => 'all' %>
+</head>
+
+<body>
+<div id="box">
+  <div id="topbarbg">  </div>
+	<div id="header">
+	  <div id="logo">
+	    <h1><%= link_to this_blog.blog_name, this_blog.base_url %></h1>
+	    <h2><%= this_blog.blog_subtitle %></h2>
+    </div>
+  </div>
+  <div id="menubg">
+      <div class="menulinks">
+        <ul>
+          <li class="page_item <%= 'current_page_item' if (controller.controller_name == "articles" and controller.action_name == "index") %>">
+          <%= link_to _("Home"), this_blog.base_url %>
+            </li>
+            <li class="page_item <%= 'current_page_item' if (controller.action_name != 'index' and controller.action_name != 'view_page') %>">
+                <%= link_to _("Articles"), {:controller => "articles", :action => "archives"} if (controller.controller_name != "index" )%>
+            </li>
+            <li class="page_item <%= 'current_page_item' if (controller.controller_name == "articles" and controller.action_name == "view_page" and params[:name].to_s == 'about') %>">
+                <%= link_to _("About"), this_blog.base_url + "/pages/about" %>
+            </li>
+        </ul>
+      </div>
+    </div>
+  <%= render :partial => 'shared/search' %>
+
+	<div id="content">
+    <div id="loading" class="loading" style="display:none;"><%=_("Searching")%>...</div>
+    <div id="results" class="results"></div>
+      
+	  <%= @content_for_layout %>
+	  <%= javascript_tag 'show_dates_as_local_time()' %>
+  </div>
+  <div class="sidebg">
+    <div id="index07">  </div>
+  	<%= render_sidebars %>
+	</div>
+  <div id="footerbg">
+    <div class="copyrights">
+      <p>Copyright &copy; <%= this_blog.blog_name %></p>
+      <p>
+        <a href="http://www.themelab.com/2008/02/29/free-release-15-tech-blue/">Tech Blue</a>
+        designed by
+        <a href="http://www.thehivedesigns.com">Hive Designs</a>
+        • Ported by
+        <a href="http://www.themelab.com">Free WordPress Themes</a> and 
+        <a href="http://t37.net">Frédéric de Villamil</a>
+        Powered by <a href="http://typosphere.org">Typo</a>
+      </p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

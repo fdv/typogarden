@@ -1,0 +1,18 @@
+<div class="comment preview-comment">
+	<div class="comment-body">
+		<cite>
+			<strong>
+				<%= @comment[:author] %>
+			</strong>
+			is about to say:
+			
+		</cite>
+		<%= comment.html(@comment) %>
+		<% if this_blog.use_gravatar and comment.email %>
+			<a href="<%= (comment.email.blank?) ? 'http://www.gravatar.com' : comment.url %>" title="<%= (comment.url.blank?) ? 'Get your own gravatar' : ('Vist the website of: ' + h(comment.author)) %>">
+				<%= gravatar_tag(comment.email, :default => 'http://stage.izilla.com.au/getAGravatar.png', :size => 50, :class => 'gravatar') %>
+			</a>
+		<% end %>
+	</div>
+	<div class="comment-date">This is a preview of your post. Dont forget to publish it.</div>
+</div>

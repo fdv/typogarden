@@ -1,0 +1,39 @@
+
+<div class="section" id="comment-reply-form">
+<h2 class="section-title">Your Reply</h2>
+<div id="preview" style="display: none" class="normal-comment"></div>
+<div class="comment-box"><% form_remote_tag :url      => @article.comment_url,
+                    :position => :bottom,
+                    :update   => {:success => 'commentList'},
+                    :loading  => "loading()",
+                    :complete => "complete(request)",
+                    :failure  => "failure(request)",
+                    :html     => {:id => 'commentform', :class => 'comments' } \
+    do %>
+	<fieldset id="respond">
+		<legend>Comment Form.</legend>
+		<div id="errors"></div>
+		<div class="notes">
+			<p>Fields denoted with a "<em>*</em>" are required.</p>
+		</div>
+		<div class="required clearfix">
+			<label for="comment_author"><em>*</em>Your name:</label>
+			<%= text_field "comment", "author", :class => 'text'%>
+			<small>You may also like to <a href="/pages/javascript-error" onclick="toggleCommentForm(); return false;">leave your email or website.</a></small>
+		</div>
+		<div id="guest_url" class="clearfix" style="display:none;">
+			<label for="comment_url">Your blog:</label>
+			<%= text_field "comment", "url", :class => 'text' %> </div>
+		<div id="guest_email" class="clearfix" style="display:none;">
+			<label for="comment_email">Your email:</label>
+			<%= text_field "comment", "email", :class => 'text' %> </div>
+		<div class="required clearfix">
+			<label for="comment_body"><em>*</em>Your message:</label>
+			<%= text_area "comment", "body", :class => 'text' %> </div>
+		<div id="frm-btns" class="buttons">
+		<span id="comment_loading" style="display:none;"><%= image_tag "spinner.gif" %></span>
+		<input name="submit" type="image" value="Publish" onmouseover="this.src='/images/theme/btn_publishComment_h.png'" onmouseout="this.src='/images/theme/btn_publishComment.png'" id="form-submit-button" class="button" src="/images/theme/btn_publishComment.png" alt="Publish Comment" />
+	</div>
+</fieldset><% end %> 
+</div>
+</div>

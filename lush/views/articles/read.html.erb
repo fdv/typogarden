@@ -1,0 +1,59 @@
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about=""
+    trackback:ping="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+    dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
+    dc:identifier="<%= url_for :controller=>"articles", :action=>"read", :id=>@article %>"
+    dc:description="<%=h @article.html.strip_html[0..255].gsub(/-+/, '-') %>"
+    dc:creator="<%= h @article.author %>"
+    dc:date="<%= @article.updated_at.xmlschema %>" />
+</rdf:RDF>
+-->
+<div class="post"<%= onhover_show_admin_tools(:article) %>>
+  <h2><%= @article.title %></h2>
+  <%= link_to("edit", { :controller => "admin/content", :action => "edit", :id => @article },
+        :class => "admintools", :style => "display: none", :id => "admin_article") %>
+  <div class="postcontent">
+  <p class="auth">Posted by <%= author_link(@article) %>
+  <%= js_distance_of_time_in_words_to_now @article.created_at.utc %></p>
+  <%= @article.html %>
+  <p id="printer"><a id="printbutton" href="javascript:void(null);" onclick="window.print();" title="Print this article"></a><br style="clear:both;" /></p>
+</div>
+  <p class="meta">
+  <%= article_links @article %>
+</p>
+</div>
+<% if @article.allow_comments? or @article.comments.size > 0 -%>
+  <a name="comments"></a><h2 id="commentshead">Commentary</h2> 
+  <% if @article.allow_comments? -%>
+    <p class="postmetadata alt">
+      <small><a href="#respond" onclick="new Effect.ScrollTo('respond'); return false">Leave a response &raquo;</a></small>
+    </p>
+  <% end -%>
+  <% $alternater=0 %>
+  <% $tbalternater=0 %>  
+<ol class="comment-list" id="commentList">
+<% if @article.comments.blank? %><li id="dummy_comment" style="display: none"></li><% else %><%= render(:partial => "comment", :collection => @article.comments) %><% end %></ol>
+<% end -%>
+
+<% if @article.allow_pings? %>
+  <a name="trackbacks"></a><h2 id="trackbackshead">Trackbacks</h2>
+  <%= content_tag(:ol,
+        render(:partial => "trackback", :collection => @article.trackbacks),
+        :id => 'trackbackList', :class => 'trackback-list') unless @article.trackbacks.blank? %>  
+<% end -%> 
+<p id="rss_track">
+  <a href="<%= link_to :controller => 'articles', :action=>'list', :format => 'rss', :id => @article %>" title="RSS Feed" class="rssbutton">&nbsp;</a>
+  <% if @article.allow_pings? %><a href="<%= url_for :controller=>"articles", :action=>"trackback", :id => @article.id %>" class="trackbackbutton" title="Trackback URI">&nbsp;</a><% end %>
+<small>Leave a comment<% if @article.allow_pings? %>, a trackback from your own site<% end %> or subscribe to an RSS feed for this entry.</small>
+  <br style="clear:both;" />
+</p>
+<% if @article.allow_comments? -%>
+  <h2 id="responsehead">Leave a response</h2>
+  <%= render :partial => 'comment_box' %>
+<% else -%>
+  <p>Comments are disabled</p>
+<% end -%>

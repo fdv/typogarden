@@ -1,0 +1,47 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+   <%= stylesheet_link_tag "/stylesheets/theme/local", :media => 'all'  %>
+  <%= stylesheet_link_tag "/stylesheets/theme/citrus", :media => 'all'  %>
+	<%= javascript_include_tag "/javascript/theme/sifr" %>
+</head>
+<body>
+ <div id="container">
+    <div id="header">
+		
+		    <h1><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+				<h2 id="subtitle"> <%= link_to this_blog.blog_subtitle, { :controller => '/' } %></h2>
+  </div>      
+	<div id="sidebar">
+	<div id="search"> 
+			<%= render :partial => "shared/search" %>
+				  <%= observe_field "q", 
+					  :frequency => 1, 
+					  :url => { :controller => "live", :action => "search" }, 
+					  :loading => "Element.show('search_spinner')",
+					  :complete => "Element.hide('search_spinner')",
+					  :update => "search-results" -%>
+		  </div>
+	<div id="search-results"></div><br/>
+	<%= render_sidebars %>
+	
+	
+	
+			
+			
+			</div>
+		<div id="content">
+		
+   
+          <%= @content_for_layout %>
+          <%= javascript_tag "show_dates_as_local_time()" %>
+       
+        
+
+             
+      </div>  
+  </div>
+</body>
+</html>

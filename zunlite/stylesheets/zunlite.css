@@ -1,0 +1,424 @@
+/* Zunlite CSS by Martin Wulffeld <martin.wulffeld@aeonblue.dk> */
+
+body {
+        margin: 0;
+        padding: 0;
+        text-align: left;
+        background: url("../../images/theme/header.jpg") 50% 0 no-repeat;
+        font-size: 14px;
+        font-family: Verdana, Helvetica, sans-serif;
+}
+        
+a {
+        color: #FF6600;
+        text-decoration: none;
+}
+        
+a:hover {
+        color: #FFF;
+}
+
+h1, h2, h3, h4, h5, h6 {
+        margin: 5px 0;
+        font-family: Verdana, Helvetica, sans-serif;
+}
+
+h1 {
+        font-size: 1.5em;
+}
+
+h2 {
+        font-size: 1.3em;
+}
+
+h3 {
+        font-size: 1em;
+}
+
+h4 {
+        font-size: 0.8em;
+}
+
+p,
+code,
+pre,
+th,
+td,
+blockquote {
+        font-size: 11px;
+}
+
+form, div {
+        padding: 0;
+        margin: 0;
+}
+
+p {
+        margin: 0 0 1em 0;
+        padding: 0;
+}
+
+img {
+        border: none;
+}
+
+#container {
+        margin: 0;
+        padding: 0;
+}
+
+#header { 
+        height: 103px;
+        margin: 0 auto;
+        padding: 0 0 1px 0;
+}
+
+.contentsize { 
+        margin: 0 auto;
+        width: 770px;
+}
+
+#header-contentsize { 
+        margin: 0 auto;
+        width: 770px;
+        height: 103px;
+}
+
+#header h1#sitename {
+        text-transform: uppercase;
+        margin: 0;
+        padding: 18px 10px 0px 0px;
+        font-size: 2em;
+}
+     
+#header h1#sitename a {
+        color: #2D5D84;
+        text-decoration: none;
+        border: none;
+        letter-spacing: 0.1em;
+}
+
+#header h1#sitename a:hover {
+        color: #FF7700;
+}
+
+#header h3#subtitle {
+        color: #4C88AA;
+        padding: 0px 10px 0 0px;
+        margin: 0;
+        font-size: 13px;
+        font-style: normal;
+        text-transform: uppercase;
+}
+
+#page {
+        margin: 0 auto;
+        padding: 10px 5px 5px 5px;
+        width: 770px;
+        text-align: left;
+}
+
+#page a {
+        color: #FF6600;
+        text-decoration: none;
+        border-bottom: 1px solid #FF6600;
+}
+        
+#page a:hover {
+        color: #FFF;
+        background-color: #FF6600;
+        border-bottom: 1px solid #FF6600;
+}
+
+#search #sform {
+        padding: 5px 3px;
+}
+ 
+#search #sform label {
+        padding: 0px 5px;
+        font-size: 0.8em;
+}
+
+/* Apparently search borks if font-size is specified here. */
+#search #q {
+}
+ 
+#main { 
+        float: left;
+        width: 500px;
+        background: #FFF;
+        border: 1px dashed #DDD;
+        border-left: none;
+        border-bottom: none;
+        padding: 10px 10px 5px 5px;
+        margin-bottom: 20px;
+}
+
+#sidebar {
+        margin-left: 510px;
+        padding: 0 5px 10px 20px;
+}
+
+.post {
+        margin: 0 0 5px 0px;
+        padding-bottom: 10px;
+}
+
+.post h2 {
+        text-transform: uppercase;
+        text-align: center;
+}
+
+.post p {
+        line-height: 1.4em;
+}
+        
+.post p.meta {
+        display: block;
+        color: #678;
+        background: url("../../images/theme/bgmeta.gif");
+        border-top: 1px dashed #A2DFFC;
+        text-align: right;
+        padding: 3px;
+        text-transform: uppercase;
+        font-size: 0.6em;
+}
+
+.post table {
+        margin: 5px 0;
+        padding: 0;
+}
+
+.post thead td,
+.post th {
+        background-color: #FF6600;
+        color: #FFF;
+        border: 1px solid #EE5500;
+        padding: 1px 3px;
+        margin: 0;
+}
+
+.post tbody td,
+.post td {
+        background-color: #EEE;
+        color: #222;
+        border: 1px solid #DDD;
+        padding: 1px 3px;
+        margin: 0;
+}
+
+#page .post p.meta a {
+        color: #217D9E;
+        border-bottom: 1px solid #22AFCC;
+}
+
+#page .post p.meta a:hover {
+        color: #FFF;
+        background-color: #226FAA;
+        border-bottom: 1px solid #226FAA;
+}
+
+.post li {
+        font: 0.8em Verdana, Helvetica, sans-serif;
+}
+
+blockquote {
+        font-style: italic;
+}
+
+code {
+        display: block;
+        background-color: #F4F4F4;
+        border: 1px solid #E4E4E4;
+        margin: 3px;
+        padding: 5px;
+}
+
+ul.postmetadata {
+        margin: 0 0 10px 0;
+        padding: 0;
+        text-transform: uppercase;
+        list-style-type: none;
+        font-size: 0.7em;
+}
+
+ul.postmetadata li {
+        display: inline;
+}
+
+.post p.auth {
+        display: block;
+        padding: 0 0 3px 12px;
+        font-size: 0.8em;
+        margin: 0;
+        color: #AAA;
+        font-style: italic;
+        text-align: center;
+}
+
+ol.comment-list {
+        list-style-type: none;
+        margin: 0 0 30px 0;
+        padding: 0;
+}
+
+ol.comment-list li {
+        background: url("../../images/theme/bgcomment.gif");
+        border: 1px dashed #DD8;
+        padding: 5px 5px;
+        margin: 0 0 10px 0;
+        color: #222;
+        font-size: 0.8em;
+}
+
+ol.comment-list li h4.commentauthor {
+        background: url("../../images/theme/bgcommentauthor.gif");
+        margin: 0 0 8px 0;
+        padding: 4px;
+        line-height: 1.1em;
+}
+
+ol.comment-list li h4.commentauthor a {
+        line-height: 1em;
+}
+
+ol.comment-list li div.commentbody {
+        padding: 0 4px 4px 4px;
+}
+
+h4.blueblk {
+        padding: 5px 0;
+        margin: 10px 0;
+        border-bottom: 1px dashed #DDD;
+        color: #AAA;
+        text-transform: uppercase;
+}
+
+h4.blueblk span {
+        font-size: 0.8em;
+}
+
+div.comment-box {
+}
+
+table.comment {
+        padding: 2px 0px;
+}
+
+table.comment td {
+        vertical-align: top;
+        padding: 2px;
+}
+
+table.comment td.meta {
+        padding: 3px 0;
+}
+
+table.comment td#comments-buttons {
+        text-align: right;
+}
+
+table.comment p {
+        margin: 0;
+}
+
+table.comment textarea#comment_body {
+        height: 140px;
+}
+
+.light-bg {
+        background: #F727F7;
+        padding: 2px;
+}
+
+#errors {
+        color: red;
+}
+
+/* Sidebar */
+#sidebar h3 {
+        color: #333;
+        margin-top: 10px;
+        text-transform: uppercase;
+        font-size: 0.8em;
+}
+
+#sidebar a {
+        text-transform: uppercase;
+}
+
+#sidebar ul {
+        margin: 0;
+        padding: 0 0 0 20px;
+        list-style-type: square;
+}
+         
+#sidebar ul li { 
+        margin: 0 0 3px 0;
+        padding: 0;
+        font: 0.7em Verdana, Helvetica, sans-serif;
+}
+
+#sidebar ul li em {
+        font-size: 8px;
+}
+          
+#sidebar #flickr div img {
+        border: 2px solid #FFF;
+}
+         
+#sidebar #flickr div {
+        width: 108px;
+        margin-bottom: 5px;
+}
+
+#sidebar #flickr div.flickrsquare { 
+        float: left;
+        width: 82px;
+        margin-right: 5px;
+}
+
+#sidebar #flickr div a {
+        border: 1px solid #FFF;
+}
+
+#sidebar #flickr div a:hover {
+        border-bottom: 1px solid #FF6600;
+}
+
+#footer {
+        clear: left;
+        background: url("../../images/theme/footer.jpg") 50% 0;
+        margin: 0px auto 10px auto;
+        padding: 0 10px;
+        height: 76px;
+        text-align: center;
+}
+
+#footer ul {
+        border: none;
+        margin: 0;
+        padding: 25px 0 0 0;
+        list-style: none;
+}
+        
+#footer ul li {
+        display: inline;
+        margin: 0;
+        padding: 0 3px 0 0;
+}
+
+.admintools {
+        float: right;
+        background-color: #FFF;
+        font-size: smaller;
+        padding: 0 2px;
+        margin: 0 1px;
+        color: #ccc;
+        border: 1px solid #CCC;
+}
+
+.admintools:hover {
+        color: #c00;
+        border: 1px solid #A00;
+}

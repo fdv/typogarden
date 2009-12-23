@@ -1,0 +1,8 @@
+<ol id="commentList" class="commentList">
+  <% if @article.published_comments.any? -%>
+  <% @com = 0%>
+    <%= render(:partial => "comment", :collection => @article.published_comments) %>
+  <% else -%>
+    <li class="dummy_comment" style="display:none">No comments</li>
+  <% end -%>
+</ol>

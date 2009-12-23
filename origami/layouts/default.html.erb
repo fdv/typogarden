@@ -1,0 +1,144 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  
+  <%= page_header %>
+
+  <link rel="icon" href="/images/theme/icon_favicon.ico" />
+  <link rel="shortcut icon" href="/images/theme/icon_favicon.ico" />
+  <%= stylesheet_link_tag "/stylesheets/user-styles", :media => 'all' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/print", :media => 'print' %>
+  <%= stylesheet_link_tag "/stylesheets/theme/core" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/tables" %>
+ 
+  <%= stylesheet_link_tag "/stylesheets/theme/sIFR-screen" %>
+  <%= stylesheet_link_tag "/stylesheets/theme/sIFR-print", :media => "print" %>
+
+<!-- updated javascript libs -->
+  <%= javascript_include_tag "/javascript/theme/init" %>
+  <%= javascript_include_tag "/javascript/theme/sifr" %>
+  <%= javascript_include_tag "/javascript/theme/sifr-addons" %>
+  <%= javascript_include_tag "/javascript/theme/sifrResize" %>
+  <%= javascript_include_tag "/javascript/theme/behaviour" %>
+  <%= javascript_include_tag "/javascript/theme/prototype" %>
+  <%= javascript_include_tag "/javascript/theme/coreFunctions" %>
+  <%= javascript_include_tag "/javascript/theme/effects" %>
+  <%= javascript_include_tag "/javascript/theme/styleSwitcher" %>
+  <%= javascript_include_tag "/javascript/theme/searchResults" %>
+  <script type="text/javascript">
+  	<%= @content_for_script %>
+  </script>
+  
+  <!--[if IE]>
+  <%= stylesheet_link_tag "/stylesheets/theme/core-IE" %>
+  <![endif]-->
+  
+  <!--[if IE 5]>
+  <%= stylesheet_link_tag "/stylesheets/theme/ie5_5" %>
+  <![endif]-->
+
+</head>
+<body class="sIFROn fixedLayout rightNav mediumText">
+<script type="text/javascript">setUserStyles();</script>
+<p id="top-link"><a href="#sizer" title="Go to the top of the page" >Top</a></p>
+	<div id="container" class="clearfix">
+		<div id="sizer">
+			<div id="expander">
+				<div id="header">
+					<div id="jump-menu">
+						<h3>Jump Menu</h3>
+						<ul class="menu horizontal clearfix">
+							<li><a href="#sidebar" id="skipToNav" title="Jump to Navigation">Navigation</a></li>
+							<li><a href="#content" id="skipToContent" title="Jump to Content">Content</a></li>
+							<li><a href="#q" id="skipToSearch" onclick="document.getElementById('q').focus(); return false;" title="Jump to Search">Search</a></li>
+						</ul>
+					</div>
+					<div id="personalize">
+						<div id="personalization-help">
+							<h2><a href="#" title="What do all these icons mean?">Need Help?</a></h2>
+							<div id="personalization-instructions" style="display:none;">
+								<h3>So what are all these buttons for?</h3>
+								<p><%= this_blog.blog_name %>, has many personalition features for you, the reader. Below is a key of what all the icons mean and which aspects of the layout they change.</p>
+								<ol class="menu">
+									<li><img src="/images/theme/icon_sifrOn.png" alt="Use rendered Trade Gothic type face (default)"/> Use rendered Trade Gothic type face (default)</li>
+									<li><img src="/images/theme/icon_sifrOff.png" alt="Use fonts available on your system" /> Use fonts available on your system</li>
+									<li><img src="/images/theme/icon_mediumText.png" alt="Set font size to medium (default)" /> Set font size to medium (default)</li>
+									<li><img src="/images/theme/icon_largeText.png" alt="Set font size to large" /> Set font size to large</li>
+									<li><img src="/images/theme/icon_xLargeText.png" alt="Set font size to x-large" /> Set font size to x-large</li>
+									<li><img src="/images/theme/icon_jello.png" alt="Set layout to 'Jello' (min-width:770px \ max-width:1200px)" /> Set layout to "Jello" (min-width:770px \ max-width:1200px) (default) </li>
+									<li><img src="/images/theme/icon_fluid.png" alt="Set layout to 'Fluid' (width: 100%)" /> Set layout to "Fluid" (width: 100%)</li>
+									<li><img src="/images/theme/icon_fixed.png" alt="Set layout to 'Fixed' (width: 760px) (default)" /> Set layout to "Fixed" (width: 760px)</li>
+									<li><img src="/images/theme/icon_rightSideBar.png" alt="Place navigation on the right of the screen (default)" /> Place navigation on the right of the screen (default)</li>
+									<li><img src="/images/theme/icon_leftSideBar.png" alt="Place navigation on the left of the screen" /> Place navigation on the left of the screen</li>
+								</ol>
+								<p id="personalization-instructions-close">
+									<a href="#" title="Close Help Instructions">Close Window</a>
+								</p>
+							</div>
+						</div>
+						<h3>Personalize</h3>
+						<h4>Use sIFR</h4>
+						<ul id="text-styles" class="menu horizontal clearfix">
+							<li><a href="/pages/javascript-error" id="sIFROn" title="Turn on rendered text (sIFR)(Default)">Turn on rendered text (sIFR) (Default)</a></li>
+							<li><a href="/pages/javascript-error" id="sIFROff" title="Turn off rendered text ">Turn off rendered text</a></li>
+						</ul>
+						<h4>Text Size</h4>
+						<ul id="text-size" class="menu horizontal clearfix">
+							<li><a href="/pages/javascript-error" id="mediumText" title="Medium Font Size (Default)">Medium Font Size (Default)</a></li>
+							<li><a href="/pages/javascript-error" id="largeText" title="Large Font Size (Large Font Size)">Large Font Size</a></li>
+							<li><a href="/pages/javascript-error" id="xLargeText" title="X-Large Font Size (X-Large Font Size)">X-Large Font Size</a></li>
+						</ul>
+						<h4>Layout</h4>
+						<ul id="layout" class="menu horizontal clearfix">
+							<li><a href="/pages/javascript-error" id="jelloLayout" title="Jello Layout (Minimum Width:770px \ Max-Width:1200px)">Jello Layout</a></li>
+							<li><a href="/pages/javascript-error" id="fluidLayout" title="Fluid Layout (100% Width)">Fluid Width Layout</a></li>
+							<li><a href="/pages/javascript-error" id="fixedLayout" title="Fixed Width Layout (770px Wide)">Fixed Width Layout</a></li>
+						</ul>
+						<h4>Navigation Position</h4>
+						<ul id="navigation-position" class="menu horizontal clearfix">
+							<li><a href="/pages/javascript-error" id="leftNav" title="Left Navigation">Left Navigation</a></li>
+							<li><a href="/pages/javascript-error" id="rightNav" title="Right Navigation">Right Navigation</a></li>
+						</ul>
+					</div>
+					<div id="logo">
+						<h1 id="site-name"><%= link_to this_blog.blog_name, { :controller => '/' } %></h1>
+						<h2 id="sub-title"><%= this_blog.blog_subtitle %></h2>
+					</div>
+					
+					<div id="search">
+						<a href="#" title="Close search results" id="search-results-close" style="display:none;">Close search results</a>
+						<%= render :partial => "shared/search" %>
+						<div id="search-results" style="display:none;"></div>
+					</div>
+				</div>
+				<div id="content" class="clearfix">
+					<div id="main-wrapper">
+						<div id="main">
+							<%= @content_for_layout %>
+							<%= javascript_tag "show_dates_as_local_time()" %>
+					      </div>
+				      </div>
+					<div id="sidebar-wrapper">
+						<div id="sidebar">
+            					<%= render_sidebars %>
+						</div>
+					</div>
+					<ul class="menu" id="button-nav">
+						<li id="typo-powered"><a href="http://typosphere.orgtrac/" title="Powered By TYPO">Powered By Typo</a></li>
+						<li id="validate-CSS"><a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>" title="Validate documents CSS">Validate CSS</a></li>
+						<li id="validate-XHTML"><a href="http://validator.w3.org/check?uri=referer" title="Validate XHTML 1.0">Validate XHTML 1.0</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer">
+		<p><strong>Template Design: <a href="http://www.leevigraham.com" title="Template Design - The Leevi Graham (http://www.leevigraham.com)">Leevi Graham</a></strong></p>
+	</div>
+	<script type="text/javascript">
+		init();
+	</script>
+	
+</body>
+</html>

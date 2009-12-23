@@ -1,0 +1,268 @@
+/* Sagacity Screen Styles */
+
+html {
+	height: 100%;
+	margin-bottom: 1px;
+}
+
+body {
+	font: 75% palatino, georgia, "times new roman", times, serif;
+	line-height: 1.5em;
+	color: #333;
+	background: #a73232;
+	margin: 0;
+	padding: 0;
+}
+
+#main { padding: 20px 50px; }
+
+h1 {
+	font-size: 1.5em;
+	text-transform: uppercase;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
+h3 {
+	font-size: 1.3em;
+}
+
+h4 {
+	font-size: 1.1em;
+}
+
+h5 {
+	font-size: 1.0em;
+	font-style: italic;
+}
+
+h6 {
+	font-size: 0.8em;
+	text-transform: uppercase;
+}
+
+blockquote {
+	line-height: 1.2em;
+	border: 2px solid #f0f0f0;
+	padding: 1px 12px;
+	margin: 0 25px;
+}
+
+pre {
+	font-family: monaco, courier, monospace;
+	color: #fff;
+	background: #666;
+	border: 2px solid #888;
+	padding: 12px;
+	margin: 0 25px;
+}
+
+a {
+	color: #7e2323;
+}
+
+a:hover {
+	border-bottom: 1px dotted #7e2323;
+}
+
+a img {
+	border: none; border-bottom: 1px solid #7e2323;
+	padding-bottom: 2px;
+}
+
+.post {
+	text-align: justify;
+	margin-bottom: 50px;
+}
+
+.post h2:first-child, #admin_article + h2 {
+	font-size: 1.0em;
+	font-weight: normal;
+	font-style: normal;
+	letter-spacing: 0.3em;
+	text-decoration: none;
+	text-align: center;
+	text-transform: uppercase;
+	color: #000;
+	margin-bottom: 0;
+}
+
+.post h2 a {
+	color: #000;
+}
+
+.auth {
+	margin-top: 0;
+}
+
+.auth, .meta {
+	font-size: 1.0em;
+	text-align: center;
+	color: #999;
+}
+
+.meta a {
+	color: #a96d6d;
+}
+
+#header {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+#header h1 {
+	font-size: 2.8em;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #a73232;
+	border-bottom: 1px solid #ccc;
+}
+
+#header h2 {
+	font-size: 1.4em;
+	font-weight: normal;
+	font-style: italic;
+	text-decoration: none;
+	text-transform: lowercase;
+	color: #999;
+}
+
+#header a {
+	text-decoration: none;
+	color: inherit;
+}
+
+#header a:hover {
+	border: none;
+}
+
+#sidebar {
+	text-align: center;
+	color: #999;
+	background: #fff;
+	border: 1px solid #ccc;
+	float: left;
+	width: 150px;
+	padding: 12px 0;
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+#sidebar h3 {
+	font-size: 1.0em;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #999;
+	border-top: 3px double #ccc;
+	padding-top: 2.0em;
+	margin-top: 2.0em;
+}
+
+#sidebar ul {
+	list-style: none;
+	padding: 0;
+}
+
+#sidebar a {
+	color: #a96d6d;
+}
+
+#sidebar a img {
+	border-bottom: 1px solid #a96d6d;
+}
+
+#search input {
+	background: #f0f0f0;
+	border: 1px solid #ccc;
+	width: 126px;
+}
+
+#posts {
+	background: url(../../images/theme/divider.png) no-repeat center bottom;
+	padding-bottom: 50px;
+	margin-bottom: 50px;
+}
+
+#footer {
+	text-align: center;
+	color: #c66;
+	padding-bottom: 2.0em;
+}
+
+#footer a {
+	color: inherit;
+}
+
+#footer a:hover {
+	color: #fff;
+	border: none;
+}
+
+/* Comments Stuff */
+small a {
+	font-size: 1.0em;
+	font-weight: normal;
+	font-style: normal;
+	margin-right: 1.0em;
+}
+
+.blueblk {
+	font-size: 1.2em;
+	text-align: center;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ccc;
+	margin-bottom: 0;
+}
+
+.comment-list li {
+	border: 2px solid #f0f0f0;
+	padding: 0 25px;
+	margin: 25px;
+}
+
+.comment-list li:first-line {
+	color: #999;
+}
+
+#frm-btns {
+	text-align: right;
+}
+
+.admintools {
+  float: right;
+  background-color: #fff;
+  font-size: smaller;
+  padding: 0 2px;
+  margin: 0 1px;
+  color: #ccc;
+  border: 1px solid #ccc;
+}
+
+.admintools:hover {
+  color: #c00;
+  border: 1px solid #c00;
+}
+
+/* The Weird Background Stuff. 'Cause I Didn't Use Tables */
+
+#bg-left { background: url(../../images/theme/bg-left.png) repeat-y left top; }
+#bg-right { background: url(../../images/theme/bg-right.png) repeat-y right top; }
+#bg-upper-left { background: url(../../images/theme/g-upper-left.png) no-repeat left top; }
+#bg-upper-right { background: url(../../images/theme/bg-upper-right.png) no-repeat right top; }
+#bg-inner-top {
+	background: url(../../images/theme/bg-inner-top.png) repeat-x #fff;
+	margin: 0 103px;
+}
+#bg-inner-left { background: url(../../images/theme/bg-inner-left.png) repeat-y left top; }
+#bg-inner-right { background: url(../../images/theme/bg-inner-right.png) repeat-y right top; }
+#bg-lower-left { background: url(../../images/theme/bg-lower-left.png) no-repeat left top; }
+#bg-lower-right { background: url(../../images/theme/bg-lower-right.png) no-repeat right top; }
+#bg-bottom {
+	background: url(../../images/theme/bg-bottom.png) repeat-x;
+	height: 48px;
+	margin: 0 114px;
+}

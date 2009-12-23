@@ -1,0 +1,49 @@
+<!--
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+       xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/"
+       xmlns:dc="http://purl.org/dc/elements/1.1/">
+<rdf:Description
+    rdf:about=""
+    trackback:ping="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article %>"
+    dc:title="<%=h @article.title.gsub(/-+/, '-') %>"
+    dc:identifier="<%= url_for :controller=>"articles", :action=>"read", :id=>@article %>"
+    dc:description="<%=h (@article.html.strip_html[0..255]).gsub(/-+/, '-') %>"
+    dc:creator="<%= h @article.author %>"
+    dc:date="<%= @article.updated_at.xmlschema %>" />
+</rdf:RDF>
+-->
+
+<div class="post"<%= onhover_show_admin_tools(:article) %>>
+  <%= link_to("edit", { :controller => "admin/content", :action => "edit", :id => @article },
+        :class => "admintools", :style => "display: none", :id => "admin_article") %>
+  <div class="content">
+    <h2 class="postTitle"><%= @article.title %></h2>
+    <p class="auth">by <%= author_link(@article) %> <%= js_distance_of_time_in_words_to_now @article.created_at.utc %></p>
+    <%= @article.html(:body) %>
+  </div>
+    <p class="meta">
+			<a href="<%= url_for :controller => 'xml', :action=>'feed', :type=>'article', :format => 'atom', :id => @article %>">Atom feed for this post</a>      |<a href="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>" title="<%= url_for :controller=>"articles", :action=>"trackback", :id=>@article.id %>">Trackback from your site</a>
+      <% if @article.allow_comments? -%>
+      |<a href="#respond">Add your comment</a>
+      <% end -%>
+    </p>
+</div>
+
+<div id="commentBlock">
+  <% if @article.allow_pings? and @article.trackbacks.size > 0 -%>
+    <a name="trackbacks"></a>
+    <%= content_tag(:ol, render(:partial => "trackback", :collection => @article.trackbacks), :id => 'trackbackList', :class => 'trackback-list') %>  
+  <% end -%>
+
+  <% if @article.allow_comments? or @article.comments.size > 0 -%>
+    <a name="comments"></a>
+    <%= content_tag(:ol, render(:partial => "comment", :collection => @article.comments), :id => 'commentList', :class => 'comment-list') %>
+  <% end -%>
+  <div id="comment_box">
+    <% if @article.allow_comments? -%>
+      <%= render :partial => 'comment_box' %>
+    <% else -%>
+      <p>Comments are disabled</p>
+    <% end -%>
+  </div>
+</div>

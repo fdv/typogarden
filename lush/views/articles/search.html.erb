@@ -1,0 +1,25 @@
+<% if @articles.to_a.empty? -%>
+<div class="post">
+<div class="postcontent">
+<p>No articles found...</p>
+</div>
+</div>
+<% else -%>
+<div class="post">
+<h2>Search Results</h2>
+<div class="postcontent">
+<em>Your search query returned the following entries:</em>
+</div>
+</div>
+<% for article in @articles -%>
+  <div class="post">
+  <div class="postcontent">
+  <h3><%= article.title %></h3>
+  <%= render_partial "article", article %>
+  <%= article_link "Read more...", article if article.extended?%>    
+  </div>
+  <p class="meta"><%= article_links article %></p> 
+  </div>
+<% end -%>
+
+<% end -%>

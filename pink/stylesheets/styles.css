@@ -1,0 +1,280 @@
+/*--------------------------------------------------------------------
+ * Pink! styles
+ * Jordan Elver
+ --------------------------------------------------------------------*/
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 76%;
+	background: url(../../images/theme/bg.jpg) 50% center #f8f8f8 repeat-y;
+}
+
+a {
+	color: #FF359A;
+	padding: 3px;
+}
+
+a:hover {
+	color: #fff;
+	background: #FF359A;	
+}
+
+/*-------------------------------------------
+ * Wrapper
+ *------------------------------------------*/
+div#wrapper {
+	margin: 0 auto 0 auto;
+	background: url(../../images/theme/wrapper-bg.jpg) top right no-repeat;
+	width: 718px;
+	position: relative;
+}
+
+/*-------------------------------------------
+ * Header
+ *------------------------------------------*/
+div#header {
+	background: url(../../images/theme/header-bg.gif) no-repeat top center;
+	height: 88px;
+	position: relative;
+	color: #fff;
+	width: 718px;
+}
+
+/* blog title */
+div#header h1 {
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	left: 0.9em;
+	bottom: 1.3em;
+	font-size: 2.2em;
+}
+
+div#header h1 a {
+	color: #fff;
+	text-decoration: none;
+	padding: 5px;
+}
+
+/* blog sub-title */
+div#header h2 {
+	position: absolute;
+	left: 2.5em;
+	bottom: 1.5em;
+	font-size: 1em;
+	margin: 0;
+	padding: 0;
+}
+
+/*-------------------------------------------
+ * Content
+ *------------------------------------------*/
+div#content {
+	float: left;
+	width: 494px;
+	line-height: 1.4em;
+}
+
+/* individual post wrapper */
+div#content div.post {
+	clear: both;
+}
+
+/* post title */
+div#content div.post h2 {
+	font-family: Lucida Grande, Helvetica, Arial, sans-serif;
+	font-size: 1.3em;
+	margin: 0;
+	margin-bottom: 5px;
+	padding: 0;
+	color: #FF359A;
+}
+
+/* comments and trackbacks headings */
+div#content h4 {
+	color: #666;
+	font-size: 0.9em;
+	font-weight: bold;
+	margin: 30px 0 0 0;
+	padding: 0 0 5px 0;
+	text-transform: uppercase;
+	border-bottom: 2px solid #eee;
+}
+
+/* posted by text for each post */
+div#content div.post p.auth {
+	margin: 3px 0 10px 0;
+	padding: 2px 2px 6px 20px;
+	border-bottom: 2px solid #eee;
+	color: #666;
+	font-size: 0.9em;
+	background: url(../../images/theme/posted-by.gif) 3px 50% no-repeat;
+}
+
+div#content div.post p.auth a {
+	color: #666;
+	padding: 5px
+}
+
+div#content div.post p.auth a:hover {
+	color: #333;
+	background: none;
+}
+
+/* post information at the bottom of each post */
+div#content div.post p.meta {
+	float: right;
+	font-size: 0.9em;
+	border-top: 1px solid #eee;
+	padding: 1px 4px 4px 3px;
+	margin-bottom: 30px;
+	color: #999;
+}
+
+div#content div.post p.meta a {
+	color: #666;
+	padding: 3px;
+}
+
+div#content div.post p.meta a:hover {
+	color: #666;
+	background: #eee;
+	border-top: 1px solid #ccc;
+}
+
+div#content div.post p.meta strong {
+	font-weight: normal;
+}
+
+/* comments and comment box */
+div#content td#frm-btns {
+	text-align: right;
+}
+
+div#content ol.comment-list {
+	list-style-position: inside;
+	margin: 0;
+	padding: 0;
+	color: #333;
+}
+
+div#content ol.comment-list li.graybox {
+	margin: 0 0 10px 0;
+	padding: 6px;
+	background: url(../../images/theme/bottom-quote.gif) no-repeat bottom right #eee;
+}
+
+div#content ol.comment-list li.graybox cite {
+	font-style: normal;
+}
+
+div#content ol.comment-list li.graybox a {
+	color: #666;
+}
+
+div#content ol.comment-list li.graybox a:hover {
+	background: none;
+}
+
+/* pad all content with content div rather than individual content
+   more markup, but simpler and clearer */
+div#content-inner {
+	margin: 30px 30px 40px 30px;
+}
+
+/*-------------------------------------------
+ * Navigation
+ *------------------------------------------*/
+div#navigation {
+	padding-top: 30px;
+	margin-left: 524px;
+	width: 180px;
+	font-size: 0.9em;
+}
+
+div#navigation ul {
+	padding: 0;
+	margin: 14px 0 20px 0;
+}
+
+div#navigation li {
+	list-style: none;
+	line-height: 1.8em;
+}
+
+div#navigation a {
+	color: #999;
+	font-weight: bold;
+}
+
+div#navigation a:hover {
+	color: #333;
+	background: #eee;
+}
+
+div#navigation em {
+	font-style: normal;
+	color: #666;
+}
+
+div#navigation img {
+	border: none;
+}
+
+div#navigation h3 {
+	color: #FF359A;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	padding-left: 3px;
+}
+
+/*-------------------------------------------
+ * Search
+ *------------------------------------------*/
+div#search {
+	position: absolute;
+	left: 524px;
+	top: 30px;
+	color: #fff;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+div#search form {
+	margin: 0;
+	padding: 0;
+}
+
+div#search label {
+	display: block;
+	text-transform: uppercase;
+}
+
+/*-------------------------------------------
+ * Footer
+ *------------------------------------------*/
+div#footer {
+	height: 50px;
+	clear: both;
+	padding-top: 26px;
+	margin: 26px 26px 0 26px;
+	font-size: 0.9em;
+	border-top: 1px solid #eee;
+	color: #ccc;	
+}
+
+div#footer ul {
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+div#footer li {
+	display: inline;
+	list-style: none;
+	padding-right: 20px;
+}

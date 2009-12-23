@@ -1,0 +1,18 @@
+<% unless @categories.blank? -%>
+<h3 id="categories-heading">Categories</h3>
+<ul id="categories-list">
+<% for category in @categories -%>
+  <% unless @sb_config['empty'].blank? and category.article_counter == 0 %>
+  <% linktitle = category.name %>
+  <% extra = "" %>
+
+  <% unless @sb_config['count'].blank?%> 
+    <% extra = "<small> (" + category.article_counter.to_s + ") </small>"%>
+  <% end%>
+
+  <% linktitle = linktitle + extra %>
+  <li><%= link_to linktitle, :controller => "articles", :action => "category", :id => category.permalink  %></li>
+  <% end %>
+<% end -%>
+</ul>
+<% end %>

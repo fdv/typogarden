@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title><%=h page_title %></title>
+  <%= page_header %>
+  <%= stylesheet_link_tag "/stylesheets/theme/wired", :media => 'all'  %>
+  <%= javascript_include_tag "/javascript/theme/wired" %>
+</head>
+<body>
+    <div id="header">
+        <div class="rt">                               
+            <div class="lt">
+                <div id="search"><%= render :partial => "shared/search" %></div>
+                
+                <div id="title">
+                    <h1 id="sitename"><%= this_blog.blog_name %></h1>
+                    <h2 id="subtitle"><%= this_blog.blog_subtitle %></h2> 
+                </div>     
+            </div>
+        </div>
+    </div>
+    
+    <div id="content">
+        <div class="rt">
+            <div class="lt">
+                <div class="wrapper">
+                    <div id="main">
+                        <%= @content_for_layout %>
+                        <%= javascript_tag "show_dates_as_local_time()" %>            
+                    </div> 
+                </div>
+                
+                <div id="sidebar">
+                    <div id="results"><div id="search-results"></div></div>
+                    <div id="plugins"><%= render_sidebars %></div>
+                </div>                                                  
+            </div>              
+        </div>   
+     </div>
+    
+    <div id="footer">
+        <div class="rt">       
+            <div class="lt">                
+                <ul>
+                    <li>Valid <a href="http://validator.w3.org/check?uri=referer">XHTML 1.0</a> | <a href="http://jigsaw.w3.org/css-validator/validator?uri=<%= url_for :controller => 'articles' %>">CSS</a></li>
+                    <li><a href="http://www.travelatlas.org/wired.zip">Wired</a> Theme</li>
+                </ul>
+
+                <a class="typo" href="http://typosphere.orgtrac/"><%= image_tag('../../images/theme/footer-typo.gif', options={:alt => 'Typo Powered', :border => '0'}) %></a>               
+            </div>
+        </div>
+    </div>
+</body>
+</html>
