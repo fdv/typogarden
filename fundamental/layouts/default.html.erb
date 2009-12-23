@@ -33,7 +33,7 @@
     </div>
     <div id="search-results"></div>
       <%= observe_field "q", :frequency => 1, 
-          :url => { :controller => "live", :action => "search" }, 
+          :url => { :controller => "articles", :action => "live_search" }, 
           :loading => "Element.show('search_spinner')",
           :complete => "Element.hide('search_spinner')",
           :update => "search-results" -%>

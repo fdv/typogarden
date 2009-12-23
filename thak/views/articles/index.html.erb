@@ -1,7 +1,7 @@
 <% for article in @articles -%>
  <div class="post">
   <%= render :partial => "articles/article", :object => article %>
-  <%= article_link "Read more...", article if article.extended? %>  
+  <%= link_to_permalink(article, "#{_("Read more")}...") if article.extended? %>  
   </div>
 <% end -%>
 

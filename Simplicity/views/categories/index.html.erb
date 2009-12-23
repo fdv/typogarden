@@ -6,7 +6,7 @@
   <% else %>
   	<%= render :partial => "article", :object => article %>
   <% end %>
-  <p><%= article_link "Read more...", article if article.extended? %></p>
+  <p><%= link_to_permalink(article, "#{_("Read more")}...") if article.extended? %></p>
  </div>
  <% count = count + 1 %>
 <% end -%>

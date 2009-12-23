@@ -3,7 +3,7 @@
   <h2><a href="<%= article.permalink_url %>" title="go read <%= article.title %>"><%= article.title %></a></h2>
   <div class="postcontent">
   <%= render :partial => "articles/article", :object => article %>
-  <%= article_link "Read more &raquo;", article if article.extended? %>
+  <%= link_to_permalink(article, "Read more &raquo;") if article.extended? %>
   </div>
   <p class="meta">
   <%= article_links article %>

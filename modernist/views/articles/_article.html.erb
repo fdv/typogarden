@@ -15,7 +15,7 @@
 <%= html(article,:body) %>
 
 <% if article.extended? %>
-<p class="pink"><%= article_link "Read more...", article %></p>
+<p class="pink"><%= link_to_permalink article, "Read more..." %></p>
 <% end %>
 <div class="post-meta">
     <div>

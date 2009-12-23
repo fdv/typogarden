@@ -5,7 +5,7 @@
 <%= image_tag('../../images/theme/header-search-rt.gif', options={:border => '0', :id => 'search-rt'}) %>
 <% end %>
 <%= observe_field "q", :frequency => 1, 
-    :url => { :controller => "live", :action => "search" }, 
+    :url => { :controller => "articles", :action => "live_search" }, 
     :loading => "Wired.loading('search-rt')",
     :complete => "Wired.complete('search-rt')",
     :update => "search-results",

@@ -117,7 +117,7 @@ show_dates_as_local_time()
             <div id="search-results"></div>
               <script type="text/javascript">
 //<![CDATA[
-new Form.Element.Observer('q', 1, function(element, value) {new Ajax.Updater('search-results', '/live/search', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('search_spinner')}, onLoading:function(request){Element.show('search_spinner')}, parameters:value})})
+new Form.Element.Observer('q', 1, function(element, value) {new Ajax.Updater('search-results', '/live_search', {asynchronous:true, evalScripts:true, onComplete:function(request){Element.hide('search_spinner')}, onLoading:function(request){Element.show('search_spinner')}, parameters:value})})
 //]]>
 </script>
               <h3>Categories</h3>

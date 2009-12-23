@@ -22,7 +22,7 @@
 		
 		<div id="search-results"></div>
 		<%= observe_field "q", :frequency => 1, 
-                 	 :url => { :controller => "live", :action => "search" }, 
+                 	 :url => { :controller => "articles", :action => "live_search" }, 
                  	 :update => "search-results" -%>
 					 
 	</div>

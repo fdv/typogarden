@@ -44,7 +44,7 @@
         
         <% end %>
         <%= observe_field "q_bottom", :frequency => 1, 
-            :url => { :controller => "live", :action => "search" }, 
+            :url => { :controller => "articles", :action => "live_search" }, 
             :loading => "Element.show('search_spinner1')",
             :complete => "Element.hide('search_spinner1')",
             :update => "search-results1",

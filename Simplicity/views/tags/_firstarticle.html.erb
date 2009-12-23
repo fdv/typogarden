@@ -1,4 +1,4 @@
-<h2><%= article_link firstarticle.title, firstarticle %> - 
+<h2><%= link_to_permalink firstarticle, firstarticle.title %> - 
 	<span id="showlink_<%= firstarticle.id %>" class="showhide">
 		<%= link_to_function( "Hide&laquo;", 
 							  "Element.toggle('showlink_#{firstarticle.id}', 'hidelink_#{firstarticle.id}' , 'postbody_#{firstarticle.id}'); " ) + " " %></span>

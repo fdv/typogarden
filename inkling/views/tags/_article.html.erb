@@ -12,6 +12,6 @@
   <%= html(article,:body) %>
 </dd>
 <dd class="entry-nav">
-  <a href="<%= article_url(article) %>" class="read-more"><strong><%= article.extended? ? "Read more..." : "Comments..."  %></strong>(<%= "#{article.comments.size} " +  pluralize(article.comments.size,"comment", "comment", "comments") %>)</a> 
-  <a href="<%= article_url(article) %>" class="permalink"><span>Permalink</span></a>
+  <a href="<%= article.permalink_url %>" class="read-more"><strong><%= article.extended? ? "Read more..." : "Comments..."  %></strong>(<%= "#{article.comments.size} " +  pluralize(article.comments.size,"comment", "comment", "comments") %>)</a> 
+  <a href="<%= article.permalink_url %>" class="permalink"><span>Permalink</span></a>
 </dd>

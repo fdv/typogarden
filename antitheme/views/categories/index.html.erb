@@ -1,7 +1,7 @@
 <% for article in @articles -%>
  <div class="post">
   <%= render :partial => "article", :object => article %>
-  <%= article_link "Read more...", article if article.extended? %>  
+  <%= link_to_permalink(article, "#{_("Read more")}...") if article.extended? %>  
   <p class="data"><span class="meta"><%= article_links article %></span><span class="auth">Posted by <%= author_link(article) %>
 <%= js_distance_of_time_in_words_to_now article.created_at %></span></p> 
   </div>

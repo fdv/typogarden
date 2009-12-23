@@ -1,7 +1,7 @@
 
 1.2.2
 
-- Overrode the live/search.rhtml in the theme directory instead of 
+- Overrode the live_search.rhtml in the theme directory instead of 
   requiring people to overwrite the one in the typo codebase
 - Made the right sidebar absolutely positioned so that text overflows 
   in the content area (like from long text in <pre> tags) wouldn't
